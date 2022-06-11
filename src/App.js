@@ -1,12 +1,12 @@
 // import {BrowserRouter as Router,Route,Switch } from 'react-router-dom'
-import Home from "./pages/Home";
+import Pages from "./pages/Pages";
 
 
 function App() {
   return (
     <div className="App">
       <h1>hello world</h1>
-      <Home/>
+      <Pages/>
     </div>
     );
 }
