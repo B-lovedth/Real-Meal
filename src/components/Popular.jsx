@@ -4,7 +4,7 @@ const Popular = () => {
   const [popular,setPopular] = useState([])
   useEffect(() => {
     getPopular()
-  }, [])
+  },[])
   
    const getPopular = () => {
     fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`)
