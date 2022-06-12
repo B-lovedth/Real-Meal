@@ -9,9 +9,11 @@ const Popular = () => {
    const getPopular = () => {
     fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`)
       .then((res) => res.json())
-      .then((data) => setPopular(data))
-       .catch((err) => console.log(err.message))
-     console.log("popular",popular)
+      .then((data) => {
+        setPopular(data)
+        console.log("popular",popular)
+      })
+      .catch((err) => console.log(err.message))
     }
   return (
     <div>
@@ -19,6 +21,7 @@ const Popular = () => {
         return (
           <div>
             <p>{recipe.title}</p>
+            {console.log(recipe.title)}
           </div>
         )
       })}
