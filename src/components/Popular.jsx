@@ -15,7 +15,13 @@ const Popular = () => {
     }
   return (
     <div>
-      Popular
+      {popular.map((recipe) => {
+        return (
+          <div>
+            <p>{recipe.title}</p>
+          </div>
+        )
+      })}
     </div>
   )
 }
