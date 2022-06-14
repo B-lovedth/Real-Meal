@@ -11,18 +11,16 @@ const Popular = () => {
       .then((res) => res.json())
       .then((data) => {
         setPopular(data.recipes)
-        console.log(popular)
         console.log(data)
       })
-      .catch((err) => console.log(err.message))
+       .catch((err) => console.log(err.message))
     }
   return (
     <div>
       {popular.map((recipe) => {
         return (
-          <div>
+          <div key={recipe.id}>
             <p>{recipe.title}</p>
-            {console.log(recipe.title)}
           </div>
         )
       })}
