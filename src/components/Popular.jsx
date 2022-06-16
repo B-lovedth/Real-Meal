@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-
 const Popular = () => {
   const [popular,setPopular] = useState([])
   useEffect(() => {
@@ -21,7 +20,7 @@ const Popular = () => {
         return (
           <div key={recipe.id}>
             <p>{recipe.title}</p>
-          </div>
+          </div> 
         )
       })}
     </div>
