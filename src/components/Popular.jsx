@@ -1,6 +1,9 @@
+import { Splide, SplideSlide } from "@splidejs/react-splide"
 import { useEffect, useState } from "react"
 import styled from "styled-components"
+import '@splidejs/react-splide/css';
 
+  
 const Popular = () => {
   const [popular,setPopular] = useState([])
   useEffect(() => {
@@ -19,14 +22,16 @@ const Popular = () => {
         return <div>Unable to fetch</div>
       })
     }
-  return (
+  return ( 
     <div>
           <Wrapper>
-            <h3>Popular Picks</h3>
+        <h3>Popular Picks</h3>
+        <Splide></Splide>
             {popular.map((recipe) => {
               return (
                 <Card>
                   <p>{recipe.title}</p>
+                  <img src={recipe.image} alt={recipe.title}/>
                 </Card>
               )
             }
@@ -38,10 +43,16 @@ const Popular = () => {
 
 const Wrapper = styled.div`
   margin: 4rem 0rem;
+  padding: 2rem;
 `;
 
 const Card = styled.div`
   min-height: 25rem;
   border-radius: 2rem;
+  overflow : hidden;
+
+  img{
+    border-radius:2rem;
+  }
 `
 export default Popular
