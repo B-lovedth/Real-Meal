@@ -1,6 +1,6 @@
 // import {BrowserRouter as Router,Route,Switch } from 'react-router-dom'
 import Pages from "./pages/Pages";
-import './bootstrap1.css'
+// import './bootstrap1.css'
 
 function App() {
   return (
