@@ -3,14 +3,14 @@ import { useEffect, useState } from "react"
 import styled from "styled-components"
 import '@splidejs/react-splide/css';
 
-  
+
 const Popular = () => {
-  const [popular,setPopular] = useState([])
+  const [popular, setPopular] = useState([])
   useEffect(() => {
     getPopular()
-  },[])
-  
-   const getPopular = () => {
+  }, [])
+
+  const getPopular = () => {
     fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`)
       .then((res) => res.json())
       .then((data) => {
@@ -21,32 +21,33 @@ const Popular = () => {
         console.log(err.message)
         return <div>Unable to fetch</div>
       })
-    }
-  return ( 
+  }
+  return (
     <div>
-          <Wrapper>
+      <Wrapper>
         <h3>Popular Picks</h3>
         <Splide
-          options={ {
-            perPage: 3,
+          options={{
+            perPage: 4,
             arrows: false,
             pargination: false,
             drag: 'free',
             gap: '5rem',
-        } }>
-            {popular.map((recipe) => {
-              return (
-                <SplideSlide>
-                  <Card>
-                    <p>{recipe.title}</p>
-                    <img src={recipe.image} alt={recipe.title}/>
-                  </Card>
-                </SplideSlide>
-              )
-            }
+          }}>
+          {popular.map((recipe) => {
+            return (
+              <SplideSlide>
+                <Card>
+                  <p>{recipe.title}</p>
+                  <img src={recipe.image} alt={recipe.title} />
+                  <Gradient />
+                </Card>
+              </SplideSlide>
+            )
+          }
           )}
         </Splide>
-      </Wrapper> 
+      </Wrapper>
     </div>
   )
 }
@@ -78,19 +79,20 @@ const Card = styled.div`
     width:100%;
     text-align: center;
     font-weight:600;
+
     font-size:1.5rem;
     height:40%;
     display:flex;
     justify-content: center;
     align-items:center;
   }
-`
+`;
+
 const Gradient = styled.div`
   z-index: 3;
   position: absolute;
   width:100%;
   height : 100%;
-  background:linear-gradient(rgb)
-
-`
+  background:linear-gradient(rgba(0,0,0,0) , rgba(0,0,0,0.5))
+`;
 export default Popular
