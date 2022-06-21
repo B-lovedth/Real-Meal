@@ -10,19 +10,26 @@ const Popular = () => {
     getPopular()
   }, [])
                                                        
-  const getPopular = () => {
-
-
-    fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`)
+  const getPopular = async() => {
+    const check = localStorage.getItem('popular');
+    console.log(check)
+    if (check) {
+      setPopular(JSON.parse(check))
+    } else {
+       fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`)
       .then((res) => res.json())
       .then((data) => {
         setPopular(data.recipes)
-        console.log(data)
+        console.log(data.recipes)
+        localStorage.setItem('popular', JSON.stringify(data.recipes))   
       })
       .catch((err) => {
-        console.log(err.message)
-        return <div>Unable to fetch</div>
-      })
+        console.log(err.message) 
+      })   
+    }
+      
+      
+   
   }
   return (
     <div>
