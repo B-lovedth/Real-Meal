@@ -21,7 +21,7 @@ const Popular = () => {
       .then((data) => {
         setPopular(data.recipes)
         console.log(data.recipes)
-        localStorage.setItem('popular', JSON.stringify(data.recipes))   
+        localStorage.setItem('popular',JSON.stringify(data.recipes))   
       })
       .catch((err) => {
         console.log(err.message) 
