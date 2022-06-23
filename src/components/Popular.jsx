@@ -11,21 +11,22 @@ const Popular = () => {
   }, [])
                                                        
   const getPopular = async() => {
-    const check = localStorage.getItem('popular');
+    const check = localStorage.getItem("popular");
     console.log(check)
-    if (check) {
+    if(check){
       setPopular(JSON.parse(check))
-    } else {
+    }else{
        fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`)
       .then((res) => res.json())
       .then((data) => {
-        localStorage.setItem('popular',JSON.stringify(data.recipes))   
+        localStorage.setItem("popular",JSON.stringify(data.recipes))   
         setPopular(data.recipes)
         console.log(data.recipes)
       })
       .catch((err) => {
         console.log(err.message) 
       })   
+      console.log(popular)
     }
       
       
