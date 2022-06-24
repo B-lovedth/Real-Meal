@@ -16,17 +16,17 @@ const Veggie = () => {
     if(check){
       setVeggie(JSON.parse(check))
     }else{
-       fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`)
+       fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`)
         .then((res) => res.json())
         .then((data) => {
-        localStorage.setItem("veggie",JSON.stringify(data.recipes))   
-        setVeggie(data.recipes)
-        console.log(data.recipes)
-      })
-      .catch((err) => {
-        console.log(err.message) 
-      })   
-      console.log(veggie)
+          localStorage.setItem("veggie",JSON.stringify(data.recipes))   
+          setVeggie(data.recipes)
+          console.log(data.recipes)
+          })
+        .catch((err) => {
+          console.log(err.message) 
+          })   
+        console.log(veggie)
     }
   }
   return (
