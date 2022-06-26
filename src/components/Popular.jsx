@@ -16,17 +16,17 @@ const Popular = () => {
       setPopular(JSON.parse(check))
     }else{
        fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`)
-         .then((res) => res.json())
-      .then((data) => {
-        localStorage.setItem("popular",JSON.stringify(data.recipes))   
-        setPopular(data.recipes)
-        console.log(data.recipes)
-      })
-      .catch((err) => {
-        console.log(err.message) 
-      })   
-      console.log(popular)
-    }
+        .then((res) => res.json())
+        .then((data) => {
+          localStorage.setItem("popular",JSON.stringify(data.recipes))   
+          setPopular(data.recipes)
+          console.log(data.recipes)
+        })
+        .catch((err) => {
+          console.log(err.message) 
+        })   
+        console.log(popular)
+      }
   }
   return (
     <div>
