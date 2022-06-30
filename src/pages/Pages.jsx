@@ -1,14 +1,21 @@
-import React from 'react'
-import { BrowserRouter as Route, Router, Switch } from 'react-router-dom'
-import Home from './Home'
-
-
+import { BrowserRouter as Route, Router, Switch } from 'react-router-dom';
+import Cuisine from './Cuisine';
+import Home from './Home';
+  
 const Pages = () => {
-
   return (
     <div>
       <Router>
-        <Route path="/" ><Home/></Route>
+        <Switch>
+          <Route exact path="/" >
+            <Home/>
+          </Route>
+        </Switch>
+        <Switch>
+          <Route path="/cuisine">
+            <Cuisine />
+          </Route>
+        </Switch>
       </Router>
     </div>
   )
