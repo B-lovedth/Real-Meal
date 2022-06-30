@@ -7,22 +7,22 @@ import styled from 'styled-components'
 const Category = () => {
     return (
         <List>
-            <div>
+            <NavLink to={"/cuisine/Italian"}>
                 <FaPizzaSlice />
                 <h4>Italian</h4>
-            </div>
-            <div>
+            </NavLink>
+            <NavLink to={"/cuisine/American"}>
                 <FaHamburger />
                 <h4>American</h4>
-            </div>
-            <div>
+            </NavLink>
+            <NavLink to={"/cuisine/Thai"}>
                 <GiNoodles />
                 <h4>Thai</h4>
-            </div>
-            <div>
+            </NavLink>
+            <NavLink to={"/cuisine/Japanese"}>
                 <GiChopsticks />
                 <h4>Japanese</h4>
-            </div>
+            </NavLink>
         </List>
     )
 }
