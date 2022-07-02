@@ -6,10 +6,8 @@ const Pages = () => {
   return (
     <div>
       <Routes>
-          <Route exact path="/" >
-            <Home/>
-          </Route>
-          <Route path="/cuisine"><Cuisine/></Route>
+          <Route exact path="/" element={<Home/>}/>
+          <Route path="/cuisine" element={<Cuisine/>} />
       </Routes>
     </div>
   )
