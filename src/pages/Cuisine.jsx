@@ -9,7 +9,7 @@ function Cuisine() {
     const [cuisine, setCuisine] = useState([])
     useEffect(() => {
         getCuisine()
-    })
+    },[])
     
     const getCuisine = (name) => {
         fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine={name}`)
@@ -18,7 +18,7 @@ function Cuisine() {
                 setCuisine(data.recipe)
                 console.log(data)
             })
-        .catch((err)=>console.log(err.message))
+            .catch((err)=>console.log(err.message))
     }
 
     return (
