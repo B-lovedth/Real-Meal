@@ -7,15 +7,17 @@ import styled from "styled-components";
 
 function Cuisine() {
     const [cuisine, setCuisine] = useState([])
+    let params = useParams()
     useEffect(() => {
-        getCuisine()
-    },[])
+        // getCuisine('italian')
+        console.log(params)
+    }, []);
     
     const getCuisine = (name) => {
         fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine={name}`)
             .then((res) => res.json())
             .then((data) => {
-                setCuisine(data.recipe)
+                setCuisine(data.results)
                 console.log(data)
             })
             .catch((err)=>console.log(err.message))
