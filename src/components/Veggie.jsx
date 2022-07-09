@@ -16,7 +16,7 @@ const Veggie = () => {
     if(check){
       setVeggie(JSON.parse(check))
     }else{
-       fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`)
+       fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegan`)
         .then((res) => res.json())
         .then((data) => {
           localStorage.setItem("veggie",JSON.stringify(data.recipes))   
