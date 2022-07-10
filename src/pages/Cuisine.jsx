@@ -8,10 +8,10 @@ import styled from "styled-components";
 function Cuisine() {
     const [cuisine, setCuisine] = useState([])
     let params = useParams()
+        console.log(params)
     useEffect(() => {
         // getCuisine('italian')
-        console.log(params)
-    }, []);
+    }, [params.type]);
     
     const getCuisine = (name) => {
         fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine={name}`)
