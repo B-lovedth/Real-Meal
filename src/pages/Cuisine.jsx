@@ -17,10 +17,10 @@ function Cuisine() {
         fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`)
             .then((res) => {
                 res.json()
+                // console.log(res.json())
             })
             .then((data) => {
                 setCuisine(data.results)
-                console.log(data.results)
             })
             .catch((err)=>console.log(err.message))
     }
