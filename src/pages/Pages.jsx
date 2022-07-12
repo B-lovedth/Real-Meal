@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Cuisine from './Cuisine';
 import Home from './Home';
-import LandingPage from './LandingPage';
+import LandingPage from '../components/LandingPage';
   
 const Pages = () => {
   return (
