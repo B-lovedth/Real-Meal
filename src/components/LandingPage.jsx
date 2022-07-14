@@ -10,7 +10,7 @@ const LandingPage = () => {
         <div className="row">
           <div className="column-one">
             <div className="main-header">
-              Let's get cooking with delicious recipies
+              Let's get cooking<br/>with delicious recipies
             </div>
             <div className="sub-header">
               <p>Wanna cook, but not sure how to go about it?</p>
@@ -46,10 +46,11 @@ const ButtonOutline = styled.button`
   border-radius:5px;
   padding:2rem 3rem;
   font-size:2rem;
+  font-weight:400;
 `
 const Img = styled.img`
   max-height:100%;
   width: 100%;
-  height:30rem;
+  height:40rem;
 `
 export default LandingPage
