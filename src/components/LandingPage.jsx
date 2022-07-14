@@ -38,6 +38,7 @@ const ButtonBold = styled.button`
   padding: 2rem 3rem;
   margin-right: 10px;
   font-size:2rem;
+  cursor: pointer;
 `
 const ButtonOutline = styled.button`
   background-color: white;
@@ -47,6 +48,8 @@ const ButtonOutline = styled.button`
   padding:2rem 3rem;
   font-size:2rem;
   font-weight:400;
+  cursor: pointer;
+  
 `
 const Img = styled.img`
   max-height:100%;
