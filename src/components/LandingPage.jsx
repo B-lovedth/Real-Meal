@@ -51,6 +51,6 @@ const ButtonOutline = styled.button`
 const Img = styled.img`
   max-height:100%;
   width: 100%;
-  height:40rem;
+  height:50rem;
 `
 export default LandingPage
