@@ -7,7 +7,7 @@ import Pages from "./pages/Pages";
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      {/* <Navbar/> */}
       <BrowserRouter>
         <LandingPage/>
         <Category/>
