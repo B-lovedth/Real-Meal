@@ -1,6 +1,7 @@
 import React from 'react'
 import "./HeroSection.css"
 import Dish from './pasta.png'
+import Mobile from './mobile.png'
 import styled from 'styled-components'
 
 const LandingPage = () => {
@@ -15,6 +16,9 @@ const LandingPage = () => {
             <div className="sub-header">
               <p>Wanna cook, but not sure how to go about it?</p>
               <p>Don't worry, we got you.</p>
+            </div>
+            <div className="mobile-header">
+              <img src={Mobile} alt='pasta'/>
             </div>
             <div className="btn-wrapper">
               <ButtonBold className="btn btn-one">Get started</ButtonBold>
