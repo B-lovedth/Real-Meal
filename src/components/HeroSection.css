@@ -3,7 +3,6 @@
     font-family:'Monserrat',sans-serif
 }
 .body{
-    margin: 0;
     height: 100vh;
     width: 100%;
     margin: 0 auto;
@@ -20,7 +19,7 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-    height:100%;
+    height:auto;
 }
 
 .column-one{
@@ -44,4 +43,44 @@
     font-size: 1.5rem;
     margin-bottom:1rem;
     font-weight:600;
+}
+@media(max-width:1200px){
+    .body{
+        width: 90%;
+    }
+    .column-two img{
+        height: 40rem;
+        margin-top: -20rem;
+        margin-left:10px;
+    }
+    .main-header{
+        font-size:5rem;
+    }
+    .sub-header{
+        font-size:1rem;
+        font-weight:100;
+    }
+    .btn-wrapper{
+        display:flex;
+        flex-direction: row;
+    }
+}
+@media(max-width:960px){
+    .body{
+        width:80%;
+    }
+     .column-two img {
+         height: 30rem;
+         margin-top: -20rem;
+         margin-left: 10px;
+     }
+
+     .main-header {
+         font-size: 4rem;
+     }
+
+     .sub-header {
+         font-size: 0.5rem;
+         font-weight: 100;
+     }
 }
