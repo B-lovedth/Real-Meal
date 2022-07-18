@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   const confirmMobile = () =>{
-    if (window.innerWidth <= 1000) {
+    if (window.innerWidth <= 1200) {
       setisMobile(true)
     }
     else {
@@ -36,8 +36,8 @@ const Navbar = () => {
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars-staggered"}>icon </i>
           </div>
-          <input type='t' ></input>
           <div className={ click ? "nav-menu active" : "nav-menu"}>
+            <input type='text' class ></input>
             <ul className='nav-list'>
               <li className="nav-item">
                 <Link to="/" className="nav-links" onClick={closeMobileMenu}>
