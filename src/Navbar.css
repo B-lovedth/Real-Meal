@@ -110,16 +110,17 @@
     .nav-menu {
         display: flex;
         flex-direction:column;
-        width:40%;
+        width:50%;
         height: 100vh;
         position: absolute;
         left: -400px;
+        top:0;
         opacity: 0;
         padding-top: 30px;
     }
 
     .nav-menu.active {
-        background: #131212ec;
+        background: rgba(51, 51, 51, 0.909);
         left: 0;
         top:0;
         z-index: 1;
@@ -148,6 +149,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        font-size:3rem;
         transform: translate(25%, 50%);
     }
 
@@ -179,5 +181,23 @@
 }
 
 @media(max-width:960px) {
-    
+    .navbar{
+        height:5rem;
+    }
+    .navbar-logo{
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+    .nav-links{
+        font-size:1rem ;
+    }
+    .nav-item {
+        position: relative;
+        margin: 10px 0;
+        width: 100%;
+    }
+    .icons{
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
 }
