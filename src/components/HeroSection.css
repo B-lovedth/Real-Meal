@@ -94,13 +94,24 @@
      
 }
 @media(max-width:600px){
+    .container{
+        padding:0;
+    }
+    .column-one{
+        width:auto;
+    }
     .column-two img{
         display: none;
-        height:20rem;
     }
     .mobile-header{
-        height:20rem;
-        display:flex;
+        display:block;
+    }
+    .mobile-header img{
+        height:10rem;
+        align-self: center;
+        justify-self: flex-start;
+        width:100%;
+        margin:0;
     }
     .main-header {
         display:none;
@@ -125,6 +136,5 @@
         align-items: center;
         justify-content: space-between;
          margin:0 auto;
-         /* margin-left: 60px; */
      }
 }
