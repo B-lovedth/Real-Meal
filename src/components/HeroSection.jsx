@@ -50,9 +50,9 @@ const ButtonOutline = styled.button`
   font-weight:400;
   cursor: pointer;
   &:hover{
-    background-color: #008000aa;
+    background-color: #008000c8;
     color: white;
-    border:1px solid #008000aa;
+    border:1px solid #008000c8;
     transition:all 350ms ease-in;
   }
   
