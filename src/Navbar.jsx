@@ -1,49 +1,78 @@
-// import { useState } from "react";
-import { Link,NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
-  // const [click, setClick] = useState(false);
-  const [isMobile , setIsMobile] = useState(false)
-  // const handleClick = () => {
-  //   setClick(!click);
-  // };
+  const [click, setClick] = useState(false);
+  const [isMobile , setisMobile] = useState(false)
+  const handleClick = () => {
+    setClick(!click);
+  };
 
-  // const closeMobileMenu = () => {
-  //   setClick(false);
-  // };
+  const closeMobileMenu = () => {
+    setClick(false);
+  };
 
-  // const showButton = () => {
-  //   if (window.innerWidth <= 960) {
-  //   } else {
-  //   }
-  // };
+  const confirmMobile = () =>{
+    if (window.innerWidth <= 1000) {
+      setisMobile(true)
+    }
+    else {
+      setisMobile(false)
+    }
+  }
+  window.addEventListener('resize',confirmMobile)
 
-  // window.addEventListener("resize", showButton);
-
-  // useEffect(() => {
-  //   showButton();
-  // }, []);
-
+  useEffect(() => {
+    confirmMobile()
+  },[])
   return (
     <div>
-      <nav className="nav-container">
-        <div>
-          <Link to='/'className="nav-logo">
-            My<span id="green">Recipe</span>
+      <nav className="navbar">
+        <div className="navbar-container">
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            My<span id='green'>Recipe</span>
           </Link>
+          <div className="menu-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars-staggered"}>icon </i>
+          </div>
+          <input type='t' ></input>
+          <div className={ click ? "nav-menu active" : "nav-menu"}>
+            <ul className='nav-list'>
+              <li className="nav-item">
+                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="/contact"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
+                >
+                  Contact
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="/cuisine"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
+                >
+                  Recipe
+                </Link>
+              </li>
+            </ul>
+            <span className="icons nav-item">
+              <i className="fas fa-facebook">F</i>
+              <i className="fas fa-twitter">T</i>
+              <i className="fas fa-github">G</i>
+            </span>
+          </div>
         </div>
-        <div className="nav-mobile">
-          active
-        </div>
-        <ul className="nav-items">
-          <li><NavLink to='/'>Home</NavLink></li>
-          <li><NavLink to='/services'>Contact</NavLink></li>
-          <li><NavLink to='/cuisine'>Recipes</NavLink></li>
-        </ul>
       </nav>
     </div>
-      );
+  );
 };
 
 export default Navbar;
