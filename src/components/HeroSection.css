@@ -11,8 +11,8 @@
 
 .container{
     max-height: 100%;
-    margin:auto 0;
-    padding-top:20rem;
+    margin:0;
+    padding-top:5rem;
     /* padding-bottom:10rem; */
 }
 .row{
@@ -43,5 +43,5 @@
 .sub-header p{
     font-size: 1.5rem;
     margin-bottom:1rem;
-    font-weight:500;
+    font-weight:600;
 }
