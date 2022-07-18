@@ -4,6 +4,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   // const [click, setClick] = useState(false);
+  const [isMobile , setIsMobile] = useState(false)
   // const handleClick = () => {
   //   setClick(!click);
   // };
@@ -27,8 +28,8 @@ const Navbar = () => {
   return (
     <div>
       <nav className="nav-container">
-        <div className="nav-logo">
-          <Link to='/'>
+        <div>
+          <Link to='/'className="nav-logo">
             My<span id="green">Recipe</span>
           </Link>
         </div>
@@ -36,9 +37,9 @@ const Navbar = () => {
           active
         </div>
         <ul className="nav-items">
-          <NavLink to='/'><li>Home</li></NavLink>
-          <NavLink to='/services'><li>Contact</li></NavLink>
-          <NavLink to='/cuisine'><li>Recipes</li></NavLink>
+          <li><NavLink to='/'>Home</NavLink></li>
+          <li><NavLink to='/services'>Contact</NavLink></li>
+          <li><NavLink to='/cuisine'>Recipes</NavLink></li>
         </ul>
       </nav>
     </div>
