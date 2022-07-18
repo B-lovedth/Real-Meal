@@ -93,10 +93,18 @@
     display:none;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
     .nav-item {
         position: relative;
         margin:40px 0;
+        width:100%;
+    }
+
+    .nav-list{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
     }
     
     .nav-menu {
@@ -111,7 +119,7 @@
     }
 
     .nav-menu.active {
-        background: #131212;
+        background: #131212ec;
         left: 0;
         top:0;
         z-index: 1;
@@ -119,22 +127,21 @@
         transition: all 0.5s ease;
         position: fixed;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .nav-links {
         text-align: center;
         color: #ffffff;
-        padding: 1rem;
-        margin:80px 0;
+        padding:0 4rem;
+        margin: 0;
         width: 100%;
         display: table;
     }
 
     .nav-links:hover {
-        background-color: #ffffff;
-        color: #ffffff;
-        border-radius: 0;
+        border-bottom: 2px solid #ffffff;
+        border-radius: 8px;
     }
 
     .navbar-logo {
@@ -144,10 +151,7 @@
         transform: translate(25%, 50%);
     }
 
-    .mobile-nav{
-        display:flex;
-        flex-direction: column;
-    }
+    
     .menu-icon {
         display: block;
         position: absolute;
@@ -164,32 +168,16 @@
         font-size: 2rem;
     }
 
-    .nav-links-mobile {
-        display: block;
-        text-align: center;
-        margin: 2rem auto;
-        border-radius: 4px;
-        width: 70%;
-        text-decoration: none;
-        font-size: 1.5rem;
-        background-color: transparent;
-        color: rgb(0, 0, 0);
-        padding: 14px 20px;
-        border: 1px solid #111010;
-        transition: all 0.3s ease-out;
-    }
-
-    .nav-links-mobile:hover {
-        background: #fff;
-        color: #242424;
-        transition: 250ms;
-    }
 
     .icons{
         left:0;
         display:flex;
         align-items:center;
-        justify-self:flex-end;
         color:white;
+        justify-content: space-evenly;
     }
+}
+
+@media(max-width:960px) {
+    
 }
