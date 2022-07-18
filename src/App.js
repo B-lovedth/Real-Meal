@@ -1,15 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
 import Category from "./components/Category";
 import Navbar from './Navbar'
-import LandingPage from "./components/LandingPage";
-import Pages from "./pages/Pages";
+import Pages from "./Pages";
 
 function App() {
   return (
     <div className="App">
-      {/* <Navbar/> */}
       <BrowserRouter>
-        <LandingPage/>
+        <Navbar/>
         <Category/>
         <Pages />
       </BrowserRouter>
