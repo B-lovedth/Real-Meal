@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import {GiHamburgerMenu , GiCrossMark ,GiKnifeFork} from 'react-icons/gi'
+import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa'
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -31,10 +33,10 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            My<span id='green'>Recipe</span>
+            My<span id='green'>Recipe</span><GiKnifeFork/>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars-staggered"}>icon </i>
+            {click ? <GiCrossMark/> : <GiHamburgerMenu/>}
           </div>
           <div className={ click ? "nav-menu active" : "nav-menu"}>
             <input type='text' class ></input>
@@ -64,9 +66,9 @@ const Navbar = () => {
               </li>
             </ul>
             <span className="icons nav-item">
-              <i className="fas fa-facebook">F</i>
-              <i className="fas fa-twitter">T</i>
-              <i className="fas fa-github">G</i>
+              <a href=""><FaLinkedin/></a>
+              <a href="twitter.com/B-lovedth"><FaTwitter/></a>
+              <a href="github.com/B-lovedth"><FaGithub/></a>
             </span>
           </div>
         </div>
