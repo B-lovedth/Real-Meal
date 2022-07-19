@@ -4,9 +4,8 @@
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    /* position: fixed; */
     width: 100%;
-    /* margin-top:5rem; */
+    margin-top:5rem;
 }
 
 .navbar-container {
@@ -27,14 +26,24 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 4rem;
-    font-weight: bolder;
-    font-family:cursive;
+    font-weight: 700;
     display: flex;
     align-items: center;
+    text-shadow: 5px 1px 5px #333 , 1px 1px 5px #333;
 }.navbar-logo #green{
-    color:green;
+    color:#00df34;
 }
 
+.nav-links.nav-recipe{
+    color:#fff;
+    background:#00df34;
+    border-radius:18px;
+    border: 2px solid #00df34;
+}.nav-links.nav-recipe:hover{
+    border:2px solid #00df34;
+    background: transparent;
+    color:#00df34;
+}
 
 .nav-menu {
     display: grid;
@@ -58,7 +67,7 @@
 }
 
 .nav-item {
-    height: 80px;
+    text-align: center;
 }
 
 .nav-links {
@@ -66,7 +75,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     height: 100%;
     font-size: 2rem;
     font-weight:700;
@@ -74,7 +83,7 @@
 }
 
 .nav-links:hover {
-    border-bottom: 5px solid green;
+    border-bottom: 5px solid #00df34;
     transition: all 0.1s ease-out;
 }
 
@@ -141,7 +150,7 @@
     }
 
     .nav-links:hover {
-        border-bottom: 2px solid green;
+        border-bottom: 2px solid #00df34;
         border-radius: 8px;
     }
 
@@ -153,7 +162,9 @@
         transform: translate(25%, 50%);
     }
 
-    
+.nav-links.nav-recipe {
+    padding:2rem 0;
+}
     .menu-icon {
         display: block;
         position: absolute;
