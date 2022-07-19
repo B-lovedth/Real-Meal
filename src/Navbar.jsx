@@ -58,7 +58,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   to="/cuisine"
-                  className="nav-links"
+                  className="nav-links nav-recipe"
                   onClick={closeMobileMenu}
                 >
                   Recipe
