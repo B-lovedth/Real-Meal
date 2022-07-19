@@ -126,6 +126,7 @@
         top:0;
         opacity: 0;
         padding-top: 30px;
+        overflow:hidden;
     }
 
     .nav-menu.active {
@@ -150,13 +151,13 @@
     }
 
     .nav-links:hover {
-        border-bottom: 3px solid #00df34;
+        border-bottom: 5px solid #00df34;
         border-radius: 8px;
     }
 
     .navbar-logo {
         position: absolute;
-        top: 0;
+        /* top: 0; */
         left: 0;
         font-size:3rem;
         transform: translate(25%, 50%);
@@ -203,5 +204,26 @@
     .icons{
         font-size: 1.5rem;
         margin-bottom: 40px;
+    }
+    .nav-links.nav-recipe {
+        padding:1rem 0;
+    }
+
+}
+@media(max-width:560px){
+    .navbar-container{
+        display:flex;
+        align-items: center;
+        justify-content:space-between;
+    }
+    .navbar{
+        margin:0;
+    }
+    .menu-icon{
+        font-size:2rem;
+    }
+    .navbar-logo{
+        font-size:2rem;
+        top:0;
     }
 }
