@@ -3,9 +3,8 @@
     font-family:'Monserrat',sans-serif
 }
 .body{
-    height: 100vh;
+    margin-bottom:9rem;
     width: 100%;
-    margin: 0 auto;
 }
 
 .container{
