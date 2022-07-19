@@ -70,10 +70,10 @@
     }
     .btn-wrapper button {
         padding: 10px 12px;
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     .column-one{
-        width:60%;
+        margin-left:2rem;
     }
 }
 @media(max-width:960px){
