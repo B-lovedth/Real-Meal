@@ -150,7 +150,7 @@
     }
 
     .nav-links:hover {
-        border-bottom: 2px solid #00df34;
+        border-bottom: 3px solid #00df34;
         border-radius: 8px;
     }
 
@@ -171,22 +171,15 @@
         top: 0;
         right: 0;
         transform: translate(-100%, 60%);
-        font-size: 1.8rem;
+        font-size: 3rem;
         cursor: pointer;
         transition: all 500ms ease;
     }
-
-    .fa-times {
-        color: #000000;
-        font-size: 2rem;
-    }
-
-
-    .icons{
+    .nav-item.icons{
         left:0;
         display:flex;
         align-items:center;
-        color:white;
+        color:#000000;
         justify-content: space-evenly;
     }
 }
