@@ -50,7 +50,7 @@
 }
 @media(max-width:1270px){
     .body{
-        width: 90%;
+        margin:0 auto;
     }
     .column-two img{
         height: 40rem;
@@ -71,6 +71,9 @@
     .btn-wrapper button {
         padding: 10px 12px;
         font-size: 1rem;
+    }
+    .column-one{
+        width:60%;
     }
 }
 @media(max-width:960px){
