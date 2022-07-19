@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import {GiHamburgerMenu , GiCrossMark ,GiKnifeFork} from 'react-icons/gi'
-import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa'
+import { FaLinkedin, FaTwitter, FaGithub,FaTimes } from 'react-icons/fa'
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -36,7 +36,7 @@ const Navbar = () => {
             My<span id='green'>Recipe</span><GiKnifeFork/>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
-            {click ? <GiCrossMark/> : <GiHamburgerMenu/>}
+            {click ? <FaTimes/> : <GiHamburgerMenu/>}
           </div>
           <div className={ click ? "nav-menu active" : "nav-menu"}>
             <input type='text' class ></input>
@@ -65,7 +65,7 @@ const Navbar = () => {
                 </Link>
               </li>
             </ul>
-            <span className="icons nav-item">
+            <span className="nav-item icons">
               <a href=""><FaLinkedin/></a>
               <a href="twitter.com/B-lovedth"><FaTwitter/></a>
               <a href="github.com/B-lovedth"><FaGithub/></a>
