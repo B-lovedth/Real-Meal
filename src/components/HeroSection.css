@@ -13,6 +13,7 @@
     margin:0;
     padding-top:5rem;
     /* padding-bottom:10rem; */
+    overflow: hidden;
 }
 .row{
     display:flex;
@@ -20,6 +21,7 @@
     justify-content: center;
     margin: auto;
     height:auto;
+    overflow:hidden;
 }
 
 .column-one{
@@ -68,7 +70,7 @@
         flex-direction: row;
     }
     .btn-wrapper button {
-        padding: 8px 10px;
+        padding: 10px 12px;
         font-size: 1rem;
     }
 }
