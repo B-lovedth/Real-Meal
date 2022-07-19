@@ -60,7 +60,7 @@ const Veggie = () => {
 }
 
 const Wrapper = styled.div`
-        margin: 4rem 8rem;
+        margin: 4rem 15rem;
         h3{
           text-align:center;
         }
@@ -68,11 +68,11 @@ const Wrapper = styled.div`
 
     const Card = styled.div`
         min-height: 25rem;
-        border-radius: 2rem;
+        border-radius: 3rem;
         overflow : hidden;
         position:relative;
         img{
-            border-radius:2rem;
+            border-radius:3rem;
             position:absolute;
             left:0;
             width:100%;
