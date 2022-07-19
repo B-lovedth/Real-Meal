@@ -59,7 +59,7 @@ const Popular = () => {
 }
 
 const Wrapper = styled.div`
-  margin: 4rem 0rem;
+  margin: 4rem 15rem;
   h3{
     text-align:center;
   }
