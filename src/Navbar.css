@@ -157,7 +157,7 @@
 
     .navbar-logo {
         position: absolute;
-        /* top: 0; */
+        top: 0;
         left: 0;
         font-size:3rem;
         transform: translate(25%, 50%);
