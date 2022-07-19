@@ -30,6 +30,6 @@ const Category = () => {
 const List = styled.div`
     display:flex;
     justify-content: center;
-    margin:2rem 0rem;
+    margin:1rem 0rem;
 `
 export default Category
