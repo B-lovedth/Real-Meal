@@ -35,23 +35,24 @@ const LandingPage = () => {
 }
 
 const ButtonBold = styled.button`
-  background-color: green;
-  border:1px solid green;
+  background-color: #00df34;
+  border:1px solid #00df34;
   color: white;
   border-radius: 5px;
   padding: 2rem 3rem;
   margin-right: 10px;
   font-size:2rem;
+  font-weight: 600;
   cursor: pointer;
 `
 const ButtonOutline = styled.button`
   background-color: white;
-  border:1px solid green;
-  color: green;
+  border:1px solid #00df34;
+  color: #00df34;
   border-radius:5px;
   padding:2rem 3rem;
   font-size:2rem;
-  font-weight:400;
+  font-weight:600;
   cursor: pointer;
   &:hover{
     background-color: #008000c8;
