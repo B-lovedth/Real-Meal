@@ -60,7 +60,10 @@ const Veggie = () => {
 }
 
 const Wrapper = styled.div`
-        margin: 4rem 0rem;
+        margin: 4rem 8rem;
+        h3{
+          text-align:center;
+        }
     `;
 
     const Card = styled.div`
@@ -86,7 +89,6 @@ const Wrapper = styled.div`
             width:100%;
             text-align: center;
             font-weight:600;
-
             font-size:1.5rem;
             height:40%;
             display:flex;
