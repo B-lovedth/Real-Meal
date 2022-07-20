@@ -1,12 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import {GiHamburgerMenu , GiCrossMark ,GiKnifeFork} from 'react-icons/gi'
-import { FaLinkedin, FaTwitter, FaGithub,FaTimes } from 'react-icons/fa'
+import {GiHamburgerMenu ,GiKnifeFork} from 'react-icons/gi'
+import { FaLinkedin, FaTwitter, FaGithub, FaTimes } from 'react-icons/fa'
+import {HashLink as Hlink} from 'react-router-hash-link'
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
-  const [isMobile , setisMobile] = useState(false)
+  // const [isMobile , setisMobile] = useState(false)
   const handleClick = () => {
     setClick(!click);
   };
@@ -15,19 +16,19 @@ const Navbar = () => {
     setClick(false);
   };
 
-  const confirmMobile = () =>{
-    if (window.innerWidth <= 1200) {
-      setisMobile(true)
-    }
-    else {
-      setisMobile(false)
-    }
-  }
-  window.addEventListener('resize',confirmMobile)
+  // const confirmMobile = () =>{
+  //   if (window.innerWidth <= 1200) {
+  //     setisMobile(true)
+  //   }
+  //   else {
+  //     setisMobile(false)
+  //   }
+  // }
+  // window.addEventListener('resize',confirmMobile)
 
-  useEffect(() => {
-    confirmMobile()
-  },[])
+  // useEffect(() => {
+  //   confirmMobile()
+  // },[])
   return (
     <div>
       <nav className="navbar">
@@ -56,19 +57,20 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link
-                  to="/cuisine"
+                <Hlink
+                  scroll
+                  to="/#popular"
                   className="nav-links nav-recipe"
                   onClick={closeMobileMenu}
                 >
                   Recipe
-                </Link>
+                </Hlink>
               </li>
             </ul>
             <span className="nav-item icons">
-              <Link pathname="https://www.linkedin.com/in/great-solomon-656397237/"><FaLinkedin/></Link>
-              <Link pathname="twitter.com/B_lovedth"><FaTwitter/></Link>
-              <Link pathname="github.com/B-lovedth"><FaGithub/></Link>
+              <Link target="blank" to={{pathname:"https://www.linkedin.com/in/great-solomon-656397237/"}}><FaLinkedin/></Link>
+              <Link target="blank" to={{pathname:"twitter.com/B_lovedth"}}><FaTwitter/></Link>
+              <Link target="blank" to={{pathname:"github.com/B-lovedth"}}><FaGithub/></Link>
             </span>
           </div>
         </div>
