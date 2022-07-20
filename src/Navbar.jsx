@@ -66,9 +66,9 @@ const Navbar = () => {
               </li>
             </ul>
             <span className="nav-item icons">
-              <a href=""><FaLinkedin/></a>
-              <a href="twitter.com/B-lovedth"><FaTwitter/></a>
-              <a href="github.com/B-lovedth"><FaGithub/></a>
+              <Link pathname="https://www.linkedin.com/in/great-solomon-656397237/"><FaLinkedin/></Link>
+              <Link pathname="twitter.com/B_lovedth"><FaTwitter/></Link>
+              <Link pathname="github.com/B-lovedth"><FaGithub/></Link>
             </span>
           </div>
         </div>
