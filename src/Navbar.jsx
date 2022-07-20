@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import {GiHamburgerMenu ,GiKnifeFork} from 'react-icons/gi'
@@ -7,7 +7,6 @@ import {HashLink as Hlink} from 'react-router-hash-link'
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
-  // const [isMobile , setisMobile] = useState(false)
   const handleClick = () => {
     setClick(!click);
   };
@@ -16,19 +15,7 @@ const Navbar = () => {
     setClick(false);
   };
 
-  // const confirmMobile = () =>{
-  //   if (window.innerWidth <= 1200) {
-  //     setisMobile(true)
-  //   }
-  //   else {
-  //     setisMobile(false)
-  //   }
-  // }
-  // window.addEventListener('resize',confirmMobile)
 
-  // useEffect(() => {
-  //   confirmMobile()
-  // },[])
   return (
     <div>
       <nav className="navbar">
@@ -59,7 +46,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <Hlink
                   scroll
-                  to="/#popular"
+                  to="#popular"
                   className="nav-links nav-recipe"
                   onClick={closeMobileMenu}
                 >
@@ -68,9 +55,9 @@ const Navbar = () => {
               </li>
             </ul>
             <span className="nav-item icons">
-              <Link target="blank" to={{pathname:"https://www.linkedin.com/in/great-solomon-656397237/"}}><FaLinkedin/></Link>
-              <Link target="blank" to={{pathname:"twitter.com/B_lovedth"}}><FaTwitter/></Link>
-              <Link target="blank" to={{pathname:"github.com/B-lovedth"}}><FaGithub/></Link>
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/great-solomon-656397237/"><FaLinkedin/></a>
+              <a target="_blank" rel="noreferrer" href="https://twitter.com/B_lovedth"><FaTwitter/></a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/B-lovedth"><FaGithub/></a>
             </span>
           </div>
         </div>
