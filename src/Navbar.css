@@ -170,7 +170,7 @@
     padding:2rem 0;
 }
     .menu-icon {
-        display: block;
+        display: inline;
         position: absolute;
         top: 0;
         right: 0;
