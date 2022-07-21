@@ -8,10 +8,12 @@ import styled from 'styled-components'
 function App() {
   return (
       <BrowserRouter>
+        <Navbar />
+        <Category />
         <Pages />
+          <Img src={Fixed} />
       </BrowserRouter>
     </div>
-    );
 }
 
 export default App;
