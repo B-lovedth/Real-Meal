@@ -17,9 +17,6 @@ const LandingPage = () => {
               <p>Wanna cook, but not sure how to go about it?</p>
               <p>Don't worry, we got you.</p>
             </div>
-            <div className="mobile-header">
-              <img src={Mobile} alt='pasta'/>
-            </div>
             <div className="btn-wrapper">
               <ButtonBold className="btn btn-one">Get started</ButtonBold>
               <ButtonOutline className="btn btn-two">Explore Menu</ButtonOutline>
