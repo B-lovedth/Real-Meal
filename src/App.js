@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import Pages from "./Pages";
 import styled from 'styled-components'
 import Fixed from "./imgFixed.png"
+import Fixed2 from "./fixed2.png"
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
         <Navbar />
         <Category />
         <Pages />
-          <Img src={Fixed} />
+        <Img src={Fixed} />
+        <Img2 src={ Fixed2 } />
       </BrowserRouter>
     </div>
   );
@@ -22,7 +24,16 @@ function App() {
 const Img = styled.img`
   position: fixed;
   right: 0;
-  top: 418px;
+  top: 490px;
+  z-index: -1;
+  height: 15rem;
+  filter: opacity(0.7);
+  -webkit-filter: opacity(0.7);
+`;
+const Img2 = styled.img`
+  position: fixed;
+  left: 0;
+  top: 200px;
   z-index: -1;
   height: 15rem;
   filter: opacity(0.7);
