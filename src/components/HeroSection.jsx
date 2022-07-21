@@ -10,6 +10,9 @@ const LandingPage = () => {
       <div className='container'>
         <div className="row">
           <div className="column-one">
+            <div className="mobile-header">
+              <img src={Mobile} alt='pasta'/>
+            </div>
             <div className="main-header">
               Let's get cooking<br/>with delicious recipies
             </div>
