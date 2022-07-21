@@ -174,7 +174,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(-100%, 60%);
+        margin: 1rem 1rem;
         font-size: 3rem;
         cursor: pointer;
         transition: all 500ms ease;
