@@ -162,7 +162,8 @@
         top: 0;
         left: 0;
         font-size:3rem;
-        transform: translate(25%, 50%);
+        margin: 1rem 1rem;
+        transition: all 500ms ease;
     }
 
 .nav-links.nav-recipe {
