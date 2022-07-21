@@ -31,5 +31,8 @@ const List = styled.div`
     display:flex;
     justify-content: center;
     margin:1rem 0rem;
+    h4{
+        font-size:0.7rem;
+    }
 `
 export default Category
