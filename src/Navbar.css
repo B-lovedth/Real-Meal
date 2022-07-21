@@ -193,8 +193,9 @@
         height:5rem;
     }
     .navbar-logo{
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: bolder;
+        transition: all 200ms ease;
     }
     .nav-links{
         font-size:1rem ;
