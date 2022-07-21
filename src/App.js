@@ -3,6 +3,7 @@ import Category from "./components/Category";
 import Navbar from './Navbar'
 import Pages from "./Pages";
 
+
 function App() {
   return (
     <div className="App">
