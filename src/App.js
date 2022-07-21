@@ -7,6 +7,7 @@ import styled from 'styled-components'
 
 function App() {
   return (
+    <div className='App'>
       <BrowserRouter>
         <Navbar />
         <Category />
@@ -14,6 +15,7 @@ function App() {
           <Img src={Fixed} />
       </BrowserRouter>
     </div>
+  );
 }
 
 export default App;
