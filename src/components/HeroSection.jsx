@@ -36,28 +36,28 @@ const LandingPage = () => {
 
 const ButtonBold = styled.button`
   background-color: #00df34;
-  border:3px solid #00df34;
+  border:2px solid #00df34;
   color: white;
   border-radius: 5px;
-  padding: 2rem 3rem;
+  padding: 1rem 2rem;
   margin-right: 10px;
-  font-size:2rem;
+  font-size:1rem;
   font-weight: 600;
   cursor: pointer;
 `
 const ButtonOutline = styled.button`
   background-color: white;
-  border:3px solid #00df34;
+  border:1px solid #00df34;
   color: #00df34;
   border-radius:5px;
-  padding:2rem 3rem;
-  font-size:2rem;
+  padding:1rem 2rem;
+  font-size:1rem;
   font-weight:600;
   cursor: pointer;
   &:hover{
     background-color: #008000c8;
     color: white;
-    border:2px solid #008000c8;
+    border:1px solid #008000c8;
     transition:all 350ms ease-in;
   }
   
@@ -65,6 +65,6 @@ const ButtonOutline = styled.button`
 const Img = styled.img`
   max-height:100%;
   width: 100%;
-  height:50rem;
+  height:25rem;
 `
 export default LandingPage
