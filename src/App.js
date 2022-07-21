@@ -18,4 +18,15 @@ function App() {
   );
 }
 
+const Img = styled.img`
+  position: fixed;
+  right: 0;
+  top: 418px;
+  z-index: -1;
+  height: 15rem;
+  filter: opacity(0.7);
+  -webkit-filter: opacity(0.7);
+`;
+
+
 export default App;
