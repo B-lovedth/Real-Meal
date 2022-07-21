@@ -21,7 +21,7 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            My<span id='green'>Recipe</span><GiKnifeFork/>
+            Make<span id='green'>Meal</span><GiKnifeFork/>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes/> : <GiHamburgerMenu/>}
