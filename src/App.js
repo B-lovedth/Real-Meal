@@ -7,8 +7,6 @@ import Pages from "./Pages";
 function App() {
   return (
       <BrowserRouter>
-        <Navbar/>
-        <Category/>
         <Pages />
       </BrowserRouter>
     </div>
