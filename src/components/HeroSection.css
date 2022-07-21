@@ -84,8 +84,8 @@
     }
      .column-two img {
          height: 30rem;
-         margin-top: -20rem;
-         margin-left: 10px;
+         margin-top: -10rem;
+         margin-left: 20px;
      }
 
      .main-header {
@@ -119,12 +119,10 @@
         margin:0;
     }
     .main-header {
-        display:none;
+        font-size:1.2rem;
     }
     .sub-header p{
         display: none;
-        font-size: 0.5rem;
-        font-weight: 50;
     }
     .column-one {
         text-align: center;
@@ -132,6 +130,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-left:0;
     }
      .btn-wrapper button {
          padding: 5px 10px;
