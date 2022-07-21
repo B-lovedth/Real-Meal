@@ -108,7 +108,9 @@
         margin:40px 0;
         width:100%;
     }
-
+    .navbar-container{
+        width:100%;
+    }
     .nav-list{
         display:flex;
         flex-direction:column;
