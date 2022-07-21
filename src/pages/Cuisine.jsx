@@ -32,4 +32,25 @@ function Cuisine() {
   )
 }
 
+const Grid = styled.div`
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap:3rem;
+`
+
+const Card = styled.div`
+        min-height: 25rem;
+        border-radius: 3rem;
+        overflow : hidden;
+        position:relative;
+        img{
+            border-radius:3rem;
+            position:absolute;
+            left:0;
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+`        
+
 export default Cuisine;
