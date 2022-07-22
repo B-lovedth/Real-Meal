@@ -73,11 +73,15 @@ const Card = styled.div`
             object-fit:cover;
         }
             position:absolute;
+            z-index:1;
             left:50%;
             bottom:0%;
+            color: #383838;
+            transform: translate(-50%,24%);
             width:100%;
             text-align: center;
             font-weight:600;
+            font-size:1rem;
             height:40%;
             display:flex;
             justify-content: center;
