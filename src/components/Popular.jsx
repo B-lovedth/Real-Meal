@@ -80,6 +80,13 @@ const Card = styled.div`
             height:100%;
             object-fit:cover;
         }
+        
+        `;
+
+const Gradient = styled.div`
+  z-index: 3;
+  position: absolute;
+  width:100%;
             position:absolute;
             z-index:1;
             left:50%;
