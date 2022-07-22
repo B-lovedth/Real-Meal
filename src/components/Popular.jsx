@@ -57,11 +57,16 @@ const Popular = () => {
 }
 
 const Wrapper = styled.div`
+  margin: 2rem 10rem;
+  overflow: hidden;
   h3{
     text-align:center;
+    font-size:1rem;
   }
   `;
 const Card = styled.div`
+  min-height: 14rem;
+  border-radius: 50%;
   overflow : hidden;
   position:relative;
         img{
