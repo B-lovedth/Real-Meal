@@ -46,10 +46,10 @@ const Veggie = () => {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
-                  <p>{recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title} />
                   <Gradient />
                 </Card>
+                  <P>{recipe.title}</P>
               </SplideSlide>
             )
           }
@@ -61,7 +61,7 @@ const Veggie = () => {
 }
 
 const Wrapper = styled.div`
-  margin: 3rem 10rem;
+  margin: 2rem 10rem;
   overflow: hidden;
   h3{
     text-align:center;
@@ -69,7 +69,7 @@ const Wrapper = styled.div`
   }
   `;
 const Card = styled.div`
-  min-height: 15rem;
+  min-height: 14rem;
   border-radius: 50%;
   overflow : hidden;
   position:relative;
@@ -81,22 +81,7 @@ const Card = styled.div`
             height:100%;
             object-fit:cover;
         }
-        p{
-            position:absolute;
-            z-index:1;
-            left:50%;
-            bottom:0%;
-            color: #383838;
-            transform: translate(-50%,70%);
-            width:100%;
-            text-align: center;
-            font-weight:600;
-            font-size:1rem;
-            height:40%;
-            display:flex;
-            justify-content: center;
-            align-items:center;
-        }
+        
         `;
 
 const Gradient = styled.div`
@@ -106,4 +91,21 @@ const Gradient = styled.div`
   height : 100%;
   background:linear-gradient(rgba(0,0,0,0) , rgba(0,0,0,0.5))
     `;
+
+const P = styled.p`
+            position:absolute;
+            z-index:1;
+            left:50%;
+            bottom:0%;
+            color: #383838;
+            transform: translate(-50%,24%);
+            width:100%;
+            text-align: center;
+            font-weight:600;
+            font-size:1rem;
+            height:40%;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+        `;
 export default Veggie
