@@ -37,8 +37,10 @@ const Veggie = () => {
           options={{
             perPage: 4,
             arrows: false,
+            pagination: false,
             drag: 'free',
             gap: '5rem',
+            height:"17rem",
           }}>
           {veggie.map((recipe) => {
             return (
@@ -59,7 +61,20 @@ const Veggie = () => {
 }
 
 const Wrapper = styled.div`
+  margin: 3rem 10rem;
+  overflow: hidden;
+  h3{
+    text-align:center;
+    font-size:1rem;
+  }
+  `;
+const Card = styled.div`
+  min-height: 15rem;
+  border-radius: 50%;
+  overflow : hidden;
+  position:relative;
         img{
+            border-radius:2rem;
             position:absolute;
             left:0;
             width:100%;
@@ -68,11 +83,15 @@ const Wrapper = styled.div`
         }
         p{
             position:absolute;
+            z-index:1;
             left:50%;
             bottom:0%;
+            color: #383838;
+            transform: translate(-50%,70%);
             width:100%;
             text-align: center;
             font-weight:600;
+            font-size:1rem;
             height:40%;
             display:flex;
             justify-content: center;
@@ -80,5 +99,11 @@ const Wrapper = styled.div`
         }
         `;
 
+const Gradient = styled.div`
+  z-index: 3;
+  position: absolute;
+  width:100%;
+  height : 100%;
+  background:linear-gradient(rgba(0,0,0,0) , rgba(0,0,0,0.5))
     `;
 export default Veggie
