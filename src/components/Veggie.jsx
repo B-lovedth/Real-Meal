@@ -60,17 +60,6 @@ const Veggie = () => {
 }
 
 const Wrapper = styled.div`
-        margin: 4rem 15rem;
-        h3{
-          text-align:center;
-        }
-    `;
-
-    const Card = styled.div`
-        min-height: 25rem;
-        border-radius: 3rem;
-        overflow : hidden;
-        position:relative;
         img{
             border-radius:3rem;
             position:absolute;
