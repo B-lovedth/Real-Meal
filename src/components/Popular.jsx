@@ -36,7 +36,6 @@ const Popular = () => {
           options={{
             perPage: 3,
             arrows: false,
-            pargination: false,
             drag: 'free',
             gap: '5rem',
           }}>
@@ -44,7 +43,6 @@ const Popular = () => {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
-                  <p>{recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title} />
                   <Gradient />
                 </Card>
@@ -59,14 +57,11 @@ const Popular = () => {
 }
 
 const Wrapper = styled.div`
-  margin: 4rem 15rem;
   h3{
     text-align:center;
   }
   `;
 const Card = styled.div`
-  min-height: 25rem;
-  border-radius: 2rem;
   overflow : hidden;
   position:relative;
         img{
@@ -77,7 +72,6 @@ const Card = styled.div`
             height:100%;
             object-fit:cover;
         }
-        p{
             position:absolute;
             z-index:10;
             left:50%;
