@@ -36,8 +36,10 @@ const Popular = () => {
           options={{
             perPage: 3,
             arrows: false,
+            pagination: false,
             drag: 'free',
             gap: '5rem',
+            height:"17rem",
           }}>
           {popular.map((recipe) => {
             return (
@@ -46,6 +48,7 @@ const Popular = () => {
                   <img src={recipe.image} alt={recipe.title} />
                   <Gradient />
                 </Card>
+                <P>{recipe.title}</P>
               </SplideSlide>
             )
           }
