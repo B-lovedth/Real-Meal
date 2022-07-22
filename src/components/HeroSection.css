@@ -8,6 +8,7 @@
 }
 
 .container{
+    max-height: 30rem;
     /* background: white; */
     margin:0 auto;
     padding-bottom:2rem;
@@ -42,6 +43,8 @@
 .sub-header p{
     font-size: 0.7rem;
     margin-bottom:0.5rem;
+    color: #383838;
+    font-weight:600;
 }
 .mobile-header{
     display: none;
