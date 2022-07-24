@@ -45,13 +45,13 @@
 }
 
 .nav-menu {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: 20px;
-    text-align: center;
-    /* width: 60vw; */
-    justify-content: space-evenly;
-    /* margin-right: 2rem; */
+    width:100%;
+}
+.nav-menu-wrapper{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .nav-list{
