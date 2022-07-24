@@ -123,8 +123,11 @@
         height:100%;
         width:80%;
         flex-direction:column;
-        width:50%;
-        height: 100vh;
+        padding-top: 30px;
+        overflow:hidden;
+        margin:0 auto;
+    }
+    .nav-menu{
         position: absolute;
         left: -400px;
         top:0;
