@@ -184,7 +184,7 @@
         cursor: pointer;
         transition: all 500ms ease;
     }
-    .nav-item.icons{
+    .nav-item-icons{
         left:0;
         display:flex;
         align-items:center;
