@@ -17,13 +17,13 @@ const Navbar = () => {
     setClick(false);
   };
 
-
   return (
     <div>
-      <nav className="navbar">
-        <div className="navbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            <GiKnifeFork/>Real<span id='green'>Meal</span>
+      <nav className='navbar'>
+        <div className='navbar-container'>
+          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+            <GiKnifeFork />
+            Real<span id='green'>Meal</span>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes/> : <GiHamburgerMenu/>}
