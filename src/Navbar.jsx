@@ -1,4 +1,4 @@
-import { useState , useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import {GiHamburgerMenu ,GiKnifeFork} from 'react-icons/gi'
@@ -21,7 +21,7 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            Make<span id='green'>Meal</span><GiKnifeFork/>
+            <GiKnifeFork/>Real<span id='green'>Meal</span>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes/> : <GiHamburgerMenu/>}
