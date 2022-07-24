@@ -66,15 +66,19 @@ const Navbar = () => {
                   rel='noreferrer'
                   href='https://www.linkedin.com/in/great-solomon-656397237/'
                 >
-                  Contact
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Hlink
-                  scroll
-                  to="#popular"
-                  className="nav-links nav-recipe"
-                  onClick={closeMobileMenu}
+                  <FaLinkedin />
+                </a>
+                <a
+                  target='_blank'
+                  rel='noreferrer'
+                  href='https://twitter.com/B_lovedth'
+                >
+                  <FaTwitter />
+                </a>
+                <a
+                  target='_blank'
+                  rel='noreferrer'
+                  href='https://github.com/B-lovedth'
                 >
                   Recipe
                 </Hlink>
