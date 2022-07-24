@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import {GiHamburgerMenu ,GiKnifeFork} from 'react-icons/gi'
-import { FaLinkedin, FaTwitter, FaGithub, FaTimes } from 'react-icons/fa'
-import {HashLink as Hlink} from 'react-router-hash-link'
+import { GiHamburgerMenu, GiKnifeFork } from "react-icons/gi";
+import { FaLinkedin, FaTwitter, FaGithub, FaTimes } from "react-icons/fa";
+import { HashLink as Hlink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
