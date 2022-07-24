@@ -80,15 +80,10 @@ const Navbar = () => {
                   rel='noreferrer'
                   href='https://github.com/B-lovedth'
                 >
-                  Recipe
-                </Hlink>
-              </li>
-            </ul>
-            <span className="nav-item icons">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/great-solomon-656397237/"><FaLinkedin/></a>
-              <a target="_blank" rel="noreferrer" href="https://twitter.com/B_lovedth"><FaTwitter/></a>
-              <a target="_blank" rel="noreferrer" href="https://github.com/B-lovedth"><FaGithub/></a>
-            </span>
+                  <FaGithub />
+                </a>
+              </span>
+            </div>
           </div>
         </div>
       </nav>
