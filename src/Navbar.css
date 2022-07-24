@@ -193,7 +193,7 @@
     }
     .nav-item-icons a{
         color:#000000;
-        justify-content: space-evenly;
+        font-size:2rem;
     }
 }
 
