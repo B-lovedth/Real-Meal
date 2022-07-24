@@ -62,7 +62,6 @@
     grid-gap: 25px;
     text-align: center;
     justify-content: space-evenly;
-    /* margin-right: 2rem; */
 }
 
 .nav-item {
@@ -82,7 +81,7 @@
 }
 
 .nav-links:hover {
-    border-bottom: 5px solid #00df34;
+    border-bottom: 2px solid #00df34;
     transition: all 0.1s ease-out;
 }
 
