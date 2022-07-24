@@ -133,8 +133,8 @@
         height: 100vh;
         top:0;
         opacity: 0;
-        padding-top: 30px;
-        overflow:hidden;
+        width:50%;
+
     }
 
     .nav-menu.active {
