@@ -116,7 +116,7 @@
         justify-content: center;
     }
     
-    .nav-menu {
+    .nav-menu-wrapper {
         display: flex;
         flex-direction:column;
         width:50%;
