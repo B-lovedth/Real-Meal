@@ -25,8 +25,8 @@ const Navbar = () => {
             <GiKnifeFork />
             Real<span id='green'>Meal</span>
           </Link>
-          <div className="menu-icon" onClick={handleClick}>
-            {click ? <FaTimes/> : <GiHamburgerMenu/>}
+          <div className='menu-icon' onClick={handleClick}>
+            {click ? <FaTimes /> : <GiHamburgerMenu />}
           </div>
           <div className={ click ? "nav-menu active" : "nav-menu"}>
             <input type='text' class ></input>
