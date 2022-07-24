@@ -28,19 +28,43 @@ const Navbar = () => {
           <div className='menu-icon' onClick={handleClick}>
             {click ? <FaTimes /> : <GiHamburgerMenu />}
           </div>
-          <div className={ click ? "nav-menu active" : "nav-menu"}>
-            <input type='text' class ></input>
-            <ul className='nav-list'>
-              <li className="nav-item">
-                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/contact"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
+          <div className={click ? "nav-menu active" : "nav-menu"}>
+            <div className='nav-menu-wrapper'>
+              <input
+                type='text'
+                className={click ? "nav-input-mobile" : "nav-input"}
+              />
+              <ul className='nav-list'>
+                <li className='nav-item'>
+                  <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                    Home
+                  </Link>
+                </li>
+                <li className='nav-item'>
+                  <Link
+                    to='/contact'
+                    className='nav-links'
+                    onClick={closeMobileMenu}
+                  >
+                    Contact
+                  </Link>
+                </li>
+                <li className='nav-item'>
+                  <Hlink
+                    scroll
+                    to='#popular'
+                    className='nav-links nav-recipe'
+                    onClick={closeMobileMenu}
+                  >
+                    Recipe
+                  </Hlink>
+                </li>
+              </ul>
+              <span className='nav-item-icons'>
+                <a
+                  target='_blank'
+                  rel='noreferrer'
+                  href='https://www.linkedin.com/in/great-solomon-656397237/'
                 >
                   Contact
                 </Link>
