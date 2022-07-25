@@ -110,7 +110,12 @@ const Card = styled.div`
         @media(max-width:420px){
           width:100%;
           height:5rem;
+          border-radius:0%;
+          img{
+            border-radius:0%;
+          }
         }
+        
         `;
 
 const Gradient = styled.div`
