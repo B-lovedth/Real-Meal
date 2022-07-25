@@ -66,6 +66,9 @@ const Wrapper = styled.div`
     text-align:center;
     font-size:1rem;
   }
+  @media(max-width:1200px) {
+    margin:2rem 3rem;
+  }
   `;
 const Card = styled.div`
   min-height: 14rem;
