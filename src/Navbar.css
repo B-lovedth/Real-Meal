@@ -198,12 +198,20 @@
         color:#000000;
         font-size:2rem;
     }
+    .nav-input-mobile {
+        display: flex;
+    }
+
+    .nav-input {
+        display: none;
+    }
 }
 
 @media(max-width:960px) {
     .navbar{
         height:5rem;
     }
+    
     .navbar-logo{
         font-size: 3rem;
         font-weight: bolder;
