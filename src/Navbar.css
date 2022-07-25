@@ -28,7 +28,7 @@
     font-weight: 800;
     display: flex;
     align-items: center;
-    text-shadow: -5px 8px 5px #504f4fe6;
+    /* text-shadow: -5px 8px 5px #504f4fe6; */
 }.navbar-logo #green{
     color:#00df34;
 }
