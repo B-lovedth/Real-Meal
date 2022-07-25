@@ -1,0 +1,37 @@
+.contact{
+    margin:0;
+    text-align:center;
+}
+.contact-container{
+    margin:5rem auto;
+}
+.contact-container h3{
+    font-size:3rem;
+    
+}
+.contact-container p{
+    font-size: 1.5rem;
+    margin:2rem auto;
+    color:#383838;
+}
+.contact-wrapper{
+    display :flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-wrapper a{
+    font-size:4rem;
+    margin:1rem 2rem;
+}
+@media(max-width:420px){
+
+    .contact-container h3 {
+        font-size: 2rem;
+    }
+    .contact-container p{
+        font-size:1rem;
+    }
+    .contact-wrapper a{
+        font-s1ze:3rem;
+    }
+}
