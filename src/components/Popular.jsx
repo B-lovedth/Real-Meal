@@ -98,8 +98,17 @@ const Card = styled.div`
             height:100%;
             object-fit:cover;
         }
-        @media(max-width:1200px){
-          width:5rem;
+        @media(max-width:760px){
+          width:7rem;
+          height:7rem;
+          border-radius:50%;
+          margin-bottom:2rem;
+          img{
+            border-radius:50%;
+          }
+        }
+        @media(max-width:420px){
+          width:100%;
           height:5rem;
         }
         `;
