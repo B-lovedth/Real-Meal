@@ -13,6 +13,7 @@
     margin:0 auto;
     padding-bottom:2rem;
     overflow: hidden;
+    width:100%;
 }
 .row{
     display:flex;
