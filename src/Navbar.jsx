@@ -32,7 +32,7 @@ const Navbar = () => {
             <div className='nav-menu-wrapper'>
               <input
                 type='text'
-                className={click ? "nav-input-mobile" : "nav-input"}
+                className="nav-input-mobile"
               />
               <ul className='nav-list'>
                 <li className='nav-item'>
