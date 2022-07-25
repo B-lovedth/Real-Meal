@@ -100,7 +100,9 @@
 .nav-item-icons{
     display:none;
 }
-
+.nav-input-mobile {
+    display: none;
+}
 @media screen and (max-width: 1200px) {
     .nav-item {
         position: relative;
