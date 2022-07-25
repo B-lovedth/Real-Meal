@@ -50,7 +50,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className='nav-item'>
-                  <Hlink
+                  <Link
                     scroll
                     to='#popular'
                     className='nav-links nav-recipe'
