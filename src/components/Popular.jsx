@@ -71,8 +71,9 @@ const Wrapper = styled.div`
   }
   `;
 const SSplide = styled(Splide)`
-  @media(max-width:900px) {
-    height:8rem;
+  @media (max-width: 760px) {
+    height: 10rem;
+    margin: 0 auto;
   }
   
 `;
@@ -84,12 +85,13 @@ const SSlide = styled(SplideSlide)`
 const Card = styled.div`
   max-height: 14rem;
   height:14rem;
-  width:14rem;
-  border-radius: 50%;
+  max-width:100%;
+  border-radius: 18px;
+  margin:0 auto;
   overflow : hidden;
   position:relative;
         img{
-            border-radius:50%;
+            border-radius:18px;
             position:absolute;
             left:0;
             width:100%;
