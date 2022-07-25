@@ -79,11 +79,14 @@
     font-size: 1rem;
     font-weight:700;
     margin-left:5px;
+    border-radius:18px;
 }
 
 .nav-links:hover {
     border-bottom: 2px solid #00df34;
     transition: all 0.1s ease-out;
+}.nav-links:active{
+    background: linear-gradient(to right, #21f239, #a3e940);
 }
 
 .fa-bars-staggered {
@@ -195,7 +198,6 @@
         width: 100%;
     }
     .nav-item-icons a{
-        color:#000000;
         font-size:2rem;
     }
     .nav-input-mobile {
