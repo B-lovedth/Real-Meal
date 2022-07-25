@@ -67,14 +67,20 @@ const Wrapper = styled.div`
     font-size:1rem;
   }
   @media(max-width:1200px) {
-    margin:2rem 3rem;
+    margin:2rem 1.5rem;
   }
   `;
 const SSplide = styled(Splide)`
   @media(max-width:900px) {
     height:8rem;
   }
-`
+  
+`;
+const SSlide = styled(SplideSlide)`
+  @media (max-width: 420px) {
+    width: 6rem ;
+  }
+`;
 const Card = styled.div`
   max-height: 14rem;
   height:14rem;
