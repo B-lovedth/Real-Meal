@@ -76,7 +76,9 @@ const SSplide = styled(Splide)`
   }
 `
 const Card = styled.div`
-  min-height: 14rem;
+  max-height: 14rem;
+  height:14rem;
+  width:14rem;
   border-radius: 50%;
   overflow : hidden;
   position:relative;
