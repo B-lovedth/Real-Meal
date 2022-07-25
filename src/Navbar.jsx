@@ -52,7 +52,7 @@ const Navbar = () => {
                 <li className='nav-item'>
                   <Link
                     scroll
-                    to='#popular'
+                    to='/cuisine'
                     className='nav-links nav-recipe'
                     onClick={closeMobileMenu}
                   >
