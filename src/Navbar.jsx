@@ -57,9 +57,10 @@ const Navbar = () => {
                     onClick={closeMobileMenu}
                   >
                     Recipe
-                  </Hlink>
+                  </Link>
                 </li>
               </ul>
+              <input type="text" className="nav-input"/>
               <span className='nav-item-icons'>
                 <a
                   target='_blank'
