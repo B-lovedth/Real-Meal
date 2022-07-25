@@ -22,7 +22,7 @@ const Category = () => {
             <SLink to="/cuisine/Japanese">
                 <GiChopsticks />
                 <h4>Japanese</h4>
-            </NavLink>
+            </SLink>
         </List>
     )
 }
