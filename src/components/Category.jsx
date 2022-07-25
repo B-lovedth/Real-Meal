@@ -7,11 +7,11 @@ import styled from 'styled-components'
 const Category = () => {
     return (
         <List>
-            <NavLink to="/cuisine/Italian">
+            <SLink to="/cuisine/Italian">
                 <FaPizzaSlice />
                 <h4>Italian</h4>
-            </NavLink>
-            <NavLink to="/cuisine/American">
+            </SLink>
+            <SLink to="/cuisine/American">
                 <FaHamburger />
                 <h4>American</h4>
             </NavLink>
