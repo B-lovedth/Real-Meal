@@ -70,6 +70,11 @@ const Wrapper = styled.div`
     margin:2rem 3rem;
   }
   `;
+const SSplide = styled(Splide)`
+  @media(max-width:900px) {
+    height:8rem;
+  }
+`
 const Card = styled.div`
   min-height: 14rem;
   border-radius: 50%;
