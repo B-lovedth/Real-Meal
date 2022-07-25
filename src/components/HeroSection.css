@@ -122,6 +122,7 @@
     }
     .main-header {
         font-size:1.2rem;
+        color:#383838;
     }
     .sub-header p{
         display: none;
@@ -135,7 +136,7 @@
         margin-left:0;
     }
      .btn-wrapper button {
-         padding: 5px 10px;
+         padding: 10px;
          font-size:1rem;
      }
      .btn-wrapper{
