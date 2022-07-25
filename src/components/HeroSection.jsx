@@ -35,16 +35,16 @@ const LandingPage = () => {
 }
 
 const ButtonBold = styled.button`
-  background-color: #00df34;
-  border:2px solid #00df34;
+  background: linear-gradient(to right, #00df34, #40e94e);
+  border: 2px solid #00df34;
   color: white;
   border-radius: 5px;
   padding: 1rem 2rem;
   margin-right: 10px;
-  font-size:1rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-`
+`;
 const ButtonOutline = styled.button`
   background-color: white;
   border:1px solid #00df34;
