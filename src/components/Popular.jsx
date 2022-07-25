@@ -32,7 +32,7 @@ const Popular = () => {
     <div>
       <Wrapper>
         <h3>Popular Picks</h3>
-        <Splide
+        <SSplide
           options={{
             perPage: 3,
             arrows: false,
@@ -53,7 +53,7 @@ const Popular = () => {
             )
           }
           )}
-        </Splide>
+        </SSplide>
       </Wrapper>
     </div>
   )
