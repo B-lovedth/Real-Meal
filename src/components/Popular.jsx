@@ -43,13 +43,13 @@ const Popular = () => {
           }}>
           {popular.map((recipe) => {
             return (
-              <SplideSlide key={recipe.id}>
+              <SSlide key={recipe.id}>
                 <Card>
                   <img src={recipe.image} alt={recipe.title} />
                   <Gradient />
                 </Card>
                 <P>{recipe.title}</P>
-              </SplideSlide>
+              </SSlide>
             )
           }
           )}
