@@ -83,14 +83,17 @@ const Card = styled.div`
   overflow : hidden;
   position:relative;
         img{
-            border-radius:2rem;
+            border-radius:50%;
             position:absolute;
             left:0;
             width:100%;
             height:100%;
             object-fit:cover;
         }
-        
+        @media(max-width:1200px){
+          width:5rem;
+          height:5rem;
+        }
         `;
 
 const Gradient = styled.div`
