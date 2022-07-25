@@ -1,3 +1,4 @@
+import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -31,6 +32,6 @@ const Contact = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Contact
+export default Contact;
