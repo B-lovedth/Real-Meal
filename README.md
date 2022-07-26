@@ -1,2 +1,2 @@
-# Food recipe react app
+# Food recipe and cuisine app built with Reactjs 
 
