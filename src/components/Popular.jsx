@@ -109,7 +109,7 @@ const Card = styled.div`
         }
         @media(max-width:420px){
           width:100%;
-          height:6rem;
+          height:5rem;
           border-radius:8px;
           img{
             border-radius:8px;
