@@ -67,7 +67,21 @@ const Wrapper = styled.div`
     text-align: center;
     font-size: 1rem;
   }
-  `;
+  @media (max-width: 1200px) {
+    margin: 2rem 1.5rem;
+  }
+`;
+const SSplide = styled(Splide)`
+  @media (max-width: 760px) {
+    height: 10rem;
+    margin: 0 auto;
+  }
+`;
+const SSlide = styled(SplideSlide)`
+  @media (max-width: 420px) {
+    width: 6rem;
+  }
+`;
 const Card = styled.div`
   min-height: 14rem;
   border-radius: 50%;
