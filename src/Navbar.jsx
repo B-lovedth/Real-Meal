@@ -51,11 +51,11 @@ const Navbar = () => {
                 <li className='nav-item'>
                   <Link
                     scroll
-                    to='/cuisine'
+                    to='/cuisines'
                     className='nav-links nav-recipe'
                     onClick={closeMobileMenu}
                   >
-                    Recipe
+                    Cuisine
                   </Link>
                 </li>
               </ul>
