@@ -83,20 +83,39 @@ const SSlide = styled(SplideSlide)`
   }
 `;
 const Card = styled.div`
-  min-height: 14rem;
-  border-radius: 50%;
-  overflow : hidden;
-  position:relative;
-        img{
-            border-radius:2rem;
-            position:absolute;
-            left:0;
-            width:100%;
-            height:100%;
-            object-fit:cover;
-        }
-        
-        `;
+  max-height: 14rem;
+  height: 14rem;
+  max-width: 100%;
+  border-radius: 18px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  img {
+    border-radius: 18px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media (max-width: 760px) {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    img {
+      border-radius: 50%;
+    }
+  }
+  @media (max-width: 420px) {
+    width: 100%;
+    height: 5rem;
+    border-radius: 0%;
+    img {
+      border-radius: 0%;
+    }
+  }
+`;
 
 const Gradient = styled.div`
   z-index: 3;
