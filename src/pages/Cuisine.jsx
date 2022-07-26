@@ -13,15 +13,10 @@ function Cuisine() {
         getCuisine(params.type)
     }, [params.type]);
     
-    const getCuisine = (name) => {
-        fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`)
-            .then((res) => {
-                res.json()
-                // console.log(res.json())
-            })
-            .then((data) => {
-                setCuisine(data.results)
-            })
+    const getCuisine = async(name) => {
+        fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=12`)
+            .then((res) => res.json())
+            .then((data) => setCuisine(data.results))
             .catch((err)=>console.log(err.message))
     }
 
