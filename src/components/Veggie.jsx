@@ -35,7 +35,7 @@ const Veggie = () => {
         <h3>Vegetarian Picks</h3>
         <SSplide
           options={{
-            perPage: 4,
+            perPage: 3,
             arrows: false,
             pagination: false,
             drag: 'free',
@@ -75,6 +75,7 @@ const SSplide = styled(Splide)`
   @media (max-width: 760px) {
     height: 10rem;
     margin: 0 auto;
+    /* gap:3rem; */
   }
 `;
 const SSlide = styled(SplideSlide)`
