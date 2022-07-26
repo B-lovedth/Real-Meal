@@ -44,5 +44,13 @@ const Grid = styled.div`
 const StyledLink = styled(Link)`
   font-weight:600;  
   text-decoration:none;
+  &:hover{
+    color:#00df34;
+    font-weight:800;
+  }
+  &:active{
+    color:white;
+    background: linear-gradient(to right, #21f239, #a3e940);
+  }
 `
 export default SCuisine
