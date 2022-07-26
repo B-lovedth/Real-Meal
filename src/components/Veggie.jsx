@@ -33,7 +33,7 @@ const Veggie = () => {
      <div>
       <Wrapper>
         <h3>Vegetarian Picks</h3>
-        <Splide
+        <SSplide
           options={{
             perPage: 4,
             arrows: false,
@@ -54,7 +54,6 @@ const Veggie = () => {
             )
           }
           )}
-        </Splide>
       </Wrapper>
     </div>
   )
