@@ -126,19 +126,19 @@ const Gradient = styled.div`
 `;
 
 const P = styled.p`
-            position:absolute;
-            z-index:1;
-            left:50%;
-            bottom:0%;
-            color: #383838;
-            transform: translate(-50%,24%);
-            width:100%;
-            text-align: center;
-            font-weight:600;
-            font-size:0.8rem;
-            height:40%;
-            display:flex;
-            justify-content: center;
-            align-items:center;
-        `;
+  position: absolute;
+  z-index: 1;
+  bottom: 0%;
+  color: #383838;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 760px) {
+    top: 0;
+  }
+`;
 export default Veggie
