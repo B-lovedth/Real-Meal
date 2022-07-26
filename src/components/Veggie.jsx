@@ -54,6 +54,7 @@ const Veggie = () => {
             )
           }
           )}
+        </SSplide>
       </Wrapper>
     </div>
   )
