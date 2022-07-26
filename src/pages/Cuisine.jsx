@@ -24,11 +24,11 @@ function Cuisine() {
     <Grid>
         {cuisine.map((item) => {
             return (
-                <Card>
-                    <Link>
+                <Card key={item.id}>
+                    <div>
                         <img src={item.image} alt={item.title} />
                         <h4>{item.title}</h4>
-                    </Link>
+                    </div>
               </Card>
           )
       })}
@@ -38,8 +38,9 @@ function Cuisine() {
 
 const Grid = styled.div`
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap:3rem;
+    grid-template-columns:repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap:1.5rem;
+    margin: 2rem 3rem;
 `
 
 const Card = styled.div`
