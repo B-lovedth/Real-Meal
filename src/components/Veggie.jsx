@@ -63,9 +63,9 @@ const Veggie = () => {
 const Wrapper = styled.div`
   margin: 2rem 10rem;
   overflow: hidden;
-  h3{
-    text-align:center;
-    font-size:1rem;
+  h3 {
+    text-align: center;
+    font-size: 1rem;
   }
   `;
 const Card = styled.div`
