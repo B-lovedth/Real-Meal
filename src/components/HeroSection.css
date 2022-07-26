@@ -86,7 +86,7 @@
     }
      .column-two img {
          height: 30rem;
-         margin-top: -10rem;
+         margin-top: 0;
          margin-left: 20px;
      }
 
@@ -98,7 +98,10 @@
          font-size: 1rem;
          font-weight: 100;
      }
-     
+     .btn-wrapper button {
+         padding: 10px 12px;
+         font-size: 1rem;
+     }
 }
 @media(max-width:600px){
     .container{
@@ -118,7 +121,7 @@
         align-self: center;
         justify-self: flex-start;
         width:100%;
-        margin:0;
+        margin-top:2rem;
     }
     .main-header {
         font-size:1.2rem;

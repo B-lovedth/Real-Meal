@@ -79,7 +79,7 @@
     font-size: 1rem;
     font-weight:700;
     margin-left:5px;
-    border-radius:18px;
+    /* border-radius:18px; */
 }
 
 .nav-links:hover {
@@ -87,6 +87,7 @@
     transition: all 0.1s ease-out;
 }.nav-links:active{
     background: linear-gradient(to right, #21f239, #a3e940);
+    border-radius:18px;
 }
 
 .fa-bars-staggered {
@@ -136,7 +137,7 @@
     .nav-menu{
         position: absolute;
         left: -400px;
-        height: 100vh;
+        height: 100%;
         top:0;
         opacity: 0;
         width:50%;
@@ -192,6 +193,7 @@
     }
     .nav-item-icons{
         left:0;
+        top:0;
         display:flex;
         align-items:center;
         justify-content: space-between;
@@ -215,9 +217,12 @@
     }
     
     .navbar-logo{
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: bolder;
         transition: all 200ms ease;
+    }
+    .menu-icon{
+        font-size:2rem;
     }
     .nav-links{
         font-size:1rem ;
@@ -246,10 +251,10 @@
         margin:0;
     }
     .menu-icon{
-        font-size:2rem;
+        font-size:1.5rem;
     }
     .navbar-logo{
-        font-size:2rem;
+        font-size:1.5rem;
         top:0;
     }
     .nav-item-icons{

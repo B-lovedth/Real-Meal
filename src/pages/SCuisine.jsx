@@ -43,10 +43,11 @@ const Grid = styled.div`
 
 const StyledLink = styled(Link)`
   font-weight:600;  
+  padding:1rem 3rem;
   text-decoration:none;
+  border-radius:18px;
   &:hover{
     color:#00df34;
-    font-weight:800;
   }
   &:active{
     color:white;

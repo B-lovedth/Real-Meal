@@ -27,8 +27,8 @@ const Img = styled.img`
   top: 490px;
   z-index: -1;
   height: 15rem;
-  filter: opacity(0.7);
-  -webkit-filter: opacity(0.7);
+  filter: opacity(0.4);
+  -webkit-filter: opacity(0.4);
 `;
 const Img2 = styled.img`
   position: fixed;
@@ -36,8 +36,8 @@ const Img2 = styled.img`
   top: 0;
   z-index: -1;
   height: 15rem;
-  filter: opacity(0.6);
-  -webkit-filter: opacity(0.7);
+  filter: opacity(0.4);
+  -webkit-filter: opacity(0.4);
 `;
 
 

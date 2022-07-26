@@ -4,7 +4,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { GiHamburgerMenu, GiKnifeFork } from "react-icons/gi";
-import { FaLinkedin, FaTwitter, FaGithub, FaTimes } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaGithub, FaTimes, FaWhatsapp } from "react-icons/fa";
+import Search from "./components/Search";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -50,7 +51,6 @@ const Navbar = () => {
                 </li>
                 <li className='nav-item'>
                   <Link
-                    scroll
                     to='/cuisines'
                     className='nav-links nav-recipe'
                     onClick={closeMobileMenu}
@@ -59,7 +59,7 @@ const Navbar = () => {
                   </Link>
                 </li>
               </ul>
-              <input type="text" className="nav-input"/>
+              <Search/>
               <span className='nav-item-icons'>
                 <a
                   target='_blank'
@@ -81,6 +81,13 @@ const Navbar = () => {
                   href='https://github.com/B-lovedth'
                 >
                   <FaGithub />
+                </a>
+                <a
+                  target='_blank'
+                  rel='noreferrer'
+                  href='https://wa.me/+2348109882351'
+                >
+                  <FaWhatsapp />
                 </a>
               </span>
             </div>

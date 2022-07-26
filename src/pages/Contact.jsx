@@ -1,4 +1,4 @@
-import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaGithub , FaWhatsapp } from "react-icons/fa";
 import "./Contact.css"
 
 const Contact = () => {
@@ -29,6 +29,13 @@ const Contact = () => {
             href='https://github.com/B-lovedth'
           >
             <FaGithub />
+          </a>
+          <a
+            target='_blank'
+            rel='noreferrer'
+            href='https://wa.me/+2348109882351'
+          >
+            <FaWhatsapp />
           </a>
         </div>
       </div>
