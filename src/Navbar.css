@@ -30,17 +30,17 @@
     align-items: center;
     /* text-shadow: -5px 8px 5px #504f4fe6; */
 }.navbar-logo #green{
-    color:#02830b;
+    color:#e45710;
 }
 
 .nav-links.nav-recipe{
-    color:#02830b;
+    color:#e45710;
     border:2px solid transparent;
     border-radius:18px;
 }.nav-links.nav-recipe:hover{
-    border:2px solid #02830b;
+    border:2px solid #e45710;
     background: transparent;
-    color:#02830b;
+    color:#e45710;
 }
 
 .nav-menu {
@@ -82,7 +82,7 @@
 }
 
 .nav-links:hover {
-    color: #02830b;
+    color: #e45710;
     transition: all 0.1s ease-out;
 }.nav-links:active{
     background: linear-gradient(to right, #21f239, #a3e940);
@@ -146,7 +146,7 @@
     }
 
     .nav-menu.active {
-        background: #caffceee;
+        background: linear-gradient(to right, #ffa31d , #ef5454);
         left: 0;
         top:0;
         z-index: 1;
