@@ -29,7 +29,6 @@ const Popular = () => {
       }
   }
   return (
-    <div>
       <Wrapper>
         <h3>Popular Picks</h3>
         <SSplide
@@ -38,8 +37,7 @@ const Popular = () => {
             arrows: false,
             pagination: false,
             drag: 'free',
-            gap: '5rem',
-            height:"17rem",
+            gap: '4rem',
           }}>
           {popular.map((recipe) => {
             return (
@@ -55,7 +53,6 @@ const Popular = () => {
           )}
         </SSplide>
       </Wrapper>
-    </div>
   )
 }
 
@@ -67,19 +64,20 @@ const Wrapper = styled.div`
     font-size:1rem;
   }
   @media(max-width:1200px) {
-    margin:2rem 1.5rem;
+    margin:1rem 1.5rem;
   }
   `;
 const SSplide = styled(Splide)`
   @media (max-width: 760px) {
-    height: 10rem;
     margin: 0 auto;
   }
-  
+  @media screen and (max-width: 420px) {
+    gap:2rem;
+  }
 `;
 const SSlide = styled(SplideSlide)`
-  @media (max-width: 420px) {
-    width: 6rem ;
+  @media screen and (max-width: 420px) {
+    ul{height: 100%;}
   }
 `;
 const Card = styled.div`
@@ -99,12 +97,12 @@ const Card = styled.div`
             object-fit:cover;
         }
         @media(max-width:760px){
-          width:7rem;
+          width:100%;
           height:7rem;
-          border-radius:50%;
+          border-radius:8px;
           margin-bottom:2rem;
           img{
-            border-radius:50%;
+            border-radius:8px;
           }
         }
         @media(max-width:420px){
@@ -127,7 +125,7 @@ const Gradient = styled.div`
     `;
 
 const P = styled.p`
-            position:absolute;
+            position:relative;
             z-index:1;
             bottom:0%;
             color: #383838;
