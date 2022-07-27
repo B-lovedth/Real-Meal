@@ -39,7 +39,7 @@ const Veggie = () => {
             arrows: false,
             pagination: false,
             drag: 'free',
-            gap: '5rem',
+            gap: '4rem',
             height:"17rem",
           }}>
           {veggie.map((recipe) => {
