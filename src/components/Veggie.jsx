@@ -68,19 +68,22 @@ const Wrapper = styled.div`
     font-size: 1rem;
   }
   @media (max-width: 1200px) {
-    margin: 2rem 1.5rem;
+    margin: 1rem 1.5rem;
   }
 `;
 const SSplide = styled(Splide)`
   @media (max-width: 760px) {
-    height: 10rem;
     margin: 0 auto;
-    /* gap:3rem; */
+  }
+  @media screen and (max-width: 420px) {
+    gap: 2rem;
   }
 `;
 const SSlide = styled(SplideSlide)`
-  @media (max-width: 420px) {
-    width: 6rem;
+  @media screen and (max-width: 420px) {
+    ul {
+      height: 100%;
+    }
   }
 `;
 const Card = styled.div`
@@ -100,20 +103,20 @@ const Card = styled.div`
     object-fit: cover;
   }
   @media (max-width: 760px) {
-    width: 7rem;
+    width: 100%;
     height: 7rem;
-    border-radius: 50%;
+    border-radius: 8px;
     margin-bottom: 2rem;
     img {
-      border-radius: 50%;
+      border-radius: 8px;
     }
   }
   @media (max-width: 420px) {
     width: 100%;
     height: 5rem;
-    border-radius: 0%;
+    border-radius: 8px;
     img {
-      border-radius: 0%;
+      border-radius: 8px;
     }
   }
 `;
@@ -125,9 +128,8 @@ const Gradient = styled.div`
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
-
 const P = styled.p`
-  position: absolute;
+  position: relative;
   z-index: 1;
   bottom: 0%;
   color: #383838;
