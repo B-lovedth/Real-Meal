@@ -30,10 +30,10 @@ const Navbar = () => {
           </div>
           <div className={click ? "nav-menu active" : "nav-menu"}>
             <div className='nav-menu-wrapper'>
-              <input
+              {/* <input
                 type='text'
                 className="nav-input-mobile"
-              />
+              /> */}
               <ul className='nav-list'>
                 <li className='nav-item'>
                   <Link to='/' className='nav-links' onClick={closeMobileMenu}>
