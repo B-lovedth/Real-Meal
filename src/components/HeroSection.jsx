@@ -35,8 +35,8 @@ const LandingPage = () => {
 }
 
 const ButtonBold = styled.button`
-  background: linear-gradient(to right, #00df34, #40e94e);
-  border: 2px solid #00df34;
+  background: linear-gradient(to right, #e45710, #ef5454);
+  border: 2px solid #e45710;
   color: white;
   border-radius: 5px;
   padding: 1rem 2rem;
@@ -47,17 +47,17 @@ const ButtonBold = styled.button`
 `;
 const ButtonOutline = styled.button`
   background-color: white;
-  border:1px solid #00df34;
-  color: #00df34;
+  border:1px solid #e45710;
+  color: #e45710;
   border-radius:5px;
   padding:1rem 2rem;
   font-size:1rem;
   font-weight:600;
   cursor: pointer;
   &:hover{
-    background-color: #008000c8;
+    background-color: #e45710;
     color: white;
-    border:1px solid #008000c8;
+    border:1px solid #e45710;
     transition:all 350ms ease-in;
   }
   
