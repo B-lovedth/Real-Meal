@@ -61,7 +61,7 @@
     grid-template-columns: repeat(3, auto);
     grid-gap: 25px;
     text-align: center;
-    margin:0 6rem;
+    margin:0 11rem;
     justify-content: space-evenly;
 }
 
