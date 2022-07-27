@@ -6,9 +6,15 @@
     font-family: 'Montserrat',sans-serif;
 }
 body{
-    background-color:#d7ebd4;
+    background:linear-gradient(to bottom right , #f3f3f3 ,#a38772, #f6905d );
     min-width:320px;
+}@media(max-width:1200px){
+    body{
+    background:linear-gradient(to bottom right, #f3f3f3, #f6c7b0, #f6905d);
+
+    }
 }
+
 h4{
     font-size:1rem ;
     color: #383838;
