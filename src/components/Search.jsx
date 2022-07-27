@@ -10,7 +10,6 @@ const Search = () => {
 }
 
 const StyleForm = styled.form`
-    /* margin: 0 10rem; */
     position: relative;
     width: 100%;
     input{
@@ -29,6 +28,13 @@ const StyleForm = styled.form`
         top:50%;
         left:0%;
         transform:translate(100%, -50%);
+    }
+    @media(max-width:1200px){
+        margin :0 auto;
+        width:100%;
+        input{
+            width:100%;
+        }
     }
 `
 export default Search
