@@ -235,7 +235,7 @@
     }
     .nav-item-icons a{
         font-size: 1.5rem;
-        margin-bottom: 40px;
+        bottom: 0;
     }
     .nav-links.nav-recipe {
         padding:1rem 0;
