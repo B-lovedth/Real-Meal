@@ -247,9 +247,13 @@
         display:flex;
         align-items: center;
         justify-content:space-between;
+        width:80%;
     }
     .navbar{
         margin:0;
+    }
+    .nav-menu-wrapper{
+        height:90%;
     }
     .menu-icon{
         font-size:1.5rem;
@@ -259,8 +263,13 @@
         top:0;
     }
     .nav-item-icons a{
-        margin-top:-3rem;
         font-size:1.3rem;
     }
-
+    .nav-list{
+        margin:5rem 0;
+        width:100%;
+    }
+    .nav-links{
+        padding: 1rem 0;
+    }
 }
