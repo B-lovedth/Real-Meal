@@ -10,7 +10,7 @@ const Search = () => {
 }
 
 const StyleForm = styled.form`
-    margin: 0 10rem;
+    /* margin: 0 10rem; */
     position: relative;
     width: 100%;
     input{
@@ -19,7 +19,7 @@ const StyleForm = styled.form`
         background: #fff;
         font-size:0.75rem;
         color:white;
-        padding:0.5rem 1.5rem;
+        padding:0.5rem 2.5rem;
         border:none;
         border-radius:1rem;
         outline:none;
