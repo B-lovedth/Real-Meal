@@ -35,7 +35,7 @@ const LandingPage = () => {
 }
 
 const ButtonBold = styled.button`
-  background: linear-gradient(to right, #e45710, #ef5454);
+  background: linear-gradient(to right, #f66117, #ef5454);
   border: 2px solid #e45710;
   color: white;
   border-radius: 5px;
