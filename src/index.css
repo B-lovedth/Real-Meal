@@ -6,7 +6,7 @@
     font-family: 'Montserrat',sans-serif;
 }
 body{
-    background:linear-gradient(to bottom right , #f3f3f3 ,#a38772, #f6905d );
+    background:linear-gradient(to bottom right , #f3f3f3 ,#fba15d, #f58147 );
     min-width:320px;
 }@media(max-width:1200px){
     body{
