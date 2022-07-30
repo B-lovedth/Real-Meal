@@ -84,6 +84,7 @@ const Card = styled.div`
   max-height: 14rem;
   height:14rem;
   max-width:100%;
+  box-shadow: -5px 8px 5px #504f4fe6;
   border-radius: 18px;
   margin:0 auto;
   overflow : hidden;
