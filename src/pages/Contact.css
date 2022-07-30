@@ -1,12 +1,15 @@
 .contact{
     margin:0;
     text-align:center;
+    height:100vh;
 }
 .contact-container{
     margin:5rem auto;
+    height:100%;
 }
 .contact-container h3{
     font-size:3rem;
+    color:#333;
     
 }
 .contact-container p{
@@ -22,6 +25,9 @@
 .contact-wrapper a{
     font-size:4rem;
     margin:1rem 2rem;
+}
+.contact-wrapper a:hover {
+    color: #e45710;
 }
 @media(max-width:420px){
 
