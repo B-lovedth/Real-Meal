@@ -40,12 +40,12 @@ const SLink = styled(NavLink)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  border-radius: 30%;
   margin-right: 2rem;
   text-decoration: none;
-  background: linear-gradient(35deg, #5c5b5b, #313131);
-  width: 4rem;
-  height: 4rem;
+  background: linear-gradient(35deg, #404040, #e45710);
+  width: 3.5rem;
+  height: 3.5rem;
   cursor: pointer;
   transform: scale(0.8);
 
@@ -61,7 +61,7 @@ const SLink = styled(NavLink)`
     background: linear-gradient(to right, #e45710, #ef5454);
   }
   &:hover {
-    background: linear-gradient(35deg, #2a2a2a, #7c7b7b);
+    background: linear-gradient(35deg, #f0532c, #7c7b7b);
     transition: all 900ms ease-in;
   }
   @media (max-width: 1200px) {
