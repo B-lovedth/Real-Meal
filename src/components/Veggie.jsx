@@ -90,6 +90,7 @@ const Card = styled.div`
   max-height: 14rem;
   height: 14rem;
   max-width: 100%;
+  box-shadow: -5px 8px 5px #504f4fe6;
   border-radius: 18px;
   margin: 0 auto;
   overflow: hidden;
@@ -136,6 +137,7 @@ const P = styled.p`
   width: 100%;
   text-align: center;
   font-weight: 600;
+  margin-top: 1rem;
   font-size: 0.8rem;
   display: flex;
   justify-content: center;
