@@ -130,6 +130,7 @@ const P = styled.p`
             z-index:1;
             bottom:0%;
             color: #383838;
+            margin-top:1rem;
             width:100%;
             text-align: center;
             font-weight:600;
