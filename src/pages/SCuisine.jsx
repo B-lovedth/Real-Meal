@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const SCuisine = () => {
   return (
-    <Sdiv >
+    <Sdiv>
+      <Title>Available Cuisines</Title>
       <Grid>
         <StyledLink to='/cuisine/African'>African</StyledLink>
         <StyledLink to='/cuisine/American'>American</StyledLink>
@@ -42,12 +43,18 @@ const Grid = styled.div`
   height:100%;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-gap: 1.5rem;
-  margin: 4rem 3rem;
+  margin: 5.4rem 3rem;
   text-align:center;
 `;
-
+const Title = styled.h3`
+  text-align: center;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing:0.5px;
+`;
 const StyledLink = styled(Link)`
   font-weight: 600;
+  color:#1a1a1a;
   padding: 1rem 3rem;
   text-decoration: none;
   border-radius: 18px;
