@@ -35,12 +35,9 @@
 
 .nav-links.nav-recipe{
     color:#e45710;
-    border:2px solid transparent;
     border-radius:18px;
 }.nav-links.nav-recipe:hover{
-    border:2px solid #e45710;
-    background: transparent;
-    color:#e45710;
+    color:#ffede3;
 }
 
 .nav-menu {
@@ -82,17 +79,14 @@
 }
 
 .nav-links:hover {
-    color: #e45710;
+    color: #ffede3;
     transition: all 0.1s ease-out;
 }.nav-links:active{
-    background: linear-gradient(to right, #21f239, #a3e940);
+    background: linear-gradient(to bottom right, #e45710, #f10e0e);
     border-radius:18px;
     color:#f3f3f3;
 }
 
-.fa-bars-staggered {
-    color: rgb(0, 0, 0);
-}
 
 .nav-links-mobile {
     display: none;
@@ -177,6 +171,7 @@
 
 .nav-links.nav-recipe {
     padding:2rem 0;
+    color:#1a1a1a;
 }
     .menu-icon {
         display: inline;
@@ -198,6 +193,11 @@
     }
     .nav-item-icons a{
         font-size:2rem;
+    }
+
+    .nav-item-icons a:hover {
+        color: #ffede3;
+        transition: all 0.1s ease-out;
     }
     .nav-input-mobile {
         display: flex;
@@ -262,7 +262,7 @@
         font-size:1.3rem;
     }
     .nav-list{
-        margin:5rem auto;
+        /* margin:5rem auto; */
         width:100%;
     }
     .nav-links{
