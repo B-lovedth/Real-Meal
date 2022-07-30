@@ -58,12 +58,12 @@ const SLink = styled(NavLink)`
     font-size: 1.5rem;
   }
   &.active {
-    background: linear-gradient(to right, #21f239, #a3e940);
+    background: linear-gradient(to right, #e45710, #ef5454);
   }
   &:hover {
     background: linear-gradient(35deg, #2a2a2a, #7c7b7b);
     transition: all 900ms ease-in;
-}
+  }
   @media (max-width: 1200px) {
     width: 3rem;
     height: 3rem;
@@ -75,8 +75,8 @@ const SLink = styled(NavLink)`
       font-size: 1rem;
     }
   }
-  @media (max-width:700px){
-    display:none;
+  @media (max-width: 700px) {
+    display: none;
   }
 `;
 export default Category
