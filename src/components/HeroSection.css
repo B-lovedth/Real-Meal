@@ -52,12 +52,12 @@
     display: none;
 }
 
-@media(max-width:1270px){
+@media(max-width:1200px){
     .body{
         margin:0 auto;
     }
     .column-two img{
-        height: 40rem;
+        height: 100%;
         margin-top: -20rem;
         margin-left:10px;
     }
