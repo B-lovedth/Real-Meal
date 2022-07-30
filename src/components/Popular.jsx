@@ -34,7 +34,7 @@ const Popular = () => {
         <SSplide
           options={{
             perPage: 3,
-            arrows: false,
+            arrows: true,
             pagination: false,
             drag: 'free',
             gap: '4rem',
