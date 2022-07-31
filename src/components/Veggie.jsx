@@ -37,10 +37,13 @@ const Veggie = () => {
           options={{
             perPage: 3,
             arrows: false,
+            type: 'loop',
+            autoplay: true,
+            pauseOnHover: false,
+            resetProgress: false,
             pagination: false,
             drag: 'free',
             gap: '4rem',
-            height:"17rem",
           }}>
           {veggie.map((recipe) => {
             return (
