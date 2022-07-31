@@ -9,16 +9,21 @@ function Cuisine() {
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
     const [cuisine, setCuisine] = useState([])
+    const [itemNum , setItemNum ] = useState(12)
     let params = useParams()
     useEffect(() => {
         console.log(params.type)
         getCuisine(params.type)
     }, [params.type]);
-    
+  const handleClick = () => {
+    if (itemNum < 20) {
+        
+      }
+    }
     const getCuisine = async (name) => {
         const abortCont = new AbortController()
         fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=12`,
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=${itemNum}`,
           { signal: abortCont.signal }
         )
             .then((res) => {
@@ -38,20 +43,25 @@ function Cuisine() {
         return ()=> abortCont.abort()
     }
 
-    return (
-        <Grid>
-            {isPending && <H3>Loading...</H3>}
-            {error && <H3>{ error }</H3>}
-            {cuisine && (cuisine.map((item) => {
-                return (
-                    <Card key={item.id}>
-                            <img src={item.image} alt={item.title} />
-                            <h4>{item.title}</h4>
-                    </Card>
-            )
-        }))}
-    </Grid>
-  )
+  return (
+    <>
+      <Ch3>{ params.type} Cuisines</Ch3>
+      <Grid>
+        {isPending && <H3>Loading...</H3>}
+        {error && <H3>{error}</H3>}
+        {cuisine &&
+          cuisine.map((item) => {
+            return (
+              <Card key={item.id}>
+                <img src={item.image} alt={item.title} />
+                <h4>{item.title}</h4>
+              </Card>
+            );
+          })}
+      </Grid>
+      <MoreBtn onClick={handleClick}/>
+    </>
+  );
 }
 
 const Grid = styled.div`
@@ -61,9 +71,17 @@ const Grid = styled.div`
     margin: 2rem 3rem;
     height:100%;
 `
+const MoreBtn = styled.button`
+`
 const H3 = styled.h3`
     text-align: center;
     height:53.5vh;
+`
+const Ch3 = styled.h4`
+  font-family: 'Calistoga', cursive;
+  text-align:center;
+  margin-top:1rem;
+  font-size:2rem;
 `
 const Card = styled.div`
   img {
