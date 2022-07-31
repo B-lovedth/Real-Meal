@@ -29,22 +29,23 @@ const Popular = () => {
       }
   }
   return (
-      <Wrapper>
-        <h3>Popular Picks</h3>
-        <SSplide
-          options={{
-            perPage: 3,
-            type:'loop',
-            arrows: true,
-            pagination: false,
-            autoplay:true,
-            pauseOnHover: true,
-            resetProgress:false,
-            drag: 'free',
-            gap: '4rem',
-          }}>
-          {popular.map((recipe) => {
-            return (
+    <Wrapper>
+      <h3>Popular Picks</h3>
+      <SSplide
+        options={{
+          perPage: 3,
+          type: "loop",
+          arrows: false,
+          pagination: false,
+          autoplay: true,
+          pauseOnHover: false,
+          resetProgress: false,
+          drag: "free",
+          gap: "4rem",
+        }}
+      >
+        {popular.map((recipe) => {
+          return (
               <SSlide key={recipe.id}>
                 <Card>
                   <img src={recipe.image} alt={recipe.title} />
@@ -52,12 +53,11 @@ const Popular = () => {
                 </Card>
                 <P>{recipe.title}</P>
               </SSlide>
-            )
-          }
-          )}
-        </SSplide>
-      </Wrapper>
-  )
+          );
+        })}
+      </SSplide>
+    </Wrapper>
+  );
 }
 
 const Wrapper = styled.div`
