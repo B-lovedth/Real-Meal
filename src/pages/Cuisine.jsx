@@ -66,17 +66,18 @@ const H3 = styled.h3`
     height:53.5vh;
 `
 const Card = styled.div`
-        img{
-            width: 100%;
-            border-radius:2rem;
-        }
-        a{
-            text-decoration: none;
-        }
-        h4{
-            text-align:center;
-            padding:1rem;
-        }
-`        
+  img {
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: -5px 8px 5px #504f4fe6;
+  }
+  a {
+    text-decoration: none;
+  }
+  h4 {
+    text-align: center;
+    padding: 1rem;
+  }
+`;        
 
 export default Cuisine;
