@@ -48,9 +48,11 @@ const Grid = styled.div`
 `;
 const Title = styled.h3`
   text-align: center;
+  font-family: 'Calistoga', cursive;
+  font-size:2rem;
   font-weight: 600;
   color: #1a1a1a;
-  letter-spacing:0.5px;
+  letter-spacing:1.5px;
 `;
 const StyledLink = styled(Link)`
   font-weight: 600;
