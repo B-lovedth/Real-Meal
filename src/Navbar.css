@@ -124,7 +124,7 @@
         align-items: center;
         justify-content: space-between;
         height:100%;
-        width:80%;
+        width:90%;
         flex-direction:column;
         padding-top: 30px;
         overflow:hidden;
@@ -155,7 +155,7 @@
 
     .nav-links {
         text-align: center;
-        color: #1a1a1a;
+        color: #333;
         font-weight:700;
         padding:0 4rem;
         margin: 0;
@@ -179,7 +179,7 @@
 
 .nav-links.nav-recipe {
     padding:2rem 0;
-    color:#1a1a1a;
+    color:#333;
 }
     .menu-icon {
         display: inline;
