@@ -45,8 +45,8 @@ function Cuisine() {
     }
 
   return (
-    <>
-      <Ch3>{ params.type} Cuisines</Ch3>
+    <Full>
+      <Ch3>{params.type} Cuisines</Ch3>
       <Grid>
         {isPending && <H3>Loading...</H3>}
         {error && <H3>{error}</H3>}
@@ -61,7 +61,8 @@ function Cuisine() {
           })}
       </Grid>
       <MoreBtn onClick={HandleClick}>More</MoreBtn>
-    </>
+
+    </Full>
   );
 }
 
@@ -72,12 +73,17 @@ const Grid = styled.div`
     margin: 2rem 3rem;
     height:100%;
 `
-const MoreBtn = styled.button`
-padding:2rem;
-right:0;
-positon:absolute;
-
+const Full = styled.div`
+  height:100%
 `
+const MoreBtn = styled.button`
+  padding: 0.5rem 1rem;
+  right: 0;
+  position: absolute;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right, #f66117, #ef5454);
+`;
 const H3 = styled.h3`
     text-align: center;
     height:53.5vh;
