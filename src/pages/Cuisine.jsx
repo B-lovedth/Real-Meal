@@ -15,11 +15,12 @@ function Cuisine() {
         console.log(params.type)
         getCuisine(params.type)
     }, [params.type]);
-  const handleClick = () => {
+  const HandleClick = () => {
     if (itemNum < 20) {
-        
+      setItemNum(itemNum + 4)
       }
-    }
+    getCuisine(params.type);
+  }
     const getCuisine = async (name) => {
         const abortCont = new AbortController()
         fetch(
@@ -37,7 +38,7 @@ function Cuisine() {
             })
             .catch((err) => {
                 console.log(err.message)
-                setError(err.message)
+                setError("Unable to fetch, Check your Network connection");
                 setIsPending(false)
             });
         return ()=> abortCont.abort()
@@ -59,7 +60,7 @@ function Cuisine() {
             );
           })}
       </Grid>
-      <MoreBtn onClick={handleClick}/>
+      <MoreBtn onClick={HandleClick}/>
     </>
   );
 }

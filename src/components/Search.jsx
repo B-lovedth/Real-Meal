@@ -2,9 +2,11 @@ import styled from 'styled-components'
 import { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 const Search = () => {
+  const [input , setInput] = useState('')
   return (
     <StyleForm>
-      <input type="text" placeholder="search"/>
+      <FaSearch/>
+      <input type="text"  placeholder="search"/>
     </StyleForm>
   )
 }
