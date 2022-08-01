@@ -3,7 +3,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat',Tahoma;
 }
 body{
     background:linear-gradient(to bottom right , #f3f3f3 ,#fba15d, #f58147 );

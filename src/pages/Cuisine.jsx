@@ -60,7 +60,7 @@ function Cuisine() {
             );
           })}
       </Grid>
-      <MoreBtn onClick={HandleClick}/>
+      <MoreBtn onClick={HandleClick}>More</MoreBtn>
     </>
   );
 }
@@ -73,6 +73,10 @@ const Grid = styled.div`
     height:100%;
 `
 const MoreBtn = styled.button`
+padding:2rem;
+right:0;
+positon:absolute;
+
 `
 const H3 = styled.h3`
     text-align: center;
