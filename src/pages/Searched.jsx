@@ -19,7 +19,7 @@ const Searched = () => {
         )
             .then((res) => {
                 if(!res.ok) throw Error('Unable to fetch, Check your Network connection') 
-                else return console.log(res.json())
+                else return (res.json())
             })
             .then((data) => {
                 setSearchedRec(data.results)
