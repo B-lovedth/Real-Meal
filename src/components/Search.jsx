@@ -3,10 +3,13 @@ import { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 const Search = () => {
   const [input , setInput] = useState('')
+  const submitHandler = (e) => {
+    e.preventDefault()
+  }
   return (
-    <StyleForm>
+    <StyleForm onSubmit={submitHandler}>
       <FaSearch/>
-      <input type="text"  placeholder="search"/>
+      <input type="text" onChange={(e) => setInput(e.target.value)} value={input} placeholder="search" />
     </StyleForm>
   )
 }
