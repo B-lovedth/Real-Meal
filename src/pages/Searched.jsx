@@ -7,6 +7,7 @@ const Searched = () => {
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
     const [searchedRec, setSearchedRec] = useState([]);
+    const [found , setFound] = useState(null)  
     let params = useParams()
     useEffect(() => {
         getSearched(params.search)
@@ -21,10 +22,14 @@ const Searched = () => {
                 if(!res.ok) throw Error('Unable to fetch, Check your Network connection') 
                 else return (res.json())
             })
-            .then((data) => {
-                setSearchedRec(data.results)
-                setIsPending(false)
-                setError(null)
+          .then((data) => {
+            if (data.results === []) setFound(false)
+            else {
+              setSearchedRec(data.results)
+              setIsPending(false)
+              setError(null)
+              setFound(null)
+            }
             })
             .catch((err) => {
                 console.log(err.message)
@@ -38,6 +43,7 @@ const Searched = () => {
         <Grid>
           {isPending && <H3>Loading...</H3>}
           {error && <H3>{error}</H3>}
+          {found && <H3>Not Available..T_T</H3>}
           {searchedRec &&
             searchedRec.map((item) => {
               return (
