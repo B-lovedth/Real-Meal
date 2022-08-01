@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
 import { FaSearch } from 'react-icons/fa'
 import {useNavigate} from 'react-router-dom'
 const Search = () => {
@@ -10,17 +10,20 @@ const Search = () => {
     if (input === "") {
       e.preventDefault();
       setError("No input");
-    } else if (!isNaN(input)) {
-      e.preventDefault();
-      setError("invalid input");
+      console.log(input+1)
+    }
+    else if (!isNaN(input)) { 
+      e.preventDefault()
+      console.log("a number")
+      setError('Invalid input2')
     } else {
       e.preventDefault();
-      setError('')
+      setError("");
       navigate(`/searched/${input}`);
     } 
   }
   return (
-    <div>
+    <Div>
       <StyleForm onSubmit={submitHandler}>
         <Button type='submit'>
           <FaSearch />
@@ -33,10 +36,12 @@ const Search = () => {
         />
       </StyleForm>
       <Error>{error}</Error>
-    </div>
+    </Div>
   );
 }
-
+const Div = styled.div`
+  width:100%
+`
 const Error = styled.h6`
   text-align: center;
   color:red;
@@ -50,6 +55,7 @@ const StyleForm = styled.form`
   width: 100%;
   input {
     border: none;
+    width:100%;
     background: #f3f3f3;
     font-size: 0.75rem;
     font-weight:600;

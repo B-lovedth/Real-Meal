@@ -19,7 +19,7 @@ const Searched = () => {
         )
             .then((res) => {
                 if(!res.ok) throw Error('Unable to fetch, Check your Network connection') 
-                else return res.json()
+                else return console.log(res.json())
             })
             .then((data) => {
                 setSearchedRec(data.results)
@@ -34,7 +34,7 @@ const Searched = () => {
         return ()=> abortCont.abort()
     }
     return (
-      <>
+      <div>
         <Grid>
           {isPending && <H3>Loading...</H3>}
           {error && <H3>{error}</H3>}
@@ -48,7 +48,7 @@ const Searched = () => {
               );
             })}
         </Grid>
-      </>
+      </div>
     );
      }
   
@@ -59,16 +59,13 @@ const Grid = styled.div`
   margin: 2rem 3rem;
   height: 100%;
 `;
-const MoreBtn = styled.button``;
+
 const H3 = styled.h3`
-  text-align: center;
-  height: 53.5vh;
-`;
-const Ch3 = styled.h4`
   font-family: "Calistoga", cursive;
   text-align: center;
   margin-top: 1rem;
   font-size: 2rem;
+  height:58.5vh;
 `;
 const Card = styled.div`
   img {

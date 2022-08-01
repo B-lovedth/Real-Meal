@@ -44,7 +44,8 @@ const Veggie = () => {
             pagination: false,
             drag: 'free',
             gap: '4rem',
-          }}>
+          }}
+        >
           {veggie.map((recipe) => {
             return (
               <SSlide key={recipe.id}>

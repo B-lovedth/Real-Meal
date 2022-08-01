@@ -74,7 +74,7 @@ const Grid = styled.div`
     height:100%;
 `
 const Full = styled.div`
-  height:100%
+  height:100%;
 `
 const MoreBtn = styled.button`
   padding: 0.5rem 1rem;

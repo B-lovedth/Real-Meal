@@ -157,7 +157,7 @@
         text-align: center;
         color: #333;
         font-weight:700;
-        padding:0 4rem;
+        padding:1rem 4rem;
         margin: 0;
         width: 100%;
         display: table;
@@ -178,7 +178,6 @@
     }
 
 .nav-links.nav-recipe {
-    padding:2rem 0;
     color:#333;
 }
     .menu-icon {
@@ -237,12 +236,16 @@
         margin: 10px 0;
         width: 100%;
     }
+    .nav-item-icons{
+        width:90%;
+    }
     .nav-item-icons a{
         font-size: 1.5rem;
         bottom: 0;
     }
-    .nav-links.nav-recipe {
-        padding:1rem 0;
+    
+    .nav-item{
+        padding:1rem 2rem;
     }
 
 }
