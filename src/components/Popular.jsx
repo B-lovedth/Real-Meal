@@ -30,7 +30,7 @@ const Popular = () => {
   }
   return (
     <Wrapper>
-      <h3>Popular Picks</h3>
+      <h3 id='popular'>Popular Picks</h3>
       <SSplide
         options={{
           perPage: 3,
@@ -86,40 +86,43 @@ const SSlide = styled(SplideSlide)`
 `;
 const Card = styled.div`
   max-height: 14rem;
-  height:14rem;
-  max-width:100%;
+  height: 14rem;
+  max-width: 100%;
   box-shadow: -5px 8px 5px #504f4fe6;
   border-radius: 18px;
-  margin:0 auto;
-  overflow : hidden;
-  position:relative;
-        img{
-            border-radius:18px;
-            position:absolute;
-            left:0;
-            width:100%;
-            height:100%;
-            object-fit:cover;
-        }
-        @media(max-width:760px){
-          width:100%;
-          height:7rem;
-          border-radius:8px;
-          margin-bottom:2rem;
-          img{
-            border-radius:8px;
-          }
-        }
-        @media(max-width:420px){
-          width:100%;
-          height:5rem;
-          border-radius:8px;
-          img{
-            border-radius:8px;
-          }
-        }
-        
-        `;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  img {
+    border-radius: 18px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &:hover {
+    transform: scale(1.1);
+    transition: all 500ms ease;
+  }
+  @media (max-width: 760px) {
+    width: 100%;
+    height: 7rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    img {
+      border-radius: 8px;
+    }
+  }
+  @media (max-width: 420px) {
+    width: 100%;
+    height: 5rem;
+    border-radius: 8px;
+    img {
+      border-radius: 8px;
+    }
+  }
+`;
 
 const Gradient = styled.div`
   z-index: 3;
