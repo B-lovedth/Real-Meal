@@ -74,6 +74,10 @@ const Grid = styled.div`
     grid-gap:1.5rem;
     margin: 2rem 3rem;
     height:100%;
+    @media(max-width:960px){
+    grid-template-columns:repeat(auto-fit, minmax(6rem, 1fr));
+    margin:2rem 1rem;
+    }
 `
 const Full = styled.div`
   height:100%;
