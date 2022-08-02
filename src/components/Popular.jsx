@@ -1,5 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import { useEffect, useState } from "react"
+import {Link} from 'react-router-dom'
 import styled from "styled-components"
 import '@splidejs/react-splide/css';
 
@@ -45,13 +46,15 @@ const Popular = () => {
       >
         {popular.map((recipe) => {
           return (
-              <SSlide key={recipe.id}>
+            <SSlide key={recipe.id}>
+              <SLink to={`/recipe/${recipe.id}`}>
                 <Card>
                   <img src={recipe.image} alt={recipe.title} />
                   <Gradient />
                 </Card>
                 <P>{recipe.title}</P>
-              </SSlide>
+              </SLink>
+            </SSlide>
           );
         })}
       </SSplide>
@@ -83,6 +86,9 @@ const SSlide = styled(SplideSlide)`
     ul{height: 100%;}
   }
 `;
+const SLink = styled(Link)`
+  text-decoration:none;
+`
 const Card = styled.div`
   max-height: 14rem;
   height: 14rem;
@@ -142,6 +148,7 @@ const P = styled.p`
             font-weight:600;
             font-size:0.8rem;
             display:flex;
+            text-decoration:none;
             justify-content: center;
             align-items:center;
             @media(max-width:760px){
