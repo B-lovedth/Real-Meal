@@ -1,5 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 import styled from "styled-components"
 import '@splidejs/react-splide/css';
 
@@ -48,13 +49,15 @@ const Veggie = () => {
           {veggie.map((recipe) => {
             return (
               <SSlide key={recipe.id}>
-                <Card>
-                  <img src={recipe.image} alt={recipe.title} />
-                  <Gradient />
-                </Card>
+                <SLink to={`/recipe/${recipe.id}`}>
+                  <Card>
+                    <img src={recipe.image} alt={recipe.title} />
+                    <Gradient />
+                  </Card>
                   <P>{recipe.title}</P>
+                </SLink>
               </SSlide>
-            )
+            );
           }
           )}
         </SSplide>
@@ -88,6 +91,9 @@ const SSlide = styled(SplideSlide)`
       height: 100%;
     }
   }
+`;
+const SLink = styled(Link)`
+  text-decoration: none;
 `;
 const Card = styled.div`
   max-height: 14rem;
@@ -138,6 +144,7 @@ const Gradient = styled.div`
 `;
 const P = styled.p`
   position: relative;
+  text-decoration:none;
   z-index: 1;
   bottom: 0%;
   color: #383838;
