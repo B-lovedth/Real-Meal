@@ -34,7 +34,6 @@ const Popular = () => {
       <SSplide
         options={{
           perPage: 3,
-          type: "loop",
           arrows: false,
           pagination: false,
           autoplay: true,
