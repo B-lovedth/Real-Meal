@@ -9,11 +9,11 @@ body{
     background:linear-gradient(to bottom right , #f3f3f3 ,#fba15d, #f58147 );
     background-attachment:fixed ;
     min-width:320px;
-    height:100%;
+    height:100vh;
 }@media(max-width:1200px){
     body{
     background:linear-gradient(to bottom right, #f3f3f3, #f6c7b0, #f6905d);
-
+    background-attachment:fixed;
     }
 }
 
