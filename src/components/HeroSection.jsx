@@ -3,35 +3,45 @@ import "./HeroSection.css"
 import Dish from './pasta.png'
 import Mobile from './mobile.png'
 import styled from 'styled-components'
+import { HashLink } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
   return (
-    <div className="body">
+    <div className='body'>
       <div className='container'>
-        <div className="row">
-          <div className="column-one">
-            <div className="mobile-header">
-              <img src={Mobile} alt='pasta'/>
+        <div className='row'>
+          <div className='column-one'>
+            <div className='mobile-header'>
+              <img src={Mobile} alt='pasta' />
             </div>
-            <div className="main-header">
-              Let's get cooking<br/>with delicious recipies
+            <div className='main-header'>
+              Let's get cooking
+              <br />
+              with delicious recipies
             </div>
-            <div className="sub-header">
+            <div className='sub-header'>
               <p>Wanna cook, but not sure how to go about it?</p>
               <p>Don't worry, we got you.</p>
             </div>
-            <div className="btn-wrapper">
-              <ButtonBold className="btn btn-one">Get started</ButtonBold>
-              <ButtonOutline className="btn btn-two">Explore Menu</ButtonOutline>
+            <div className='btn-wrapper'>
+              <Link to='/cuisines'>
+                <ButtonBold className='btn btn-one'>Get started</ButtonBold>
+              </Link>
+              <HashLink smooth to='/#popular'>
+                <ButtonOutline className='btn btn-two'>
+                  Explore Menu
+                </ButtonOutline>
+              </HashLink>
             </div>
           </div>
-          <div className="column-two">
-            <Img src={Dish} alt="dish" />
+          <div className='column-two'>
+            <Img src={Dish} alt='dish' />
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const ButtonBold = styled.button`
