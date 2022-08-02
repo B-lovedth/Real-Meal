@@ -21,7 +21,8 @@ function Cuisine() {
       }
     // getCuisine(params.type);
   }
-    const getCuisine = async (name) => {
+  
+  const getCuisine = async (name) => {
         const abortCont = new AbortController()
         fetch(
           `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=${itemNum}`,
@@ -46,10 +47,8 @@ function Cuisine() {
 
   return (
     <Full>
-      <Ch3>{params.type} Cuisines</Ch3>
+      {cuisine && <Ch3>{params.type} Cuisines</Ch3>}
       <Grid>
-        {isPending && <H3>Loading...</H3>}
-        {error && <H3>{error}</H3>}
         {cuisine &&
           cuisine.map((item) => {
             return (
@@ -60,10 +59,11 @@ function Cuisine() {
             );
           })}
       </Grid>
-      {/* <div style={{width:'80%', position:'relative'}}> */}
-        <MoreBtn onClick={HandleClick}>More</MoreBtn>
-      {/* </div> */}
-
+      {isPending && <H3>Loading...</H3>}
+      {error && <H3>{error}</H3>}
+      <div style={{ width: "90%", position: "relative" }}>
+        {cuisine && <MoreBtn onClick={HandleClick}>More</MoreBtn>}
+      </div>
     </Full>
   );
 }
@@ -91,10 +91,10 @@ const MoreBtn = styled.button`
 `;
 const H3 = styled.h3`
     text-align: center;
-    height:53.5vh;
+    /* height:53.5vh; */
 `
 const Ch3 = styled.h4`
-  font-family: 'Calistoga', cursive;
+  font-family: 'Calistoga';
   text-align:center;
   margin-top:1rem;
   font-size:2rem;
@@ -106,8 +106,9 @@ const Card = styled.div`
     border-radius: 2rem;
     box-shadow: -5px 8px 5px #504f4fe6;
   }
-  img:hover {
+  &:hover {
     transform: scale(1.1);
+    transition:all 500ms ease;
   }
 
   a {
