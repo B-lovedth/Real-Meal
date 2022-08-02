@@ -37,7 +37,6 @@ const Veggie = () => {
           options={{
             perPage: 3,
             arrows: false,
-            type: 'loop',
             autoplay: true,
             pauseOnHover: false,
             resetProgress: false,
