@@ -107,6 +107,10 @@ const Card = styled.div`
     height: 100%;
     object-fit: cover;
   }
+  &:hover {
+    transform: scale(1.01);
+    transition: all 500ms ease;
+  }
   @media (max-width: 760px) {
     width: 100%;
     height: 7rem;
