@@ -14,12 +14,12 @@ function Cuisine() {
     useEffect(() => {
         console.log(params.type)
         getCuisine(params.type)
-    }, [params.type]);
+    }, [params.type,itemNum]);
   const HandleClick = () => {
-    if (itemNum < 20) {
+    if (itemNum < 30) {
       setItemNum(itemNum + 4)
       }
-    getCuisine(params.type);
+    // getCuisine(params.type);
   }
     const getCuisine = async (name) => {
         const abortCont = new AbortController()
@@ -60,7 +60,9 @@ function Cuisine() {
             );
           })}
       </Grid>
-      <MoreBtn onClick={HandleClick}>More</MoreBtn>
+      {/* <div style={{width:'80%', position:'relative'}}> */}
+        <MoreBtn onClick={HandleClick}>More</MoreBtn>
+      {/* </div> */}
 
     </Full>
   );
@@ -80,7 +82,10 @@ const MoreBtn = styled.button`
   padding: 0.5rem 1rem;
   right: 0;
   position: absolute;
+  display:flex;
+  justify-self:flex-end;
   border: none;
+  cursor:pointer;
   border-radius: 5px;
   background: linear-gradient(to right, #f66117, #ef5454);
 `;
@@ -93,6 +98,7 @@ const Ch3 = styled.h4`
   text-align:center;
   margin-top:1rem;
   font-size:2rem;
+  overflow:hidden;
 `
 const Card = styled.div`
   img {
@@ -100,6 +106,10 @@ const Card = styled.div`
     border-radius: 2rem;
     box-shadow: -5px 8px 5px #504f4fe6;
   }
+  img:hover {
+    transform: scale(1.1);
+  }
+
   a {
     text-decoration: none;
   }
