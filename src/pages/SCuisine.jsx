@@ -40,11 +40,15 @@ const Sdiv = styled.div`
 `
 const Grid = styled.div`
   display: grid;
-  height:100%;
+  height: 100%;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-gap: 1.5rem;
-  margin: 3rem 3rem;
-  text-align:center;
+  margin: 2rem 3rem;
+  text-align: center;
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    margin:0;
+  }
 `;
 const Title = styled.h3`
   text-align: center;
@@ -60,6 +64,9 @@ const StyledLink = styled(Link)`
   padding: 1rem 3rem;
   text-decoration: none;
   border-radius: 18px;
+  @media(max-width:960px){
+    padding:1rem 2rem;
+  }
   &:hover {
     color: #e45710;
   }
