@@ -43,12 +43,12 @@ const Grid = styled.div`
   height:100%;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-gap: 1.5rem;
-  margin: 5.4rem 3rem;
+  margin: 3rem 3rem;
   text-align:center;
 `;
 const Title = styled.h3`
   text-align: center;
-  font-family: 'Calistoga', cursive;
+  font-family: 'Calistoga';
   font-size:2rem;
   font-weight: 600;
   color: #1a1a1a;
@@ -56,7 +56,7 @@ const Title = styled.h3`
 `;
 const StyledLink = styled(Link)`
   font-weight: 600;
-  color:#1a1a1a;
+  color:#1f1f1f;
   padding: 1rem 3rem;
   text-decoration: none;
   border-radius: 18px;
