@@ -40,6 +40,7 @@ const Searched = () => {
     }
     return (
       <div>
+        <h5 style={{ textAlign: 'center',marginTop:'1rem', }}>You searched for '{ params.search }'</h5>
         <Grid>
           {isPending && <H3>Loading...</H3>}
           {error && <H3>{error}</H3>}
@@ -78,6 +79,8 @@ const Card = styled.div`
     width: 100%;
     border-radius: 2rem;
     box-shadow: -5px 8px 5px #504f4fe6;
+  }img:hover{
+    transform: scale(1.1);
   }
   a {
     text-decoration: none;
