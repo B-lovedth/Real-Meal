@@ -65,6 +65,10 @@ const Grid = styled.div`
   grid-gap: 1.5rem;
   margin: 2rem 3rem;
   height: 100%;
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    margin: 2rem 1rem;
+  }
 `;
 
 const H3 = styled.h3`
@@ -81,6 +85,7 @@ const Card = styled.div`
     box-shadow: -5px 8px 5px #504f4fe6;
   }img:hover{
     transform: scale(1.1);
+    transition:all 500ms ease;
   }
   a {
     text-decoration: none;
