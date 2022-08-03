@@ -1,15 +1,16 @@
 import Veggie from "../components/Veggie";
 import HeroSection from "../components/HeroSection.jsx";
 import Popular from "../components/Popular";
+import {motion} from 'framer-motion'
 
 
 const Home = () => {
   return (
-    <div>
+    <motion.div>
         <HeroSection/>
         <Popular/>
         <Veggie/>
-    </div>
+    </motion.div>
   )
 }
 
