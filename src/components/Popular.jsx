@@ -107,7 +107,7 @@ const Card = styled.div`
     object-fit: cover;
   }
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: all 500ms ease;
   }
   @media (max-width: 760px) {
