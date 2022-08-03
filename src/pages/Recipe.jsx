@@ -95,9 +95,14 @@ const DetailWrapper = styled.div`
   }
   h2 {
     margin-bottom: 1rem;
+    font-family: 'Lobster Two';
+  }
+  h3{
+    font-size:1rem;
+    line-height:1.7rem;
   }
   li {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2.5rem;
   }
   ul {
