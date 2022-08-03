@@ -6,30 +6,71 @@ import styled from "styled-components";
 const Recipe = () => {
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
-  const [details, setDetails] = useState({});
+  const [details, setDetails] = useState();
+  const [activeTab , setActiveTab] = useState('instructions')
   let params = useParams();
   useEffect(() => {
     fetchDetails();
   }, [params.name]);
   const fetchDetails = async () => {
-    const abortCont = new AbortController()
+    const abortCont = new AbortController();
     fetch(
-      `https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_APP_API_KEY}`,{signal: abortCont.signal}
+      `https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_APP_API_KEY}`,
+      { signal: abortCont.signal }
     )
       .then((res) => res.json())
-        .then((data) => {
-            setDetails(data)
-            setIsPending(false)
-            setError(null)
-            console.log(data)
-        })
-        .catch((err) => {
-            console.log(err)
-            setError(err.message)
-        });
-      return (()=> abortCont.abort())
+      .then((data) => {
+        setDetails(data);
+        setIsPending(false);
+        setError(null);
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+        setIsPending(false)
+        setError(err.message);
+      });
+    return () => abortCont.abort();
   };
-    return <DetailWrapper>{details.title}</DetailWrapper>;
+  return (
+    <>
+      {isPending && <h3>Loading..</h3>}
+      {error && <h3>{error}</h3>}
+      {details && (
+        <DetailWrapper>
+          <div>
+            <h2>{details.title}</h2>
+            <img src={details.image} alt={details.title} />
+          </div>
+          <Info>
+            <Button
+              onClick={() => setActiveTab("instructions")}
+              className={activeTab === "instructions" ? "active" : ""}
+            >
+              Instructions
+            </Button>
+            <Button
+              onClick={() => setActiveTab("ingredients")}
+              className={activeTab === "ingredients" ? "active" : ""}
+            >
+              Ingredients
+            </Button>
+            <div>
+              <h3 dangerouslySetInnerHTML={{__html: details.summary}}></h3>
+              <h3 dangerouslySetInnerHTML={{__html: details.instructions}}></h3>
+            </div>
+            <ul>
+              {details.extemdedIngredients.map((ingredients) => {
+                return (
+                  <li key={ingredients.id}>{ ingredients.original}</li>
+                )
+              })}
+            </ul>
+          </Info>
+        </DetailWrapper>
+      )}
+    </>
+  );
 };
 
 const DetailWrapper = styled.div`
@@ -38,7 +79,7 @@ const DetailWrapper = styled.div`
   display: flex;
   .active {
     background: linear-gradient(to right, #f66117, #ef5454);
-    color:white;
+    color: white;
   }
   h2 {
     margin-bottom: 1rem;
@@ -53,14 +94,15 @@ const DetailWrapper = styled.div`
 `;
 
 const Button = styled.button`
-  padding:1rem 2rem;
+  padding: 1rem 2rem;
   color: #313131;
-  background:white;
-  border:2px solid black;
+  cursor:pointer;
+  background: white;
+  border: 2px solid black;
   margin-right: 1rem;
   font-weight: 600;
-`
-const info = styled.div`
-    margin-left: 5rem;
-`
+`;
+const Info = styled.div`
+  margin-left: 5rem;
+`;
 export default Recipe;
