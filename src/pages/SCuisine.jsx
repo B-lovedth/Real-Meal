@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components';
+import {motion} from 'framer-motion'
 
 const SCuisine = () => {
   return (
-    <Sdiv>
+    <Sdiv
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <Title>Available Cuisines</Title>
       <Grid>
         <StyledLink to='/cuisine/African'>African</StyledLink>
@@ -34,7 +40,7 @@ const SCuisine = () => {
     </Sdiv>
   );
 }
-const Sdiv = styled.div`
+const Sdiv = styled(motion.div)`
   height:100%;
   margin:0;
 `
@@ -60,19 +66,19 @@ const Title = styled.h3`
 `;
 const StyledLink = styled(Link)`
   font-weight: 600;
-  color:#1f1f1f;
+  color: #1f1f1f;
   padding: 1rem 3rem;
   text-decoration: none;
   border-radius: 18px;
-  @media(max-width:960px){
-    padding:1rem 2rem;
+  @media (max-width: 960px) {
+    padding: 1rem 2rem;
   }
   &:hover {
     color: #e45710;
   }
   &:active {
-    color: white;
-    background: linear-gradient(to right, #ffa31d, #ef5454);
+    color: #f3f3f3;
+    background: linear-gradient(to right, #333, #010101);
   }
 `;
 export default SCuisine
