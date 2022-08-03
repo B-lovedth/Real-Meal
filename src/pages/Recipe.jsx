@@ -117,6 +117,10 @@ const DetailWrapper = styled(motion.div)`
   margin-top: 5rem;
   margin-bottom: 2.5rem;
   display: flex;
+  @media(max-width:1200px){
+    flex-direction:column;
+    left
+  }
   .left {
     width: 40%;
     img {
