@@ -81,7 +81,7 @@ const Grid = styled.div`
     margin:2rem 1rem;
     }
 `
-const Full = styled.div`
+const Full = styled(motion.div)`
   height:100%;
 `
 const MoreBtn = styled.button`
