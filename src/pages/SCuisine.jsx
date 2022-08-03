@@ -52,7 +52,7 @@ const Grid = styled.div`
 `;
 const Title = styled.h3`
   text-align: center;
-  font-family: 'Calistoga';
+  font-family: 'Lobster Two';
   font-size:2rem;
   font-weight: 600;
   color: #1a1a1a;
