@@ -8,7 +8,7 @@ import styled from "styled-components";
 function Cuisine() {
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
-    const [cuisine, setCuisine] = useState([])
+    const [cuisine, setCuisine] = useState()
     const [itemNum , setItemNum ] = useState(12)
     let params = useParams()
     useEffect(() => {
@@ -38,7 +38,7 @@ function Cuisine() {
                 setError(null)
             })
             .catch((err) => {
-                console.log(err.message)
+                console.log(err)
                 setError("Unable to fetch, Check your Network connection");
                 setIsPending(false)
             });
@@ -52,18 +52,20 @@ function Cuisine() {
         {cuisine &&
           cuisine.map((item) => {
             return (
-              <Card key={item.id}>
-                <img src={item.image} alt={item.title} />
-                <h4>{item.title}</h4>
-              </Card>
+              <Link to={`/recipe/${item.id}`}>
+                <Card key={item.id}>
+                  <img src={item.image} alt={item.title} />
+                  <h4>{item.title}</h4>
+                </Card>
+              </Link>
             );
           })}
       </Grid>
       {isPending && <H3>Loading...</H3>}
       {error && <H3>{error}</H3>}
-      <div style={{ width: "90%", position: "relative" }}>
-        {cuisine && <MoreBtn onClick={HandleClick}>More</MoreBtn>}
-      </div>
+      {cuisine && (<div style={{ width: "90%", position: "relative" }}>
+        <MoreBtn onClick={HandleClick}>More</MoreBtn>
+      </div>)}
     </Full>
   );
 }
