@@ -6,13 +6,14 @@
     font-family: 'Montserrat',Tahoma;
 }
 body{
-    background:linear-gradient(to bottom right , #f3f3f3 ,#fba15d, #f58147 );
+    /* background:linear-gradient(to bottom right , #f3f3f3 ,#fba15d, #f58147 ); */
+    background: linear-gradient(10deg , #f4915a ,#facf62 );
     background-attachment:fixed ;
     min-width:320px;
     height:100vh;
 }@media(max-width:1200px){
     body{
-    background:linear-gradient(to bottom right, #f3f3f3, #f6c7b0, #f6905d);
+    /* background:linear-gradient(to bottom right, #f3f3f3, #f6c7b0, #f6905d); */
     background-attachment:fixed;
     }
 }
