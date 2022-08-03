@@ -57,7 +57,7 @@ const Searched = () => {
           {searchedRec &&
             searchedRec.map((item) => {
               return (
-                <Link to={`/recipe/${item.id}`}>
+                <Link to={`/recipe/${item.id}`} className='link'>
                   <Card key={item.id}>
                     <img src={item.image} alt={item.title} />
                     <h4>{item.title}</h4>
@@ -76,6 +76,9 @@ const Grid = styled(motion.div)`
   grid-gap: 1.5rem;
   margin: 2rem 3rem;
   height: 100%;
+  .link{
+    text-decoration:none;
+  }
   @media (max-width: 960px) {
     grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     margin: 2rem 1rem;
@@ -103,6 +106,7 @@ const Card = styled.div`
   }
   h4 {
     text-align: center;
+    text-decoration:none;
     padding: 1rem;
   }
 `;        
