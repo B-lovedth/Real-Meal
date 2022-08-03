@@ -13,7 +13,7 @@ const Veggie = () => {
   },[])
                                                        
   const getVeggie = async() => {
-    const check = localStorage.getItem("veggies");
+    const check = localStorage.getItem("veggie");
     if(check){
       setVeggie(JSON.parse(check))
     }else{
@@ -113,7 +113,7 @@ const Card = styled.div`
     object-fit: cover;
   }
   &:hover {
-    transform: scale(1.01);
+    transform: scale(1.05);
     transition: all 500ms ease;
   }
   @media (max-width: 760px) {
