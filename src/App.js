@@ -8,6 +8,9 @@ import Fixed2 from "./fixed2.png"
 
 
 function App() {
+  window.addEventListener("beforeunload", () =>
+    localStorage.clear()
+  );
   return (
     <div className='App'>
       <BrowserRouter>
