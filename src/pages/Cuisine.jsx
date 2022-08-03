@@ -48,11 +48,16 @@ function Cuisine() {
   return (
     <Full>
       {cuisine && <Ch3>{params.type} Cuisines</Ch3>}
-      <Grid>
+      <Grid
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         {cuisine &&
           cuisine.map((item) => {
             return (
-              <Link to={`/recipe/${item.id}`}>
+              <Link to={`/recipe/${item.id}`} className='link'>
                 <Card key={item.id}>
                   <img src={item.image} alt={item.title} />
                   <h4>{item.title}</h4>
@@ -63,14 +68,16 @@ function Cuisine() {
       </Grid>
       {isPending && <H3>Loading...</H3>}
       {error && <H3>{error}</H3>}
-      {cuisine && (<div style={{ width: "90%", position: "relative" }}>
-        <MoreBtn onClick={HandleClick}>More</MoreBtn>
-      </div>)}
+      {cuisine && (
+        <div style={{ width: "90%", position: "relative" }}>
+          <MoreBtn onClick={HandleClick}>More</MoreBtn>
+        </div>
+      )}
     </Full>
   );
 }
 
-const Grid = styled.div`
+const Grid = styled(motion.div)`
     display: grid;
     grid-template-columns:repeat(auto-fit, minmax(15rem, 1fr));
     grid-gap:1.5rem;
@@ -79,6 +86,9 @@ const Grid = styled.div`
     @media(max-width:960px){
     grid-template-columns:repeat(auto-fit, minmax(6rem, 1fr));
     margin:2rem 1rem;
+    .link{
+      text-decoration:none;
+    }
     }
 `
 const Full = styled(motion.div)`
@@ -100,12 +110,12 @@ const H3 = styled.h3`
     /* height:53.5vh; */
 `
 const Ch3 = styled.h4`
-  font-family: 'Calistoga';
-  text-align:center;
-  margin-top:1rem;
-  font-size:2rem;
-  overflow:hidden;
-`
+  font-family: "Lobster Two";
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2rem;
+  overflow: hidden;
+`;
 const Card = styled.div`
   img {
     width: 100%;
