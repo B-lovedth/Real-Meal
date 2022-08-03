@@ -7,7 +7,7 @@ const Recipe = () => {
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
   const [details, setDetails] = useState();
-  const [activeTab , setActiveTab] = useState('instructions')
+  const [activeTab , setActiveTab] = useState('summary')
   let params = useParams();
   useEffect(() => {
     fetchDetails();
@@ -44,6 +44,12 @@ const Recipe = () => {
           </div>
           <Info>
             <Button
+              onClick={() => setActiveTab("summary")}
+              className={activeTab === "summary" ? "active" : ""}
+            >
+              Summary
+            </Button>
+            <Button
               onClick={() => setActiveTab("instructions")}
               className={activeTab === "instructions" ? "active" : ""}
             >
@@ -55,17 +61,23 @@ const Recipe = () => {
             >
               Ingredients
             </Button>
-            <div>
-              <h3 dangerouslySetInnerHTML={{__html: details.summary}}></h3>
-              <h3 dangerouslySetInnerHTML={{__html: details.instructions}}></h3>
-            </div>
-            <ul>
-              {details.extemdedIngredients.map((ingredients) => {
-                return (
-                  <li key={ingredients.id}>{ ingredients.original}</li>
-                )
-              })}
-            </ul>
+            {activeTab === "summary" && (
+                <div>
+                  <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
+                </div>
+              )}
+            {activeTab === "instructions" && (
+              <div>
+                <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
+              </div>
+            )}
+            {activeTab === "ingredients" && (
+              <ul>
+                {details.extendedIngredients.map((ingredients) => {
+                  return <li key={ingredients.id}>{ingredients.original}</li>;
+                })}
+              </ul>
+            )}
           </Info>
         </DetailWrapper>
       )}
