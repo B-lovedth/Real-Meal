@@ -1,13 +1,24 @@
 import { FaLinkedin, FaTwitter, FaGithub , FaWhatsapp } from "react-icons/fa";
 import "./Contact.css"
+import {motion} from 'framer-motion'
 
 const Contact = () => {
   return (
-    <div className='contact'>
+    <motion.div
+      className='contact'
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className='contact-container'>
         <h3>Hi! , i'm B-lovedth</h3>
-        <p>I developed this web app, although I'm still very much inexperienced.👉👈 <br /><br /> you can reach my socials through these links.</p>
-        
+        <p>
+          I developed this web app, although I'm still very much
+          inexperienced.👉👈 <br />
+          <br /> you can reach my socials through these links.
+        </p>
+
         <div className='contact-wrapper'>
           <a
             target='_blank'
@@ -39,7 +50,7 @@ const Contact = () => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
