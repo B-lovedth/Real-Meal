@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className='contact'>
       <div className='contact-container'>
-        <h3>Hi!, i'm B-lovedth</h3>
+        <h3>Hi! , i'm B-lovedth</h3>
         <p>I developed this web app, although I'm still very much inexperienced.👉👈 <br /><br /> you can reach my socials through these links.</p>
         
         <div className='contact-wrapper'>
