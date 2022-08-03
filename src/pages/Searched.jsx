@@ -42,8 +42,15 @@ const Searched = () => {
     }
     return (
       <div>
-        <h5 style={{ textAlign: 'center',marginTop:'1rem', }}>You searched for '{ params.search }'</h5>
-        <Grid>
+        <h5 style={{ textAlign: "center", marginTop: "1rem" }}>
+          You searched for '{params.search}'
+        </h5>
+        <Grid
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           {isPending && <H3>Loading...</H3>}
           {error && <H3>{error}</H3>}
           {found && <H3>Not Available..T_T</H3>}
