@@ -50,9 +50,9 @@ const Recipe = () => {
             <img src={details.image} alt={details.title} />
             <div>
               <p>
-                <FaClock />:{details.cookingMinutes} Minutes
+                Duration
+                <FaClock />: {details.readyInMinutes} Minutes
               </p>
-              <p></p>
             </div>
           </div>
           <Info>
@@ -116,6 +116,7 @@ const Recipe = () => {
                 })}
               </motion.ul>
             )}
+            <p></p>
           </Info>
         </DetailWrapper>
       )}
