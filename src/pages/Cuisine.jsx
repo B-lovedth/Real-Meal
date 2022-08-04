@@ -96,12 +96,10 @@ const Full = styled(motion.div)`
 `
 const MoreBtn = styled.button`
   padding: 0.5rem 1rem;
-  right: 0;
-  position: absolute;
-  display:flex;
-  justify-self:flex-end;
+  display: flex;
+  margin: -2rem auto 1rem;
   border: none;
-  cursor:pointer;
+  cursor: pointer;
   border-radius: 5px;
   background: linear-gradient(to right, #f66117, #ef5454);
 `;

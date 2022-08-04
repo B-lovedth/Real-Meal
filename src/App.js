@@ -15,10 +15,10 @@ function App() {
     <div className='App'>
       <BrowserRouter>
         <Navbar />
-        <Category />
         <Pages />
         <Img src={Fixed} />
-        <Img2 src={ Fixed2 } />
+        <Img2 src={Fixed2} />
+        <Category />
       </BrowserRouter>
     </div>
   );
