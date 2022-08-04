@@ -35,8 +35,8 @@ const Recipe = () => {
   };
   return (
     <Container>
-      {isPending && <h3>Loading..</h3>}
-      {error && <h3>{error}</h3>}
+      {isPending && <H3>Loading..</H3>}
+      {error && <H3>{error}</H3>}
       {details && (
         <DetailWrapper
           animate={{ opacity: 1 }}
@@ -110,6 +110,9 @@ const Recipe = () => {
 const Container = styled.div`
   width:100%;
 `
+const H3 = styled.h3`
+  text-align: center;
+`;
 const DetailWrapper = styled(motion.div)`
   width: 80%;
   margin-left: auto;
@@ -117,24 +120,19 @@ const DetailWrapper = styled(motion.div)`
   margin-top: 5rem;
   margin-bottom: 2.5rem;
   display: flex;
-  @media(max-width:1200px){
-    flex-direction:column;
-    left
+
+  img {
+    width: 25rem;
+    border-radius: 18px;
+    box-shadow: -5px 8px 5px #504f4fe6;
   }
-  .left {
-    width: 40%;
-    img {
-      width: 25rem;
-      border-radius: 18px;
-      box-shadow: -5px 8px 5px #504f4fe6;
-    }
-  }
+
   .active {
     background: linear-gradient(to right, #f66117, #ef5454);
     color: white;
   }
   h2 {
-    text-align:center;
+    text-align: center;
     margin-bottom: 1rem;
     font-family: "Lobster Two";
   }
@@ -148,6 +146,17 @@ const DetailWrapper = styled(motion.div)`
   }
   ul {
     margin-top: 2rem;
+  }
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+    .left {
+      margin-bottom: 1rem;
+    }
+    img {
+      width: 100%;
+    }
   }
 `;
 
