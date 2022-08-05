@@ -48,12 +48,12 @@ const Recipe = () => {
           <div className='left'>
             <h2>{details.title}</h2>
             <img src={details.image} alt={details.title} />
-            <div>
-              <p>
-                Duration
+            <Div>
+              <P>
+                Ready in
                 <FaClock />: {details.readyInMinutes} Minutes
-              </p>
-            </div>
+              </P>
+            </Div>
           </div>
           <Info>
             <ButtonWrapper>
@@ -129,6 +129,13 @@ const Container = styled.div`
 const H3 = styled.h3`
   text-align: center;
 `;
+const Div = styled.div`
+  margin:1rem auto 0;
+`
+const P = styled.p`
+  font-size:0.5rem;
+  font-weight:600px;
+`
 const ButtonWrapper = styled.div`
   display:flex;
   flex-direction:row;
