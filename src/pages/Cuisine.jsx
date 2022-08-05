@@ -105,7 +105,7 @@ const MoreBtn = styled.button`
 `;
 const H3 = styled.h3`
     text-align: center;
-    /* height:53.5vh; */
+    height:53.5vh;
 `
 const Ch3 = styled.h4`
   font-family: "Lobster Two";
