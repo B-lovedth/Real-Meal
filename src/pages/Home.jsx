@@ -1,8 +1,8 @@
+import Category from "./components/Category";
 import Veggie from "../components/Veggie";
 import HeroSection from "../components/HeroSection.jsx";
 import Popular from "../components/Popular";
-import {motion} from 'framer-motion'
-
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
@@ -10,13 +10,14 @@ const Home = () => {
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
-      transition={{duration: 0.5}}
+      transition={{ duration: 0.5 }}
     >
-        <HeroSection/>
-        <Popular/>
-        <Veggie/>
+      <HeroSection />
+      <Popular />
+      <Veggie />
+      <Category />
     </motion.div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
