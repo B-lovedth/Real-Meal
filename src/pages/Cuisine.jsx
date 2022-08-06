@@ -58,10 +58,12 @@ function Cuisine() {
           cuisine.map((item) => {
             return (
               <Link to={`/recipe/${item.id}`} className='link'>
-                <Card key={item.id}>
-                  <img src={item.image} alt={item.title} />
-                  <h4>{item.title}</h4>
-                </Card>
+                <CardContainer>
+                  <Card key={item.id}>
+                    <img src={item.image} alt={item.title} />
+                    <h4>{item.title}</h4>
+                  </Card>
+                </CardContainer>
               </Link>
             );
           })}
@@ -69,7 +71,7 @@ function Cuisine() {
       {isPending && <H3>Loading...</H3>}
       {error && <H3>{error}</H3>}
       {cuisine && (
-        <div style={{ width: "90%", position: "relative" }}>
+        <div style={{ position: "relative" }}>
           <MoreBtn onClick={HandleClick}>More</MoreBtn>
         </div>
       )}
@@ -97,7 +99,7 @@ const Full = styled(motion.div)`
 const MoreBtn = styled.button`
   padding: 0.5rem 1rem;
   display: flex;
-  margin: -2rem auto 1rem;
+  margin: 1rem auto 1rem;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -114,13 +116,20 @@ const Ch3 = styled.h4`
   font-size: 2rem;
   overflow: hidden;
 `;
+const CardContainer = styled.div`
+  overflow: hidden;
+  background: #e457106e;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  box-shadow: -5px 8px 5px #504f4fe6;
+  height: 10rem;
+`;
 const Card = styled.div`
   img {
     width: 100%;
     border-radius: 2rem;
-    box-shadow: -5px 8px 5px #504f4fe6;
   }
-  &:hover {
+  img:hover {
     transform: scale(1.1);
     transition:all 500ms ease;
   }
@@ -130,7 +139,9 @@ const Card = styled.div`
   }
   h4 {
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem 0;
+    font-size:0.65rem;
+    color:#000;
   }
 `;        
 
