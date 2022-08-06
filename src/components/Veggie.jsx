@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 import styled from "styled-components"
 import '@splidejs/react-splide/css';
+import { FaArrowRight } from "react-icons/fa";
 
 
 
@@ -31,9 +32,12 @@ const Veggie = () => {
     }
   }
   return (
-     <div>
+    <div>
       <Wrapper>
-        <h3>Vegetarian Picks</h3>
+        <Heading>
+          <h3>Vegetarian Picks</h3>
+          <FaArrowRight />
+        </Heading>
         <SSplide
           options={{
             perPage: 3,
@@ -42,8 +46,8 @@ const Veggie = () => {
             pauseOnHover: false,
             resetProgress: false,
             pagination: false,
-            drag: 'free',
-            gap: '4rem',
+            drag: "free",
+            gap: "3rem",
           }}
         >
           {veggie.map((recipe) => {
@@ -58,24 +62,27 @@ const Veggie = () => {
                 </SLink>
               </SSlide>
             );
-          }
-          )}
+          })}
         </SSplide>
       </Wrapper>
     </div>
-  )
+  );
 }
 
 const Wrapper = styled.div`
   margin: 2rem 10rem;
   overflow: hidden;
   h3 {
-    text-align: center;
     font-size: 1rem;
   }
   @media (max-width: 1200px) {
     margin: 1rem 1.5rem;
   }
+`;
+const Heading = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 const SSplide = styled(Splide)`
   @media (max-width: 760px) {
@@ -120,7 +127,6 @@ const Card = styled.div`
     width: 100%;
     height: 7rem;
     border-radius: 8px;
-    margin-bottom: 2rem;
     img {
       border-radius: 8px;
     }
@@ -158,6 +164,7 @@ const P = styled.p`
   align-items: center;
   @media (max-width: 760px) {
     top: 0;
+    font-size:0.62rem;
   }
 `;
 export default Veggie
