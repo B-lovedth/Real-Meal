@@ -83,8 +83,7 @@ const Recipe = () => {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                {" "}
-                <p style={{ margin: "1rem 0" }}>Summary</p>
+                <p style={{ margin: "1rem 0", textDecoration:'underline' }}>Summary</p>
                 <h5 dangerouslySetInnerHTML={{ __html: details.summary }}></h5>
                 <div>
                   <p style={{ margin: "0" }}>Tags:</p>
