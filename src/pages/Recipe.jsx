@@ -50,8 +50,8 @@ const Recipe = () => {
             <img src={details.image} alt={details.title} />
             <Div>
               <P>
-                Ready in
-                <FaClock />: {details.readyInMinutes} Minutes
+                <FaClock /> 
+                Ready in : {details.readyInMinutes} Minutes
               </P>
             </Div>
           </div>
@@ -82,9 +82,21 @@ const Recipe = () => {
                 initial={{ opacity: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-              >
+              > <p>Tags:</p>
+                <div>{details.vegetarian && <h6>Vegetarian</h6>}, {details.glutenFree && <h6>Gluten free</h6>}, { details.dairyFree && <h6>Dairy free</h6>}</div>
                 <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
-                <div>{console.log(details.analyzedInstructions[0].steps)}</div>
+                <div>
+                  <h3>Cuisines</h3>
+                  {details.cuisines.map((cuisine) => {
+                    return <p>{cuisine}</p>
+                  })}
+                  <h3>Dish Types</h3>
+                  <ul>
+                    {details.dishTypes.map((dish) => {
+                    return <li>{dish}</li>
+                  })}
+                </ul>
+                </div>
               </motion.div>
             )}
             {activeTab === "instructions" && (
@@ -131,10 +143,12 @@ const H3 = styled.h3`
 `;
 const Div = styled.div`
   margin:1rem auto 0;
+  align-items:center;
+  display:flex;
 `
 const P = styled.p`
   font-size:0.8rem;
-  font-weight:600px;
+  font-weight:500;
 `
 const ButtonWrapper = styled.div`
   display:flex;
@@ -169,6 +183,7 @@ const DetailWrapper = styled(motion.div)`
   h3 {
     font-size: 1rem;
     line-height: 1.7rem;
+    color:#000;
   }
   li {
     font-size: 1rem;
@@ -188,13 +203,14 @@ const DetailWrapper = styled(motion.div)`
       width: 100%;
     }
     h3{
-      font-size:0.7rem;
+      font-size:0.75rem;
       text-align:justify;
       line-height:1rem;
     }
     li{
       font-size:0.7rem;
       line-height:1rem;
+      font-weight:500;
     }
   }
 `;
