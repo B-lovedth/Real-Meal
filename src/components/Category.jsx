@@ -33,12 +33,13 @@ const Category = () => {
 }
 const Footer = styled.footer`
   display: flex;
-  margin-bottom:-3rem;
+  margin-bottom: -3rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position:relative;
   bottom: 0;
-  background: linear-gradient(180deg, #ffffff0d, #ff8829);
+  background: linear-gradient(180deg, #f75252, #ff8829);
   width: 100%;
   p {
     text-align: center;
