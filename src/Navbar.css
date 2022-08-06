@@ -169,9 +169,6 @@
     }
 
     .navbar-logo {
-        position: absolute;
-        top: 0;
-        left: 0;
         font-size:3rem;
         margin: 1rem 1rem;
         transition: all 500ms ease;
@@ -182,13 +179,12 @@
 }
     .menu-icon {
         display: inline;
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 1rem 1rem;
         font-size: 3rem;
         cursor: pointer;
         transition: all 500ms ease;
+    }
+    .search-icon{
+        cursor: pointer;
     }
     .nav-item-icons{
         left:0;
@@ -254,7 +250,7 @@
         display:flex;
         align-items: center;
         justify-content:space-between;
-        width:80%;
+        width:90%;
     }
     .navbar{
         margin:0;
