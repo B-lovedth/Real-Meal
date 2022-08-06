@@ -33,6 +33,7 @@ const Category = () => {
 }
 const Footer = styled.footer`
   display: flex;
+  margin-bottom:-3rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
