@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { GiHamburgerMenu, GiKnifeFork } from "react-icons/gi";
-import { FaLinkedin, FaTwitter, FaGithub, FaTimes, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaGithub, FaTimes, FaWhatsapp , FaSearch } from "react-icons/fa";
 import Search from "./components/Search";
 
 const Navbar = () => {
@@ -21,6 +21,9 @@ const Navbar = () => {
     <div>
       <nav className='navbar'>
         <div className='navbar-container'>
+          <div className='search-icon' onClick={handleClick}>
+            <FaSearch/>
+          </div>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             <GiKnifeFork />
             Real<span id='green'>Meal</span>
@@ -59,7 +62,7 @@ const Navbar = () => {
                   </Link>
                 </li>
               </ul>
-              <Search/>
+              <Search />
               <span className='nav-item-icons'>
                 <a
                   target='_blank'
