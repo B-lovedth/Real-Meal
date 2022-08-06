@@ -50,7 +50,7 @@ const Recipe = () => {
             <img src={details.image} alt={details.title} />
             <Div>
               <P>
-                <FaClock /> 
+                <FaClock />
                 Ready in : {details.readyInMinutes} Minutes
               </P>
             </Div>
@@ -82,20 +82,24 @@ const Recipe = () => {
                 initial={{ opacity: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-              > <p>Tags:</p>
-                <div>{details.vegetarian && <h6>Vegetarian</h6>}, {details.glutenFree && <h6>Gluten free</h6>}, { details.dairyFree && <h6>Dairy free</h6>}</div>
-                <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
+              >
+                {" "}
+                <p style={{ margin: "1rem 0" }}>Summary</p>
+                <h5 dangerouslySetInnerHTML={{ __html: details.summary }}></h5>
                 <div>
-                  <h3>Cuisines</h3>
-                  {details.cuisines.map((cuisine) => {
-                    return <p>{cuisine}</p>
-                  })}
-                  <h3>Dish Types</h3>
-                  <ul>
+                  <p style={{ margin: "0" }}>Tags:</p>
+                  <div>
+                    {details.vegetarian && <h6>-Vegetarian</h6>}{" "}
+                    {details.glutenFree && <h6>-Gluten free</h6>}{" "}
+                    {details.dairyFree && <h6>-Dairy free</h6>}
+                  </div>
+                  <p style={{ margin: "1rem 0" }}>
+                    Cuisine: <h6>-{details.cuisines[0]}</h6>
+                  </p>
+                  <p>Dish Types</p>
                     {details.dishTypes.map((dish) => {
-                    return <li>{dish}</li>
-                  })}
-                </ul>
+                      return <h6>-{dish}</h6>;
+                    })}
                 </div>
               </motion.div>
             )}
@@ -180,10 +184,11 @@ const DetailWrapper = styled(motion.div)`
     margin-bottom: 1rem;
     font-family: "Lobster Two";
   }
-  h3 {
+  h5 {
     font-size: 1rem;
     line-height: 1.7rem;
     color:#000;
+    margin:1rem 0;
   }
   li {
     font-size: 1rem;
@@ -202,7 +207,7 @@ const DetailWrapper = styled(motion.div)`
     img {
       width: 100%;
     }
-    h3{
+    h5{
       font-size:0.75rem;
       text-align:justify;
       line-height:1rem;
