@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import {Link} from 'react-router-dom'
 import styled from "styled-components"
 import '@splidejs/react-splide/css';
+import { FaArrowRight } from "react-icons/fa";
 
 
 const Popular = () => {
@@ -31,7 +32,10 @@ const Popular = () => {
   }
   return (
     <Wrapper>
-      <h3 id='popular'>Popular Picks</h3>
+      <Heading>
+        <h3 id='popular'>Popular Picks</h3> 
+        <FaArrowRight/>
+      </Heading>
       <SSplide
         options={{
           perPage: 3,
@@ -41,7 +45,7 @@ const Popular = () => {
           pauseOnHover: false,
           resetProgress: false,
           drag: "free",
-          gap: "4rem",
+          gap: "3rem",
         }}
       >
         {popular.map((recipe) => {
@@ -66,19 +70,23 @@ const Wrapper = styled.div`
   margin: 2rem 10rem;
   overflow: hidden;
   h3{
-    text-align:center;
     font-size:1rem;
   }
   @media(max-width:1200px) {
     margin:1rem 1.5rem;
   }
   `;
+const Heading = styled.div`
+  display:flex;
+  align-items:center;
+  justify-content:space-between;  
+`
 const SSplide = styled(Splide)`
   @media (max-width: 760px) {
     margin: 0 auto;
   }
   @media screen and (max-width: 420px) {
-    gap:2rem;
+    gap:1rem;
   }
 `;
 const SSlide = styled(SplideSlide)`
@@ -114,7 +122,6 @@ const Card = styled.div`
     width: 100%;
     height: 7rem;
     border-radius: 8px;
-    margin-bottom: 2rem;
     img {
       border-radius: 8px;
     }
@@ -153,6 +160,7 @@ const P = styled.p`
             align-items:center;
             @media(max-width:760px){
               top:0;
+              font-size:0.62rem;
             }
         `;
 export default Popular
