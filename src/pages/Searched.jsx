@@ -9,15 +9,23 @@ const Searched = () => {
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
     const [searchedRec, setSearchedRec] = useState([]);
-    const [found , setFound] = useState(null)  
+    const [found, setFound] = useState(null)  
+    const [itemNum, setItemNum] = useState(12);
+  
     let params = useParams()
     useEffect(() => {
         getSearched(params.search)
     }, [params.search]);
+    const HandleClick = () => {
+      if (itemNum < 30) {
+        setItemNum(itemNum + 4);
+      }
+    };
+
     const getSearched = async(searchTerm) => {
          const abortCont = new AbortController()
         fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${searchTerm}&number=12`,
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${searchTerm}&number=${itemNUm}`,
           { signal: abortCont.signal }
         )
             .then((res) => {
@@ -65,6 +73,11 @@ const Searched = () => {
                 </Link>
               );
             })}
+          {searchedRec && (
+            <div style={{ position: "relative" }}>
+              <MoreBtn onClick={HandleClick}>More</MoreBtn>
+            </div>
+          )}
         </Grid>
       </div>
     );
