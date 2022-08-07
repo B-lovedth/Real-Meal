@@ -7,6 +7,8 @@ import SCuisine from './pages/SCuisine';
 import Searched from './pages/Searched';
 import {AnimatePresence} from 'framer-motion'
 import { useLocation } from 'react-router-dom';
+import PopularVeiw from './pages/PopularVeiw';
+import VeggieVeiw from './pages/VeggieView';
   
 const Pages = () => {
   const location = useLocation()
@@ -20,6 +22,8 @@ const Pages = () => {
           <Route exact path='/cuisines' element={<SCuisine />} />
           <Route path='/searched/:search' element={<Searched />} />
           <Route path='/recipe/:name' element={<Recipe />} />
+          <Route path='/pView' element={<PopularVeiw/>}/>
+          <Route path='/vView' element={<VeggieVeiw/>}/>
         </Routes>
       </AnimatePresence>
     </div>
