@@ -36,7 +36,9 @@ const Veggie = () => {
       <Wrapper>
         <Heading>
           <h3>Vegetarian Picks</h3>
-          <FaArrowRight />
+          <Link to='/vView'>
+            <FaArrowRight style={{ color: "#333" }} />
+          </Link>
         </Heading>
         <SSplide
           options={{
@@ -101,6 +103,7 @@ const SSlide = styled(SplideSlide)`
 `;
 const SLink = styled(Link)`
   text-decoration: none;
+  cursor:pointer;
 `;
 const Card = styled.div`
   max-height: 14rem;
