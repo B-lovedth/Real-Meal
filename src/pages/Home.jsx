@@ -1,4 +1,4 @@
-import Category from "./components/Category";
+import Category from "../components/Category";
 import Veggie from "../components/Veggie";
 import HeroSection from "../components/HeroSection.jsx";
 import Popular from "../components/Popular";
