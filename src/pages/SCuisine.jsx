@@ -53,7 +53,7 @@ const Grid = styled.div`
   text-align: center;
   align-items:center;
   @media (max-width: 960px) {
-    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     margin:0;
   }
 `;
