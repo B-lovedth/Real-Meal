@@ -19,7 +19,6 @@ function Cuisine() {
     if (itemNum < 30) {
       setItemNum(itemNum + 4)
       }
-    // getCuisine(params.type);
   }
   
   const getCuisine = async (name) => {
