@@ -25,7 +25,7 @@ const Searched = () => {
     const getSearched = async(searchTerm) => {
          const abortCont = new AbortController()
         fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${searchTerm}&number=${itemNUm}`,
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${searchTerm}&number=${itemNum}`,
           { signal: abortCont.signal }
         )
             .then((res) => {
@@ -123,5 +123,14 @@ const Card = styled.div`
     padding: 1rem;
   }
 `;        
+const MoreBtn = styled.button`
+  padding: 0.5rem 1rem;
+  display: flex;
+  margin: 1rem auto 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: linear-gradient(to right, #f66117, #ef5454);
+`;
 
 export default Searched
