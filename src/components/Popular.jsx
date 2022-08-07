@@ -33,8 +33,10 @@ const Popular = () => {
   return (
     <Wrapper>
       <Heading>
-        <h3 id='popular'>Popular Picks</h3> 
-        <FaArrowRight/>
+        <h3 id='popular'>Popular Picks</h3>
+        <Link to='/pView'>
+          <FaArrowRight style={{ color: "#333" }} />
+        </Link>
       </Heading>
       <SSplide
         options={{
@@ -96,6 +98,7 @@ const SSlide = styled(SplideSlide)`
 `;
 const SLink = styled(Link)`
   text-decoration:none;
+  cursor:pointer;
 `
 const Card = styled.div`
   max-height: 14rem;
