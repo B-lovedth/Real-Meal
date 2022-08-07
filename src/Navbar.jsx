@@ -1,11 +1,11 @@
-/** @format */
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { GiHamburgerMenu, GiKnifeFork } from "react-icons/gi";
 import { FaLinkedin, FaTwitter, FaGithub, FaTimes, FaWhatsapp , FaSearch } from "react-icons/fa";
 import Search from "./components/Search";
+import { motion } from "framer-motion";
+
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -98,9 +98,15 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className={isSearch ? "mobile-active" : "mobile"}>
+        <motion.div
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className={isSearch ? "mobile-active" : "mobile"}
+        >
           <Search />
-        </div>
+        </motion.div>
       </nav>
     </div>
   );
