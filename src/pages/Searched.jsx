@@ -49,7 +49,7 @@ const Searched = () => {
         return ()=> abortCont.abort()
     }
     return (
-      <div>
+      <div style={{margin:'2rem 0'}}>
         <h5 style={{ textAlign: "center", marginTop: "1rem" }}>
           You searched for '{params.search}'
         </h5>
