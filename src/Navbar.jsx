@@ -9,9 +9,13 @@ import Search from "./components/Search";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+  const [isSearch, setIsSearch] = useState(false)
   const handleClick = () => {
     setClick(!click);
   };
+  const handleSearch = () => {
+    setIsSearch(!isSearch)
+  }
 
   const closeMobileMenu = () => {
     setClick(false);
@@ -21,8 +25,8 @@ const Navbar = () => {
     <div>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <div className='search-icon' onClick={handleClick}>
-            <FaSearch/>
+          <div className='search-icon' onClick={handleSearch}>
+            <FaSearch />
           </div>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             <GiKnifeFork />
@@ -33,10 +37,6 @@ const Navbar = () => {
           </div>
           <div className={click ? "nav-menu active" : "nav-menu"}>
             <div className='nav-menu-wrapper'>
-              {/* <input
-                type='text'
-                className="nav-input-mobile"
-              /> */}
               <ul className='nav-list'>
                 <li className='nav-item'>
                   <Link to='/' className='nav-links' onClick={closeMobileMenu}>
@@ -62,7 +62,9 @@ const Navbar = () => {
                   </Link>
                 </li>
               </ul>
-              <Search />
+              <div className='desktop'>
+                <Search />
+              </div>
               <span className='nav-item-icons'>
                 <a
                   target='_blank'
@@ -95,6 +97,9 @@ const Navbar = () => {
               </span>
             </div>
           </div>
+        </div>
+        <div className={isSearch ? "mobile-active" : "mobile"}>
+          <Search />
         </div>
       </nav>
     </div>
