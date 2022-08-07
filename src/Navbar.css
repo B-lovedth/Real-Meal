@@ -104,7 +104,25 @@
 .nav-input-mobile {
     display: none;
 }
+.mobile{
+    display:none;
+}
 @media screen and (max-width: 1200px) {
+    .desktop{
+        display:none;
+    }
+    .mobile{
+        display:none;
+        
+    }
+    .mobile-active{
+        display:block;
+        margin:1rem 0;
+        width: 90%;
+        position: absolute;
+        left: 1rem;
+        top: 60px;
+    }
     .nav-item {
         position: relative;
         margin:40px 0;
