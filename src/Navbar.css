@@ -184,10 +184,14 @@
         display: inline;
         font-size: 3rem;
         cursor: pointer;
-        transition: all 500ms ease;
+    color:#333;
+    transition: all 500ms ease;
     }
     .search-icon{
+        display:inline;
         cursor: pointer;
+        color:#333;
+        font-size:3rem;
     }
     .nav-item-icons{
         left:0;
@@ -227,6 +231,9 @@
     .menu-icon{
         font-size:2rem;
     }
+    .search-icon{
+        font-size:2rem;
+    }
     .nav-links{
         font-size:1rem ;
     }
@@ -262,6 +269,9 @@
         height:90%;
     }
     .menu-icon{
+        font-size:1.5rem;
+    }
+    .search-icon{
         font-size:1.5rem;
     }
     .navbar-logo{
