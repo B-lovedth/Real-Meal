@@ -42,7 +42,7 @@ const VeggieVeiw = () => {
   };
   return (
     <Full>
-      {popularView && <Ch3>Vegetarisn Cuisines</Ch3>}
+      {popularView && <Ch3>Vegetarian Cuisines</Ch3>}
       <Grid
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
