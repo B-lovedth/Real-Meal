@@ -114,6 +114,11 @@
     .mobile{
         display:none;
         transition:all 800ms ease;
+        margin:1rem 0;
+        width: 90%;
+        position: absolute;
+        left: 1rem;
+        top: 60px;
     }
     .mobile-active{
         display:block;
