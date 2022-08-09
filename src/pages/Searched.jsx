@@ -33,7 +33,11 @@ const Searched = () => {
                 else return (res.json())
             })
           .then((data) => {
-            if (data.results === []) setFound(false)
+            if (data.results === []){
+              setFound(false);
+              setIsPending(false)
+              setError(null)
+            } 
             else {
               setSearchedRec(data.results)
               setIsPending(false)
