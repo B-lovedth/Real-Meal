@@ -9,9 +9,9 @@ const Searched = () => {
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
     const [searchedRec, setSearchedRec] = useState();
-    const [found, setFound] = useState(null)  
+    const [found, setFound] = useState(true)  
     const [itemNum, setItemNum] = useState(12);
-  
+    const [totalResult, setTotalResult] = useState(null)
     let params = useParams()
     useEffect(() => {
         getSearched(params.search)
@@ -33,16 +33,19 @@ const Searched = () => {
                 else return (res.json())
             })
           .then((data) => {
-            if (data.results === []){
+            console.log(data)
+            if (data.totalResults === 0){
               setFound(false);
               setIsPending(false)
               setError(null)
+              setSearchedRec(null)
             } 
             else {
               setSearchedRec(data.results)
               setIsPending(false)
               setError(null)
-              setFound(null)
+              setFound(true)
+              setTotalResult(data.totalResults)
             }
             })
             .catch((err) => {
@@ -57,6 +60,7 @@ const Searched = () => {
         <h5 style={{ textAlign: "center", marginTop: "1rem" }}>
           You searched for '{params.search}'
         </h5>
+        {searchedRec && <h6 style={{ textAlign: "center", color:"grey" }}>total search results: {totalResult}</h6>}
         <Grid
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
@@ -65,7 +69,7 @@ const Searched = () => {
         >
           {isPending && <H3>Loading...</H3>}
           {error && <H3>{error}</H3>}
-          {found && <H3>Not Available..T_T</H3>}
+          {!found && <H3>Not Available..T_T</H3>}
           {searchedRec &&
             searchedRec.map((item) => {
               return (
@@ -81,7 +85,7 @@ const Searched = () => {
             })}
         </Grid>
         {searchedRec && (
-          <div style={{ position: "relative" }}>
+          <div style={{ position: "relative",margin: '3rem 0', bottom : '12px' }}>
             <MoreBtn onClick={HandleClick}>More</MoreBtn>
           </div>
         )}
@@ -120,7 +124,7 @@ const Card = styled.div`
   img {
     width: 100%;
     border-radius: 2rem;
-    box-shadow: -5px 8px 5px #504f4fe6;
+    /* box-shadow: -5px 8px 5px #504f4fe6; */
   }
   img:hover {
     transform: scale(1.1);
