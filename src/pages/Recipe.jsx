@@ -86,43 +86,42 @@ const Recipe = () => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <p style={{ margin: "1rem 0", textDecoration: "underline" }}>
+                  <h4 style={{ margin: "1rem 0", textDecoration: "underline" }}>
                     Summary
-                  </p>
+                  </h4>
                   <h5
                     dangerouslySetInnerHTML={{ __html: details.summary }}
                   ></h5>
                   <div>
-                    <p
+                    <h4
                       style={{ margin: "1rem 0", textDecoration: "underline" }}
                     >
                       Tags
-                    </p>
+                    </h4>
 
-                    <div>
-                      <h5>
+                    <ul>
+                      <li>
                         Vegetarian: {details.vegetarian ? "true" : "false"}
-                      </h5>
-                      <h5>
+                      </li>
+                      <li>
                         Gluten free: {details.glutenFree ? "true" : "false"}
-                      </h5>
-                      <h5>
+                      </li>
+                      <li>
                         Dairy free: {details.dairyFree ? "true" : "false"}
-                      </h5>
-                    </div>
-                    <p
+                      </li>
+                    </ul>
+                    <h4
                       style={{ margin: "1rem 0", textDecoration: "underline" }}
                     >
-                      Cuisine: <h6>-{details.cuisines[0]}</h6>
-                    </p>
-                    <p
+                      Cuisine: {details.cuisines[0]}</h4>
+                    <h4
                       style={{ margin: "1rem 0", textDecoration: "underline" }}
                     >
                       Dish Type
-                    </p>
-                    {details.dishTypes.map((dish) => {
-                      return <h6 key={dish.id}>-{dish}</h6>;
-                    })}
+                    </h4>
+                    <ul>{details.dishTypes.map((dish) => {
+                      return <li key={dish.id}>{dish}</li>;
+                    })}</ul>
                   </div>
                 </motion.div>
               )}
@@ -133,9 +132,6 @@ const Recipe = () => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  {/* <h3
-                  dangerouslySetInnerHTML={{ __html: details.instructions }}
-                ></h3> */}
                   <ul>
                     {details.analyzedInstructions[0].steps.map((step) => {
                       return <li key={step.id}>{step.step}</li>;
@@ -155,7 +151,7 @@ const Recipe = () => {
                   })}
                 </motion.ul>
               )}
-              <p></p>
+              <h4></h4>
             </Info>
           </DetailWrapper>
         </div>
@@ -217,9 +213,6 @@ const DetailWrapper = styled(motion.div)`
   li {
     font-size: 1rem;
     line-height: 2.5rem;
-  }
-  ul {
-    margin-top: 2rem;
   }
   @media (max-width: 1200px) {
     flex-direction: column;
