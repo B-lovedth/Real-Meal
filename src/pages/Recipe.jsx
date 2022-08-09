@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from 'framer-motion'
 import {FaClock} from 'react-icons/fa'
+import Similar from "../components/Similar";
 
 const Recipe = () => {
   const [isPending, setIsPending] = useState(true);
@@ -39,101 +40,125 @@ const Recipe = () => {
       {isPending && <H3>Loading..</H3>}
       {error && <H3>{error}</H3>}
       {details && (
-        <DetailWrapper
-          animate={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className='left'>
-            <h2>{details.title}</h2>
-            <img src={details.image} alt={details.title} />
-            <Div>
-              <P>
-                <FaClock />
-                Ready in : {details.readyInMinutes} Minutes
-              </P>
-            </Div>
-          </div>
-          <Info>
-            <ButtonWrapper>
-              <Button
-                onClick={() => setActiveTab("summary")}
-                className={activeTab === "summary" ? "active" : ""}
-              >
-                Summary
-              </Button>
-              <Button
-                onClick={() => setActiveTab("instructions")}
-                className={activeTab === "instructions" ? "active" : ""}
-              >
-                Instructions
-              </Button>
-              <Button
-                onClick={() => setActiveTab("ingredients")}
-                className={activeTab === "ingredients" ? "active" : ""}
-              >
-                Ingredients
-              </Button>
-            </ButtonWrapper>
-            {activeTab === "summary" && (
-              <motion.div
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <p style={{ margin: "1rem 0", textDecoration:'underline' }}>Summary</p>
-                <h5 dangerouslySetInnerHTML={{ __html: details.summary }}></h5>
-                <div>
-                  <p style={{ margin: "0" }}>Tags:</p>
-                  <div>
-                    {details.vegetarian && <h6>-Vegetarian</h6>}{" "}
-                    {details.glutenFree && <h6>-Gluten free</h6>}{" "}
-                    {details.dairyFree && <h6>-Dairy free</h6>}
-                  </div>
-                  <p style={{ margin: "1rem 0" }}>
-                    Cuisine: <h6>-{details.cuisines[0]}</h6>
+        <div>
+          <DetailWrapper
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className='left'>
+              <h2>{details.title}</h2>
+              <img src={details.image} alt={details.title} />
+              <Div>
+                <P>
+                  <FaClock />
+                  Ready in : {details.readyInMinutes} Minutes
+                </P>
+              </Div>
+            </div>
+            <Info>
+              <ButtonWrapper>
+                <Button
+                  onClick={() => setActiveTab("summary")}
+                  className={activeTab === "summary" ? "active" : ""}
+                >
+                  Summary
+                </Button>
+                <Button
+                  onClick={() => setActiveTab("instructions")}
+                  className={activeTab === "instructions" ? "active" : ""}
+                >
+                  Instructions
+                </Button>
+                <Button
+                  onClick={() => setActiveTab("ingredients")}
+                  className={activeTab === "ingredients" ? "active" : ""}
+                >
+                  Ingredients
+                </Button>
+              </ButtonWrapper>
+              {activeTab === "summary" && (
+                <motion.div
+                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <p style={{ margin: "1rem 0", textDecoration: "underline" }}>
+                    Summary
                   </p>
-                  <p>Dish Types</p>
+                  <h5
+                    dangerouslySetInnerHTML={{ __html: details.summary }}
+                  ></h5>
+                  <div>
+                    <p
+                      style={{ margin: "1rem 0", textDecoration: "underline" }}
+                    >
+                      Tags
+                    </p>
+
+                    <div>
+                      <h5>
+                        Vegetarian: {details.vegetarian ? "true" : "false"}
+                      </h5>
+                      <h5>
+                        Gluten free: {details.glutenFree ? "true" : "false"}
+                      </h5>
+                      <h5>
+                        Dairy free: {details.dairyFree ? "true" : "false"}
+                      </h5>
+                    </div>
+                    <p
+                      style={{ margin: "1rem 0", textDecoration: "underline" }}
+                    >
+                      Cuisine: <h6>-{details.cuisines[0]}</h6>
+                    </p>
+                    <p
+                      style={{ margin: "1rem 0", textDecoration: "underline" }}
+                    >
+                      Dish Type
+                    </p>
                     {details.dishTypes.map((dish) => {
-                      return <h6>-{dish}</h6>;
+                      return <h6 key={dish.id}>-{dish}</h6>;
                     })}
-                </div>
-              </motion.div>
-            )}
-            {activeTab === "instructions" && (
-              <motion.div
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                {/* <h3
+                  </div>
+                </motion.div>
+              )}
+              {activeTab === "instructions" && (
+                <motion.div
+                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {/* <h3
                   dangerouslySetInnerHTML={{ __html: details.instructions }}
                 ></h3> */}
-                <ul>
-                  {details.analyzedInstructions[0].steps.map((step) => {
-                    return <li key={step.id}>{step.step}</li>;
+                  <ul>
+                    {details.analyzedInstructions[0].steps.map((step) => {
+                      return <li key={step.id}>{step.step}</li>;
+                    })}
+                  </ul>
+                </motion.div>
+              )}
+              {activeTab === "ingredients" && (
+                <motion.ul
+                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {details.extendedIngredients.map((ingredients) => {
+                    return <li key={ingredients.id}>{ingredients.original}</li>;
                   })}
-                </ul>
-              </motion.div>
-            )}
-            {activeTab === "ingredients" && (
-              <motion.ul
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                {details.extendedIngredients.map((ingredients) => {
-                  return <li key={ingredients.id}>{ingredients.original}</li>;
-                })}
-              </motion.ul>
-            )}
-            <p></p>
-          </Info>
-        </DetailWrapper>
+                </motion.ul>
+              )}
+              <p></p>
+            </Info>
+          </DetailWrapper>
+          <Similar />
+        </div>
       )}
     </Container>
   );

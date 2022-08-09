@@ -8,10 +8,10 @@ import { motion } from "framer-motion";
 const Searched = () => {
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
-    const [searchedRec, setSearchedRec] = useState([]);
-    const [found, setFound] = useState(null)  
+    const [searchedRec, setSearchedRec] = useState();
+    const [found, setFound] = useState(true)  
     const [itemNum, setItemNum] = useState(12);
-  
+    const [totalResult, setTotalResult] = useState(null)
     let params = useParams()
     useEffect(() => {
         getSearched(params.search)
@@ -33,12 +33,19 @@ const Searched = () => {
                 else return (res.json())
             })
           .then((data) => {
-            if (data.results === []) setFound(false)
+            console.log(data)
+            if (data.totalResults === 0){
+              setFound(false);
+              setIsPending(false)
+              setError(null)
+              setSearchedRec(null)
+            } 
             else {
               setSearchedRec(data.results)
               setIsPending(false)
               setError(null)
-              setFound(null)
+              setFound(true)
+              setTotalResult(data.totalResults)
             }
             })
             .catch((err) => {
@@ -49,10 +56,11 @@ const Searched = () => {
         return ()=> abortCont.abort()
     }
     return (
-      <div>
+      <div style={{margin:'2rem 0'}}>
         <h5 style={{ textAlign: "center", marginTop: "1rem" }}>
           You searched for '{params.search}'
         </h5>
+        {searchedRec && <h6 style={{ textAlign: "center", color:"grey" }}>total search results: {totalResult}</h6>}
         <Grid
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
@@ -61,24 +69,26 @@ const Searched = () => {
         >
           {isPending && <H3>Loading...</H3>}
           {error && <H3>{error}</H3>}
-          {found && <H3>Not Available..T_T</H3>}
+          {!found && <H3>Not Available..T_T</H3>}
           {searchedRec &&
             searchedRec.map((item) => {
               return (
                 <Link to={`/recipe/${item.id}`} className='link'>
-                  <Card key={item.id}>
-                    <img src={item.image} alt={item.title} />
-                    <h4>{item.title}</h4>
-                  </Card>
+                  <CardContainer>
+                    <Card key={item.id}>
+                      <img src={item.image} alt={item.title} />
+                      <h4>{item.title}</h4>
+                    </Card>
+                  </CardContainer>
                 </Link>
               );
             })}
-          {searchedRec && (
-            <div style={{ position: "relative" }}>
-              <MoreBtn onClick={HandleClick}>More</MoreBtn>
-            </div>
-          )}
         </Grid>
+        {searchedRec && (
+          <div style={{ position: "relative",margin: '3rem 0', bottom : '12px' }}>
+            <MoreBtn onClick={HandleClick}>More</MoreBtn>
+          </div>
+        )}
       </div>
     );
      }
@@ -97,30 +107,37 @@ const Grid = styled(motion.div)`
     margin: 2rem 1rem;
   }
 `;
-
+const CardContainer = styled.div`
+  overflow: hidden;
+  background: #e457106e;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  box-shadow: -5px 8px 5px #504f4fe6;
+  height: 10rem;
+`;
 const H3 = styled.h3`
-  font-family: "Calistoga", cursive;
+  font-family: "Lobster Two";
   text-align: center;
   margin-top: 1rem;
-  font-size: 2rem;
-  height:58.5vh;
 `;
 const Card = styled.div`
   img {
     width: 100%;
     border-radius: 2rem;
-    box-shadow: -5px 8px 5px #504f4fe6;
-  }img:hover{
+    /* box-shadow: -5px 8px 5px #504f4fe6; */
+  }
+  img:hover {
     transform: scale(1.1);
-    transition:all 500ms ease;
+    transition: all 500ms ease;
   }
   a {
     text-decoration: none;
   }
   h4 {
     text-align: center;
-    text-decoration:none;
-    padding: 1rem;
+    padding: 0.5rem 0;
+    font-size: 0.65rem;
+    color: #000;
   }
 `;        
 const MoreBtn = styled.button`
