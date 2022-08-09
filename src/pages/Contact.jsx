@@ -14,8 +14,7 @@ const Contact = () => {
       <div className='contact-container'>
         <h3>Hi! , i'm B-lovedth</h3>
         <p>
-          I developed this web app, although I'm still very much
-          inexperienced.👉👈 <br />
+          I developed this web app using Spoonacular Food and Recipe API. <br />
           <br /> you can reach my socials through these links.
         </p>
 
