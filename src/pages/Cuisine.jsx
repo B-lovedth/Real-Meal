@@ -94,6 +94,7 @@ const Grid = styled(motion.div)`
 `
 const Full = styled(motion.div)`
   height:100%;
+  margin: 2rem 0;
 `
 const MoreBtn = styled.button`
   padding: 0.5rem 1rem;
