@@ -56,6 +56,7 @@ const Recipe = () => {
                   Ready in : {details.readyInMinutes} Minutes
                 </P>
               </Div>
+              <Similar />
             </div>
             <Info>
               <ButtonWrapper>
@@ -157,7 +158,6 @@ const Recipe = () => {
               <p></p>
             </Info>
           </DetailWrapper>
-          <Similar />
         </div>
       )}
     </Container>
