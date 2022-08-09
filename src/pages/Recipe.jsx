@@ -56,7 +56,9 @@ const Recipe = () => {
                   Ready in : {details.readyInMinutes} Minutes
                 </P>
               </Div>
-              <Similar />
+              <div className='desktop'>
+                <Similar />
+              </div>
             </div>
             <Info>
               <ButtonWrapper>
@@ -113,15 +115,18 @@ const Recipe = () => {
                     <h4
                       style={{ margin: "1rem 0", textDecoration: "underline" }}
                     >
-                      Cuisine: {details.cuisines[0]}</h4>
+                      Cuisine: {details.cuisines[0]}
+                    </h4>
                     <h4
                       style={{ margin: "1rem 0", textDecoration: "underline" }}
                     >
                       Dish Type
                     </h4>
-                    <ul>{details.dishTypes.map((dish) => {
-                      return <li key={dish.id}>{dish}</li>;
-                    })}</ul>
+                    <ul style={{ listStyleType: "disclosure-closed" }}>
+                      {details.dishTypes.map((dish) => {
+                        return <li key={dish.id}>{dish}</li>;
+                      })}
+                    </ul>
                   </div>
                 </motion.div>
               )}
@@ -132,26 +137,34 @@ const Recipe = () => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <ul>
-                    {details.analyzedInstructions[0].steps.map((step) => {
-                      return <li key={step.id}>{step.step}</li>;
-                    })}
-                  </ul>
+                  <div style={{ marginTop: "2rem" }}>
+                    <ul>
+                      {details.analyzedInstructions[0].steps.map((step) => {
+                        return <li key={step.id}>{step.step}</li>;
+                      })}
+                    </ul>
+                  </div>
                 </motion.div>
               )}
               {activeTab === "ingredients" && (
-                <motion.ul
-                  animate={{ opacity: 1 }}
-                  initial={{ opacity: 0 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  {details.extendedIngredients.map((ingredients) => {
-                    return <li key={ingredients.id}>{ingredients.original}</li>;
-                  })}
-                </motion.ul>
+                <div style={{ marginTop: "2rem" }}>
+                  <motion.ul
+                    animate={{ opacity: 1 }}
+                    initial={{ opacity: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    {details.extendedIngredients.map((ingredients) => {
+                      return (
+                        <li key={ingredients.id}>{ingredients.original}</li>
+                      );
+                    })}
+                  </motion.ul>
+                </div>
               )}
-              <h4></h4>
+              <div className="Mobile">
+                <Similar />
+              </div>
             </Info>
           </DetailWrapper>
         </div>
@@ -207,32 +220,46 @@ const DetailWrapper = styled(motion.div)`
   h5 {
     font-size: 1rem;
     line-height: 1.7rem;
-    color:#000;
-    margin:1rem 0;
+    color: #000;
+    margin: 1rem 0;
+    font-weight:500;
+  }
+  h4 {
+    color: #000000;
+  font-weight:800
   }
   li {
     font-size: 1rem;
     line-height: 2.5rem;
   }
+  .Mobile{
+    display:none;
+  }
   @media (max-width: 1200px) {
     flex-direction: column;
-    margin: 0 auto;
+    margin: 2rem auto;
     width: 90%;
     .left {
       margin-bottom: 1rem;
     }
+    .Mobile{
+      display:contents;
+    }
+    .desktop{
+      display:none;
+    }
     img {
       width: 100%;
     }
-    h5{
-      font-size:0.75rem;
-      text-align:justify;
-      line-height:1rem;
+    h5 {
+      font-size: 0.75rem;
+      text-align: justify;
+      line-height: 1rem;
     }
-    li{
-      font-size:0.7rem;
-      line-height:1rem;
-      font-weight:500;
+    li {
+      font-size: 0.7rem;
+      line-height: 1rem;
+      font-weight: 500;
     }
   }
 `;
