@@ -73,9 +73,9 @@ const Searched = () => {
           {searchedRec &&
             searchedRec.map((item) => {
               return (
-                <Link to={`/recipe/${item.id}`} className='link'>
+                <Link to={`/recipe/${item.id}`} className='link' key={item.id}>
                   <CardContainer>
-                    <Card key={item.id}>
+                    <Card>
                       <img src={item.image} alt={item.title} />
                       <h4>{item.title}</h4>
                     </Card>
