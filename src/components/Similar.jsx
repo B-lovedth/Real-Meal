@@ -13,7 +13,7 @@ const Similar = () => {
   },[params.name])
                                                        
   const getSimilar = async(id) => {
-       fetch(`https://api.spoonacular.com/recipes/${id}/similar?apiKey=${process.env.REACT_APP_API_KEY}&number=9`)
+       fetch(`https://api.spoonacular.com/recipes/${id}/similar?apiKey=${process.env.REACT_APP_API_KEY}&number=4`)
         .then((res) => res.json())
         .then((data) => {
           setSimilar(data)
@@ -27,10 +27,15 @@ const Similar = () => {
   
   return (
     <Wrapper>
-      <Heading>
-        <h3 id='similar'>Similar Recipes</h3>
-      </Heading>
-      <ul style={{marginTop:"0",}}>
+        <h4
+          style={{
+            margin: "1rem 0",
+            textDecoration: "underline",
+          }}
+        >
+          Similar Recipes
+        </h4>
+      <ul style={{ marginTop: "0", listStyleType:"disk" }}>
         {similar.map((recipe) => {
           return (
             <li>
@@ -52,11 +57,7 @@ const Wrapper = styled.div`
     font-size:1rem;
   }
   `;
-const Heading = styled.div`
-  display:flex;
-  align-items:center;
-  justify-content:space-between;  
-`
+
 const SLink = styled(Link)`
   text-decoration:none;
   cursor:pointer;
