@@ -70,7 +70,7 @@ function Cuisine() {
       {isPending && <H3>Loading...</H3>}
       {error && <H3>{error}</H3>}
       {cuisine && (
-        <div style={{ position: "relative" }}>
+        <div style={{ position: "relative", margin: "3rem 0", bottom: "12px" }}>
           <MoreBtn onClick={HandleClick}>More</MoreBtn>
         </div>
       )}
