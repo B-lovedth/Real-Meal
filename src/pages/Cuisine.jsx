@@ -56,9 +56,9 @@ function Cuisine() {
         {cuisine &&
           cuisine.map((item) => {
             return (
-              <Link to={`/recipe/${item.id}`} className='link'>
+              <Link key={item.id} to={`/recipe/${item.id}`} className='link'>
                 <CardContainer>
-                  <Card key={item.id}>
+                  <Card>
                     <img src={item.image} alt={item.title} />
                     <h4>{item.title}</h4>
                   </Card>
@@ -121,7 +121,10 @@ const CardContainer = styled.div`
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
   box-shadow: -5px 8px 5px #504f4fe6;
-  height: 10rem;
+  height: 20rem;
+  @media (max-width: 960px) {
+    height: 10rem;
+  }
 `;
 const Card = styled.div`
   img {
