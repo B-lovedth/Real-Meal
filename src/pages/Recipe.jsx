@@ -222,31 +222,33 @@ const DetailWrapper = styled(motion.div)`
     line-height: 1.7rem;
     color: #000;
     margin: 1rem 0;
-    font-weight:500;
+    font-weight: 500;
   }
   h4 {
     color: #000000;
-  font-weight:800
+    font-weight: 800;
   }
   li {
     font-size: 1rem;
     line-height: 2.5rem;
   }
-  .Mobile{
-    display:none;
+  .Mobile {
+    display: none;
   }
   @media (max-width: 1200px) {
     flex-direction: column;
     margin: 2rem auto;
     width: 90%;
+    bottom: 10px;
+    position: relative;
     .left {
       margin-bottom: 1rem;
     }
-    .Mobile{
-      display:contents;
+    .Mobile {
+      display: contents;
     }
-    .desktop{
-      display:none;
+    .desktop {
+      display: none;
     }
     img {
       width: 100%;
