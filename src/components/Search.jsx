@@ -20,6 +20,7 @@ const Search = () => {
       e.preventDefault();
       setError("");
       navigate(`/searched/${input}`);
+      setInput('')
     } 
   }
   return (
