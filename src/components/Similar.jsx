@@ -35,7 +35,7 @@ const Similar = () => {
         >
           Similar Recipes
         </h4>
-      <ul style={{ marginTop: "0", listStyleType:"disk" }}>
+      <ul style={{ marginTop: "0", listStyleType:"disclosure-closed" }}>
         {similar.map((recipe) => {
           return (
             <li>
@@ -52,7 +52,6 @@ const Similar = () => {
 
 const Wrapper = styled.div`
   width:100%;
-  overflow: hidden;
   h3{
     font-size:1rem;
   }
