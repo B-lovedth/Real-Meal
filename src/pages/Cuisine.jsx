@@ -35,6 +35,7 @@ function Cuisine() {
                 setCuisine(data.results)
                 setIsPending(false)
                 setError(null)
+                console.log(data)
             })
             .catch((err) => {
                 console.log(err)
