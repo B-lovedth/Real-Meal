@@ -113,7 +113,10 @@ const CardContainer = styled.div`
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
   box-shadow: -5px 8px 5px #504f4fe6;
-  height: 10rem;
+  height: 18rem;
+  @media (max-width: 960px) {
+    height: 10rem;
+  }
 `;
 const H3 = styled.h3`
   font-family: "Lobster Two";
