@@ -215,7 +215,6 @@ const StyledLink = styled(Link)`
   }
   &:active {
     color: #f3f3f3;
-    background: linear-gradient(to right, #333, #010101);
   }
 `;
 export default SCuisine
