@@ -123,7 +123,7 @@ const CardContainer = styled.div`
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
   box-shadow: -5px 8px 5px #504f4fe6;
-  height: 20rem;
+  height: 18rem;
   @media (max-width: 960px) {
     height: 10rem;
   }
