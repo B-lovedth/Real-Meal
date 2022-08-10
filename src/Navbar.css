@@ -220,6 +220,9 @@
         color:#333;
         font-size:3rem;
     }
+    .search-icon.active{
+        color:#e45710;
+    }
     .nav-item-icons{
         left:0;
         top:0;

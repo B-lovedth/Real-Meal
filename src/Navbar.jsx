@@ -25,7 +25,7 @@ const Navbar = () => {
     <div>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <div className='search-icon' onClick={handleSearch}>
+          <div className={isSearch ? 'search-icon active' : 'search-icon'} onClick={handleSearch}>
             <FaSearch />
           </div>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
