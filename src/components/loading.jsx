@@ -5,6 +5,7 @@ const Loading = () => {
   return (
     <LoadingBar className='loading'>
         <Span></Span>
+        loading
     </LoadingBar>
   )
 }
@@ -27,12 +28,19 @@ const Span=styled.span`
     display:flex;
     align-items: center;
     justify-content: center;
+    height:6rem;
+    width:6rem;
+    border:5px solid #333;
+    border-radius:50%;
+    animation:rotate 2s infinite  ease;
 
     &::before{
         content:'';
         position:absolute;
+        left:-10px;
         height:1rem;
         width:1rem;
+        background-color: #333;
         border-radius:50%;
     }
 `
