@@ -12,11 +12,11 @@ const Loading = () => {
 const LoadingBar=styled.div`
     position: relative;
     display:flex;
-    height:80vh;
+    height:50vh;
     width:100%;
     align-items: center;
     justify-content:center;
-
+    font-size: 1rem;
 `
 const Span=styled.span`
     @keyframes rotate {
@@ -28,8 +28,8 @@ const Span=styled.span`
     display:flex;
     align-items: center;
     justify-content: center;
-    height:6rem;
-    width:6rem;
+    height:7rem;
+    width:7rem;
     border:5px solid #333;
     border-radius:50%;
     animation:rotate 2s infinite  ease;
