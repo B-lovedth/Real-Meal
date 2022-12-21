@@ -27,9 +27,6 @@ const Span=styled.span`
     display:flex;
     align-items: center;
     justify-content: center;
-    height:10rem;
-    width:10rem;
-    border:1.5rem solid #333;
 
     &::before{
         content:'';
