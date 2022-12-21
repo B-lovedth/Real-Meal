@@ -39,14 +39,14 @@ const Footer = styled.footer`
   position:relative;
   bottom: 0;
   border-top: 1px solid #555;
-  padding-top: 2rem;
+  padding: 0.5rem 0 1rem;
   width: 80%;
   margin: 7rem auto 0.5rem;
   p {
     text-align: center;
     display:inline-flex;
     align-items:center;
-    color: #1a1a1a;
+    color: #414141;
     font-size: 1rem;
     font-weight: 600;
   }
@@ -62,6 +62,8 @@ const List = styled.div`
   }
   h2 {
     font-family: "Lobster Two";
+    color: #414141;
+
   }
   @media (max-width: 700px) {
     display: none;
