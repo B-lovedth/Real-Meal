@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Loading from '../components/Loading'
 import styled from "styled-components";
 
 const PopularVeiw = () => {
@@ -62,7 +63,7 @@ const PopularVeiw = () => {
               );
             })}
         </Grid>
-        {isPending && <H3>Loading...</H3>}
+        {isPending && <Loading/>}
         {error && <H3>{error}</H3>}
         {popularView && (
           <div style={{ position: "relative",marginBottom:"2rem" }}>
