@@ -7,7 +7,6 @@ import styled from 'styled-components'
 const Category = () => {
   return (
     <Footer>
-      <p>Created by B-lovedth with ❤ and React<FaReact></FaReact></p>
       <List>
         <h2>Popular</h2>
         <SLink to='/cuisine/Italian'>
@@ -28,21 +27,25 @@ const Category = () => {
         </SLink>
         <h2>Cuisines</h2>
       </List>
+      <p>Created by B-lovedth with ❤ and React<FaReact></FaReact></p>
     </Footer>
   );
 }
 const Footer = styled.footer`
   display: flex;
-  margin-bottom: -3rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position:relative;
   bottom: 0;
-  background: linear-gradient(180deg, #f75252, #ff8829);
-  width: 100%;
+  border-top: 1px solid #555;
+  padding-top: 2rem;
+  width: 80%;
+  margin: 7rem auto 0.5rem;
   p {
     text-align: center;
+    display:inline-flex;
+    align-items:center;
     color: #1a1a1a;
     font-size: 1rem;
     font-weight: 600;
