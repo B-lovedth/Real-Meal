@@ -103,7 +103,7 @@ const Navbar = () => {
           initial={{ opacity: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className={isSearch ? "mobile-active" : "mobile"}
+          className={isSearch ? "mobile active" : "mobile"}
         >
           <Search />
         </motion.div>
