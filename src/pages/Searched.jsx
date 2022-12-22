@@ -2,6 +2,7 @@ import {Link, useParams } from "react-router-dom";
 import { useEffect , useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import Loading from "../components/Loading";
 
 
 
@@ -67,7 +68,7 @@ const Searched = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {isPending && <H3>Loading...</H3>}
+          {isPending && <H3><Loading/></H3>}
           {error && <H3>{error}</H3>}
           {!found && <H3>Not Available..T_T</H3>}
           {searchedRec &&
