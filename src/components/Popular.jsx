@@ -34,7 +34,7 @@ const Popular = () => {
     <Wrapper>
       <Heading>
         <h3 id='popular'>Popular Picks</h3>
-        <Link to='/pView'>
+        <Link style={{display:'flex',alignItems:'center',textDecoration:'none' }} to='/pView'>
           See more<FaArrowRight style={{ color: "#333" }} />
         </Link>
       </Heading>
