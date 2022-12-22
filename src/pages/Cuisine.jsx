@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link , useParams } from "react-router-dom";
 import styled from "styled-components";
+import Loading from "../components/Loading";
 
 
 
@@ -68,7 +69,7 @@ function Cuisine() {
             );
           })}
       </Grid>
-      {isPending && <H3>Loading...</H3>}
+      {isPending && <H3><Loading/></H3>}
       {error && <H3>{error}</H3>}
       {cuisine && (
         <div style={{ position: "relative", margin: "3rem 0", bottom: "12px" }}>
