@@ -35,7 +35,7 @@ const Popular = () => {
       <Heading>
         <h3 id='popular'>Popular Picks</h3>
         <Link to='/pView'>
-          <FaArrowRight style={{ color: "#333" }} />
+          See more<FaArrowRight style={{ color: "#333" }} />
         </Link>
       </Heading>
       <SSplide
