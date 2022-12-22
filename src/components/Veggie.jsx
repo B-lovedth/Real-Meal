@@ -36,8 +36,8 @@ const Veggie = () => {
       <Wrapper>
         <Heading>
           <h3>Vegetarian Picks</h3>
-          <Link to='/vView'>
-            <FaArrowRight style={{ color: "#333" }} />
+          <Link style={{display:'flex',alignItems:'center',textDecoration:'none' }} to='/vView'>
+            See more<FaArrowRight style={{ color: "#333" }} />
           </Link>
         </Heading>
         <SSplide
