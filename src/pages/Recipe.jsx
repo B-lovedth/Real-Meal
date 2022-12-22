@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { motion } from 'framer-motion'
 import {FaClock} from 'react-icons/fa'
 import Similar from "../components/Similar";
+import Loading from "../components/Loading";
 
 const Recipe = () => {
   const [isPending, setIsPending] = useState(true);
@@ -37,7 +38,7 @@ const Recipe = () => {
   };
   return (
     <Container>
-      {isPending && <H3>Loading..</H3>}
+      {isPending && <H3><Loading/></H3>}
       {error && <H3>{error}</H3>}
       {details && (
         <div>
