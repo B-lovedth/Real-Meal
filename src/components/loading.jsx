@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { GiFastNoodles, GiNoodles } from 'react-icons/gi'
 const Loading = () => {
   return (
     <LoadingBar className='loading'>
         <Span></Span>
-        loading
+        <div className='in-loading'><GiNoodles/>
+        loading</div>
     </LoadingBar>
   )
 }
@@ -16,7 +17,17 @@ const LoadingBar=styled.div`
     width:100%;
     align-items: center;
     justify-content:center;
-    font-size: 1rem;
+    color:#333;
+    font-weight:600;
+    .in-loading{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content:center;
+    }
+    .in-loading svg{
+        font-size:3.5rem;
+    }
 `
 const Span=styled.span`
     @keyframes rotate {
