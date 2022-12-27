@@ -18,6 +18,7 @@ const LoadingBar=styled.div`
     align-items: center;
     justify-content:center;
     color:#333;
+    font-size:1.5rem !important;
     font-weight:600;
     .in-loading{
         display: flex;
@@ -26,7 +27,7 @@ const LoadingBar=styled.div`
         justify-content:center;
     }
     .in-loading svg{
-        font-size:3.5rem;
+        /* font-size:3.5rem !important; */
     }
 `
 const Span=styled.span`
